@@ -4,16 +4,12 @@
     "private": true,
     "dependencies": {
         "@craco/craco": "^6.1.1",
-        "@tailwindcss/postcss7-compat": "^2.0.3",
         "@testing-library/jest-dom": "^5.11.4",
         "@testing-library/react": "^11.1.0",
         "@testing-library/user-event": "^12.1.10",
-        "autoprefixer": "^9",
-        "postcss": "^7",
         "react": "^17.0.1",
         "react-dom": "^17.0.1",
         "react-scripts": "4.0.1",
-        "tailwindcss": "npm:@tailwindcss/postcss7-compat",
         "web-vitals": "^0.2.4"
     },
     "scripts": {
@@ -42,9 +38,13 @@
         ]
     },
     "devDependencies": {
+        "@tailwindcss/postcss7-compat": "^2.0.3",
+        "autoprefixer": "^9.8.6",
         "husky": "^4.3.8",
         "lint-staged": "^10.5.3",
-        "prettier": "^2.2.1"
+        "postcss": "^7.0.35",
+        "prettier": "^2.2.1",
+        "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.3"
     },
     "husky": {
         "hooks": {
