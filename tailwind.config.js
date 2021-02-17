@@ -19,11 +19,19 @@ module.exports = {
       colors: {
         'pri-red': '#EC7676',
         pink: 'rgba(252, 193, 193, 0.47)',
+        pink2: 'rgba(243, 138, 138, 0.45)',
+        white: '#F3EFEF',
+        grey: '#604E4E',
+      },
+
+      spacing: {
+        l2: '200px',
       },
     },
   },
   variants: {
     extend: {},
   },
+
   plugins: [],
 };
