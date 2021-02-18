@@ -7,57 +7,141 @@ import HeroFive from './Images/Ellipse 49.svg';
 import HeroSix from './Images/Ellipse 46.svg';
 
 function HeroCircles() {
-  const names = ['kristin', 'Mark', 'Tina', 'Marco', 'jenny', 'Luna'];
+  const [angle, setAngle] = React.useState(0);
+  const animRef = React.useRef();
+  const cont = React.useRef(null);
+
+  const animate = (time) => {
+    animRef.current = requestAnimationFrame(animate);
+    setAngle((prev) => (prev <= 2 * Math.PI ? prev + 0.01 : 0.01));
+  };
+
+  React.useEffect(() => {
+    animRef.current = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(animRef.current);
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   return (
-    <div>
+    <div
+      ref={cont}
+      style={{ position: 'relative', width: '430px', height: '430px' }}
+    >
       <div
-        className="rounded-full bg-none border-2 border-solid border-gray-300 flex items-center justify-center mt-16"
-        style={{ height: '440px', width: '430px' }}
-      >
-        <div className="mb-64 mr-44 ml-16 absolute ">
-          <img src={HerOne} alt="hero" className="animate-bounce" />
-          <p className="absolute ml-6 mt-2 text-sm text-grey">{names[1]}</p>
-        </div>
-        <div className="absolute mb-96 mr-60 mt-12">
-          <img src={HeroTwo} alt="hero" className="animate-bounce" />
-        </div>
-        <p
-          className="absolute mr-64 mt-16 text-sm  text-grey"
-          style={{ marginBottom: '22rem' }}
-        >
-          {names[0]}
-        </p>
-        <div className=" absolute mb-28 ml-20" style={{}}>
-          <img src={HeroThree} alt="hero" className="animate-bounce" />
-        </div>
-        <p className="absolute ml-24 mb-24 text-sm  text-grey">{names[2]}</p>
-        <div class=" absolute mt-36 mr-48">
-          <img src={HeroFour} alt="hero" className="animate-bounce" />
-        </div>
-        <p className="absolute mr-40 mt-48 text-sm  text-grey">{names[3]}</p>
-        <div className=" absolute mt-48 ml-60">
-          <img src={HeroFive} alt="hero" className="animate-bounce" />
-        </div>
-        <p className="absolute ml-52 mt-60 text-sm  text-grey">{names[4]}</p>
-        <div className="absolute " style={{ marginTop: '32rem' }}>
-          <img src={HeroSix} alt="hero" className="animate-bounce" />
-        </div>
-        <p
-          className="absolute text-sm  text-grey"
-          style={{ marginTop: '36rem' }}
-        >
-          {names[5]}
-        </p>
-        <div
-          className="rounded-full bg-none border-2 border-solid border-gray-300 flex items-center justify-center "
-          style={{ height: '280px', width: '270px' }}
-        >
-          <div
-            className="rounded-full bg-none border-2 border-solid border-gray-300 flex items-center justify-center"
-            style={{ height: '73px', width: '70px' }}
-          ></div>
-        </div>
-      </div>
+        className="border-solid border-2 border-gray-400"
+        style={{
+          borderRadius: '50%',
+          width: '100%',
+          height: '100%',
+          position: 'absolute',
+        }}
+      />
+      <div
+        className="border-solid border-2 border-gray-400"
+        style={{
+          borderRadius: '50%',
+          width: '60%',
+          height: '60%',
+          position: 'absolute',
+          top: '20%',
+          left: '20%',
+        }}
+      />
+
+      <div
+        className="border-solid border-2 border-gray-400"
+        style={{
+          borderRadius: '50%',
+          width: '25%',
+          height: '25%',
+          position: 'absolute',
+          top: '37%',
+          left: '38%',
+        }}
+      />
+
+      <img
+        src={HeroTwo}
+        alt="hero"
+        style={{
+          position: 'absolute',
+          display: 'block',
+          width: '25%',
+          height: '25%',
+          margin: '-12.5%',
+          top: 215 + 215 * Math.sin(angle + 0.75),
+          left: 215 + 215 * Math.cos(angle + 0.75),
+        }}
+      />
+
+      <img
+        src={HerOne}
+        alt="hero"
+        style={{
+          position: 'absolute',
+          display: 'block',
+          width: '12%',
+          height: '12%',
+          margin: '-6%',
+          top: 215 + 150 * Math.sin(angle + 3.5),
+          left: 215 + 150 * Math.cos(angle + 3.5),
+        }}
+      />
+      <img
+        src={HeroThree}
+        alt="hero"
+        style={{
+          position: 'absolute',
+          display: 'block',
+          width: '25%',
+          height: '25%',
+          margin: '-10%',
+          top: 215 + 55 * Math.sin(angle + 1),
+          left: 215 + 55 * Math.cos(angle + 1),
+        }}
+      />
+
+      <img
+        src={HeroFive}
+        alt="hero"
+        style={{
+          position: 'absolute',
+          display: 'block',
+          width: '30%',
+          height: '30%',
+          margin: '-15%',
+          top: 215 + 215 * Math.sin(angle + 2.5),
+          left: 215 + 215 * Math.cos(angle + 2.5),
+        }}
+      />
+
+      <img
+        src={HeroFour}
+        alt="hero"
+        style={{
+          position: 'absolute',
+          display: 'block',
+          width: '27%',
+          height: '27%',
+          margin: '-14%',
+          top: 215 + 150 * Math.sin(angle - 0.5),
+          left: 215 + 150 * Math.cos(angle - 0.5),
+        }}
+      />
+
+      <img
+        src={HeroSix}
+        alt="hero"
+        style={{
+          position: 'absolute',
+          display: 'block',
+          width: '30%',
+          height: '30%',
+          margin: '-15%',
+          top: 215 + 215 * Math.sin(angle + 5),
+          left: 215 + 215 * Math.cos(angle + 5),
+        }}
+      />
     </div>
   );
 }
