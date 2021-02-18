@@ -1,8 +1,12 @@
 import './App.css';
-import Footer from '../src/components/Footer.js';
+import HeroCircles from '../src/components/HeroesCircles.js';
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <HeroCircles />
+    </div>
+  );
 }
 
 export default App;
