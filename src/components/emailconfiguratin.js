@@ -12,8 +12,7 @@ const Configuration = () => {
         />
       </div>
       <div className="m-7 pt-10">
-        <div className="text-5xl">Thank you </div>
-        <div className="text-5xl">Layla !</div>
+        <div className="text-5xl">Thank you Layla!</div>
       </div>
       <div className="mx-10 px-10 pt-10 mt-10">
         <p className="text-xl">Please check your email to verify the account</p>
