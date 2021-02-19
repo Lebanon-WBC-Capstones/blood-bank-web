@@ -1,8 +1,12 @@
 import './App.css';
-import Footer from '../src/components/Footer.js';
+import FeedCard from './components/FeedCard.js';
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <FeedCard />
+    </div>
+  );
 }
 
 export default App;
