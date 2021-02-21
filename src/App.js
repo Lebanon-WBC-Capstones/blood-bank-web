@@ -1,8 +1,12 @@
 import './App.css';
-import Footer from '../src/components/Footer.js';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <Router>
+      <div className="App"></div>
+    </Router>
+  );
 }
 
 export default App;
