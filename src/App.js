@@ -1,8 +1,12 @@
 import './App.css';
-import Footer from '../src/components/Footer.js';
+import EditPage from '../src/components/EditPage.js';
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <EditPage />
+    </div>
+  );
 }
 
 export default App;

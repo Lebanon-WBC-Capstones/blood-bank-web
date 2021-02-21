@@ -19,6 +19,7 @@ module.exports = {
       colors: {
         'pri-red': '#EC7676',
         pink: 'rgba(252, 193, 193, 0.47)',
+        white: '#FFF9F9',
       },
     },
   },
