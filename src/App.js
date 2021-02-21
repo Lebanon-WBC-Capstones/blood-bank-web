@@ -1,8 +1,12 @@
 import './App.css';
-import Footer from '../src/components/Footer.js';
+import Layout from '../src/components/Layout.js';
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <Layout />
+    </div>
+  );
 }
 
 export default App;
