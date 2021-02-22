@@ -1,9 +1,9 @@
 import React from 'react';
-import path1 from '../assets/Path1.svg';
-import path2 from '../assets/Path2.svg';
-import path3 from '../assets/Path3.svg';
-import ciclre from '../assets/Circle.svg';
-import send from '../assets/send.svg';
+import path1 from '../assets/contactFormArm1.svg';
+import path2 from '../assets/contactFormArm2.svg';
+import path3 from '../assets/contactFormArm3.svg';
+import ciclre from '../assets/deco-circles.svg';
+import send from '../assets/ic-send.svg';
 
 function ContactUs() {
   return (
