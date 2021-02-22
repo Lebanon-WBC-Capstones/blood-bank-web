@@ -37,7 +37,7 @@ function ContactUs() {
         </div>
       </div>
 
-      <div class="absolute bottom-40 left-0 z-0	">
+      <div class="absolute bottom-40 left-0 z-0">
         <img src={path1} alt="images" />
       </div>
       <div class="absolute bottom-40 left-0 ">
