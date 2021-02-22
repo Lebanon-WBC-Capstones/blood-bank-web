@@ -2,13 +2,9 @@ import React from 'react';
 import bloodIcon from '../sources/bloodIcon.svg';
 import circle from '../sources/thecircle.svg';
 import location from '../sources/location.svg';
+import moment from 'moment';
 
 const HistoryItem = () => {
-  const formatDate = (string) => {
-    let options = { year: 'numeric', month: 'short', day: 'numeric' };
-    return new Date(string).toLocaleDateString([], options);
-  };
-
   const history = [
     {
       operation: 'Donation',
@@ -19,15 +15,23 @@ const HistoryItem = () => {
     },
   ];
 
+  const checkDate = (myDate) => {
+    if (moment().diff(myDate, 'days') > 7) {
+      return moment(myDate).format('MMM DD, YYYY');
+    } else {
+      return moment(myDate).fromNow();
+    }
+  };
+
   return (
     <div>
       {history.map((h) => (
-        <div class=" flex flex-col">
+        <div class=" flex flex-col ">
           <div className="-ml-44 text-xs text-gray-400 mt-1">
-            {formatDate(h.date)}|10:am
+            {checkDate(h.date)}
           </div>
           <div class="">
-            <div className="flex flex-row justify-between ">
+            <div className="flex flex-row justify-between   ">
               <div className="flex flex-row">
                 <div className="ml-5 transform -rotate-90 text-xs text-gray-400 mb-1">
                   {h.operation}
@@ -38,9 +42,9 @@ const HistoryItem = () => {
                   src={bloodIcon}
                   alt="blood icon"
                 />
-                <div className="flex flex-col">
+                <div className="flex flex-col ">
                   <p className="mt-2 ml-2 text-gray-500">{h.type}</p>
-                  <div className="flex flex-row">
+                  <div className="flex flex-row ">
                     <img className="ml-2" src={location} />{' '}
                     <span className="ml-1 mb-1 mt-1 text-xs text-gray-500">
                       {h.location}
@@ -48,7 +52,7 @@ const HistoryItem = () => {
                   </div>
                 </div>
               </div>
-              <div className="w-11 h-8 rounded-lg bg-gray-300 text-xs text-center pt-1 mt-3 mr-3">
+              <div className="w-11 h-8 rounded-lg bg-gray-300 text-xs text-center pt-1 mt-3 mr-3 ">
                 {h.amount}
               </div>
             </div>
