@@ -1,10 +1,10 @@
 import './App.css';
-import Layout from '../src/components/Layout.js';
+import ContactUs from '../src/components/ContactUs.js';
 
 function App() {
   return (
     <div className="App">
-      <Layout />
+      <ContactUs />
     </div>
   );
 }
