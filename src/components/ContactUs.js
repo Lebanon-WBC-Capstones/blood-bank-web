@@ -21,11 +21,11 @@ function ContactUs() {
         />
 
         <input
-          class="bg-pink rounded pl-4 leading-8 mt-6	 text-xs text-gray-500 font-Robot w-full	"
+          class="bg-pink rounded pl-4 leading-8 mt-6 text-xs text-gray-500 font-Robot w-full	"
           placeholder="E-mail"
         />
         <textarea
-          class="bg-pink rounded pl-4 leading-8 mt-6	h-24 text-xs text-gray-500 font-Robot w-full	"
+          class="bg-pink rounded pl-4 leading-8 mt-6 h-24 text-xs text-gray-500 font-Robot w-full	"
           placeholder="Enter Your Message..."
         ></textarea>
         <br />
@@ -49,5 +49,4 @@ function ContactUs() {
     </div>
   );
 }
-
 export default ContactUs;
