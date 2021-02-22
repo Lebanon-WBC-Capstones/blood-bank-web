@@ -1,6 +1,6 @@
 import React from 'react';
 import signinlogo from '../assets/signinlogo.svg';
-const Configuration = () => {
+const EmailConfirmation = () => {
   return (
     <div className="text-gray-500 ">
       <div className="mt-12">
