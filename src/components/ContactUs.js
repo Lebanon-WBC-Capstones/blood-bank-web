@@ -10,7 +10,7 @@ function ContactUs() {
     <div>
       <div class="text-gray-500 text-2xl font-bold mt-4">Contact Us</div>
       <div class="text-gray-500 mt-4 pl-12">We Appreciate</div>
-      <div class="text-gray-500  pl-32">Your Feedback</div>
+      <div class="text-gray-500  pl-32">Your Feedbacke</div>
       <div class="absolute top-30	left-20">
         <img src={ciclre} alt="images" />
       </div>
