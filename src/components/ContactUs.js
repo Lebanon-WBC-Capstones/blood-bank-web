@@ -14,6 +14,7 @@ function ContactUs() {
       <div class="absolute top-30	left-20">
         <img src={ciclre} alt="images" />
       </div>
+
       <div class="z-10 grid justify-items-start absolute bottom-44 left-24 mb-6 w-8/12  mb-2">
         <input
           class="bg-pink rounded pl-4 leading-8	 text-xs text-gray-500 font-Robot w-full	"
