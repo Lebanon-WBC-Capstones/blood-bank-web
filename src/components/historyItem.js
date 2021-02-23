@@ -5,7 +5,7 @@ import location from '../sources/location.svg';
 import moment from 'moment';
 
 const HistoryItem = (props) => {
-  console.log(props);
+  console.log(props.item);
 
   const checkDate = (myDate) => {
     if (moment().diff(myDate, 'days') > 7) {
@@ -34,7 +34,7 @@ const HistoryItem = (props) => {
                 alt="blood icon"
               />
               <div className="flex flex-col ">
-                <p className="mt-2 ml-2 text-gray-500">{item.type}</p>
+                <p className="mt-2 ml-2 text-gray-500">{props.item.type}</p>
                 <div className="flex flex-row ">
                   <img className="ml-2" src={location} alt="locatim icon" />{' '}
                   <span className="ml-1 mb-1 mt-1 text-xs text-gray-500">

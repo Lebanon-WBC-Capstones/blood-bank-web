@@ -1,11 +1,6 @@
 import './App.css';
-import HistoryItem from './components/HistoryItem.js';
 function App() {
-  return (
-    <div className="App">
-      <HistoryItem />
-    </div>
-  );
+  return <div className="App"></div>;
 }
 
 export default App;

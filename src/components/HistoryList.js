@@ -1,5 +1,5 @@
 import React from 'react';
-import HistoryItem from './HistoryItem';
+import HistoryItem from './HistoryItem.js';
 const HistoryList = () => {
   const history = [
     {
@@ -12,7 +12,9 @@ const HistoryList = () => {
   ];
   return (
     <div>
-      {history.length !== 0 ? history.map((h) => <HistoryItem item={h} />) : ''}
+      {history.map((h) => (
+        <HistoryItem item={h} />
+      ))}
     </div>
   );
 };
