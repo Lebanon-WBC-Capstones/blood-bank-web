@@ -5,7 +5,7 @@ import gmail from '../assets/gmail.svg';
 export default function SignUp() {
   return (
     <div
-      className="mt-5 flex flex-col justify-center"
+      className="mt-5 flex flex-col justify-center container"
       style={{
         maxWidth: '600px',
       }}
@@ -14,7 +14,7 @@ export default function SignUp() {
         <img src={logo} alt="logo" />
       </div>
       <div
-        className="mb-5 pb-1 ml-auto mr-auto"
+        className="mb-5 pb-1 mx-auto"
         style={{
           width: '90%',
           borderBottomColor: 'rgba(202, 199, 199, 1)',
@@ -28,7 +28,7 @@ export default function SignUp() {
           style={{
             width: '90%',
           }}
-          className="flex justify-around ml-auto mr-auto"
+          className="flex justify-around mx-auto"
         >
           <button
             className="bg-pink p-2 font-roboto flex justify-between"
@@ -53,7 +53,7 @@ export default function SignUp() {
         </div>
 
         <div
-          className="mb-5 pb-1 ml-auto mr-auto"
+          className="mb-5 pb-1 mx-auto"
           style={{
             width: '90%',
             borderBottomColor: 'rgba(202, 199, 199, 1)',
