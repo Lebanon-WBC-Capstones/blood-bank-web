@@ -8,10 +8,7 @@ import heart from '../assets/dashboard-totaldonate-logo.svg';
 export default function DashCards() {
   return (
     <div class="pt-3 bg-transparent">
-      <div
-        style={{ display: 'flex', justifyContent: 'space-evenly' }}
-        class="mb-5"
-      >
+      <div class="mb-5 flex flex-row justify-evenly">
         <button
           style={{
             backgroundColor: 'rgba(247, 244, 250, 0.98)',
@@ -36,11 +33,10 @@ export default function DashCards() {
           </div>
 
           <p
-            class="text-s self-center font-roboto"
+            class="text-s self-center font-roboto text-greyfont"
             style={{
               gridRowStart: '2',
               gridRowEnd: '3',
-              color: 'rgba(106, 104, 104, 1)',
             }}
           >
             Request
@@ -71,11 +67,10 @@ export default function DashCards() {
           </div>
 
           <p
-            class="text-s self-center font-roboto pb-1"
+            class="text-s self-center font-roboto pb-1 text-greyfont"
             style={{
               gridRowStart: '2',
               gridRowEnd: '3',
-              color: 'rgba(106, 104, 104, 1)',
             }}
           >
             Donate
@@ -84,18 +79,11 @@ export default function DashCards() {
       </div>
 
       <div class="ml-3 mb-3">
-        <p
-          style={{ color: 'rgba(106, 104, 104, 1)' }}
-          class="text-m font-bold font-roboto"
-        >
-          Your Donations
-        </p>
+        <p class="text-m font-bold font-roboto text-greyfont">Your Donations</p>
       </div>
-      <div
-        style={{ display: 'flex', justifyContent: 'space-evenly' }}
-        class="ml-3"
-      >
-        <button
+
+      <div class="ml-3 flex flex-row justify-evenly ">
+        {/* <button
           style={{
             backgroundColor: 'rgba(236, 39, 39, 0.74)',
             display: 'grid',
@@ -108,12 +96,10 @@ export default function DashCards() {
         >
           <div
             style={{
-              height: '20%',
               gridRowStart: '1',
               gridRowEnd: '2',
-              display: 'flex',
-              justifyContent: 'flex-end',
             }}
+            class="flex justify-end"
           >
             <img
               class="justify-self-end"
@@ -126,9 +112,8 @@ export default function DashCards() {
             style={{
               gridRowStart: '2',
               gridRowEnd: '3',
-              display: 'flex',
-              justifyContent: 'center',
             }}
+            class="flex justify-center"
           >
             <p class="font-roboto text-white" style={{ fontSize: '10vw' }}>
               9{' '}
@@ -140,7 +125,40 @@ export default function DashCards() {
           <div style={{ gridRowStart: '3', gridRowEnd: '4' }}>
             <p class="font-roboto text-xs text-white">Last Donation</p>
           </div>
+        </button> */}
+
+        <button
+          style={{
+            backgroundColor: 'rgba(236, 39, 39, 0.74)',
+            /*display: 'grid',
+            gridTemplateRows: '1fr 3fr 1fr',*/
+            width: '27vw',
+            height: '27vw',
+            /*boxShadow: '0.25rem 0.25rem 0.25rem #F58B8B',*/
+          }}
+          class="rounded-lg pl-1 pr-1 grid grid-rows-layout shadow-sm"
+        >
+          <div class="flex justify-end row-start-1 row-end-2">
+            <img
+              class="justify-self-end"
+              style={{ height: '6vw' }}
+              src={drop}
+              alt="blooddrop"
+            />
+          </div>
+          <div class="flex justify-center row-start-2 row-end-3">
+            <p class="font-roboto text-white" style={{ fontSize: '10vw' }}>
+              9{' '}
+            </p>{' '}
+            <p class="font-roboto text-white" style={{ fontSize: '5vw' }}>
+              June
+            </p>
+          </div>
+          <div class="row-start-3 row-end-4">
+            <p class="font-roboto text-xs text-white">Last Donation</p>
+          </div>
         </button>
+
         <button
           style={{
             backgroundColor: 'rgba(247, 244, 250, 0.98)',
@@ -148,19 +166,16 @@ export default function DashCards() {
             gridTemplateRows: '1fr 3fr 1fr',
             width: '27vw',
             height: '27vw',
-
-            boxShadow: '0.25rem 0.25rem 0.25rem #F58B8B',
           }}
-          class="rounded-lg pl-1 pr-1"
+          class="rounded-lg pl-1 pr-1 shadow-sm"
         >
           <div
             style={{
               height: '20%',
               gridRowStart: '1',
               gridRowEnd: '2',
-              display: 'flex',
-              justifyContent: 'flex-end',
             }}
+            class="flex justify-end"
           >
             <img
               class="justify-self-end"
@@ -174,24 +189,15 @@ export default function DashCards() {
               gridRowStart: '2',
               gridRowEnd: '3',
               height: '60%',
-              display: 'flex',
-              justifyContent: 'center',
             }}
+            class="flex justify-center"
           >
-            <p
-              class="font-roboto"
-              style={{ fontSize: '10vw', color: 'rgba(106, 104, 104, 1)' }}
-            >
+            <p class="font-roboto text-greyfont" style={{ fontSize: '10vw' }}>
               10
             </p>
           </div>
           <div style={{ gridRowStart: '3', gridRowEnd: '4' }}>
-            <p
-              class="font-roboto text-xs"
-              style={{ color: 'rgba(106, 104, 104, 1)' }}
-            >
-              Total Donation
-            </p>
+            <p class="font-roboto text-xs text-greyfont">Total Donation</p>
           </div>
         </button>
         <button
@@ -201,9 +207,8 @@ export default function DashCards() {
             gridTemplateRows: '1fr 3fr 1fr',
             width: '27vw',
             height: '27vw',
-            boxShadow: '0.25rem 0.25rem 0.25rem #F58B8B',
           }}
-          class="rounded-lg pl-1 pr-1"
+          class="rounded-lg pl-1 pr-1 shadow-sm"
         >
           {' '}
           <div
@@ -211,9 +216,8 @@ export default function DashCards() {
               height: '20%',
               gridRowStart: '1',
               gridRowEnd: '2',
-              display: 'flex',
-              justifyContent: 'flex-end',
             }}
+            class="flex justify-end"
           >
             <img
               class="justify-self-end"
@@ -223,20 +227,12 @@ export default function DashCards() {
             />
           </div>
           <div style={{ gridRowStart: '2', gridRowEnd: '3', height: '60%' }}>
-            <p
-              class="font-roboto"
-              style={{ fontSize: '10vw', color: 'rgba(106, 104, 104, 1)' }}
-            >
+            <p class="font-roboto text-greyfont" style={{ fontSize: '10vw' }}>
               12
             </p>
           </div>
           <div style={{ gridRowStart: '3', gridRowEnd: '4' }}>
-            <p
-              class="font-roboto font-xs"
-              style={{ color: 'rgba(106, 104, 104, 1)' }}
-            >
-              Days Left
-            </p>
+            <p class="font-roboto text-xs text-greyfont">Days Left</p>
           </div>
         </button>
       </div>
