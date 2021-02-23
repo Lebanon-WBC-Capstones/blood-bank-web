@@ -1,10 +1,10 @@
 import './App.css';
-import Layout from '../src/components/Layout.js';
+import DonationRequest from './components/Donationrequestconfirmation';
 
 function App() {
   return (
     <div className="App">
-      <Layout />
+      <DonationRequest />
     </div>
   );
 }
