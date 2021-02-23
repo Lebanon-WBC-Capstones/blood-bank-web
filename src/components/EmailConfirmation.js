@@ -20,4 +20,4 @@ const EmailConfirmation = () => {
     </div>
   );
 };
-export default Configuration;
+export default EmailConfirmation;
