@@ -1,11 +1,11 @@
 import './App.css';
-import Layout from '../src/components/Layout.js';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <Layout />
-    </div>
+    <Router>
+      <div className="App"></div>
+    </Router>
   );
 }
 
