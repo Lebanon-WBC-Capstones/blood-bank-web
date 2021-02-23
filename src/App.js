@@ -1,11 +1,13 @@
 import './App.css';
-import DonationRequest from './components/Donationrequestconfirmation';
+import DonationRequestPage from './components/DonationRequestConfirmationPage';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 function App() {
   return (
     <Router>
-      <div className="App"></div>
+      <div className="App">
+        <DonationRequestPage />
+      </div>
     </Router>
   );
 }
