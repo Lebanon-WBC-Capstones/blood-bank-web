@@ -1,10 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
-import Historyitem from './components/historyItem';
+import HistoryItem from './components/HistoryItem.js';
 function App() {
   return (
     <div className="App">
-      <Historyitem />
+      <HistoryItem />
     </div>
   );
 }
