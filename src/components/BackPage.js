@@ -1,7 +1,7 @@
 import React from 'react';
-import Bottom from './assets/Bottom.svg';
-import Path from './assets/Path 4.svg';
-import Arrow from './assets/Vector.svg';
+import BottomWave from '../assets/backPageBottomWave.svg';
+import TopWave from '../assets/backPageTopWave.svg';
+import ICBack from '../assets/ic-back.svg';
 import { useHistory } from 'react-router-dom';
 
 function BackPage(props) {
@@ -14,7 +14,7 @@ function BackPage(props) {
         className="absolute border-0 mt-10 ml-6 "
       >
         <img
-          src={Arrow}
+          src={ICBack}
           alt="button"
           className="sm:w-full sm:h-full sm:mt-4 sm:ml-3"
         />
@@ -23,12 +23,16 @@ function BackPage(props) {
         {props.title}
       </h3>
       <div>
-        <img src={Path} alt="shape" className="w-full h-min-full sm:w-full" />
+        <img
+          src={TopWave}
+          alt="shape"
+          className="w-full h-min-full sm:w-full"
+        />
       </div>
       <div>{props.children}</div>
       <div style={{ marginTop: '27.5rem' }}>
         <img
-          src={Bottom}
+          src={BottomWave}
           alt="Bottom"
           className="w-full h-min-full sm:w-full "
         />
