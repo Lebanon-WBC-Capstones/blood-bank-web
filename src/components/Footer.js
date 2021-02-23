@@ -1,5 +1,5 @@
 import React from 'react';
-import wave from './assets/waves.svg';
+import wave from '../assets/waves.svg';
 
 const Footer = () => {
   return (
@@ -12,7 +12,11 @@ const Footer = () => {
           <h2>Hospitals</h2>
           <ul className="text-xs underline">
             <li>
-              <a href="https://www.hopitalnini.com/en/" target="_blank">
+              <a
+                href="https://www.hopitalnini.com/en/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 Nini
               </a>
             </li>
