@@ -1,11 +1,11 @@
 import './App.css';
-import FeedCard from './components/FeedCard.js';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <FeedCard />
-    </div>
+    <Router>
+      <div className="App"></div>
+    </Router>
   );
 }
 
