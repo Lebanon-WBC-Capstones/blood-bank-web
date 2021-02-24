@@ -1,12 +1,7 @@
 import './App.css';
-import HeroCircles from '../src/components/HeroesCircles.js';
 
 function App() {
-  return (
-    <div className="App">
-      <HeroCircles />
-    </div>
-  );
+  return <div className="App"></div>;
 }
 
 export default App;
