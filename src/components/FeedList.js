@@ -1,7 +1,7 @@
 import React from 'react';
 import FeedItem from './FeedItem.js';
 
-const FeedCard = () => {
+const FeedList = () => {
   const feed = [
     {
       fulfilled: true,
@@ -29,4 +29,4 @@ const FeedCard = () => {
   );
 };
 
-export default FeedCard;
+export default FeedList;
