@@ -1,11 +1,11 @@
-import SignIn from './components/SignIn.js';
 import './App.css';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <SignIn />
-    </div>
+    <Router>
+      <div className="App"></div>
+    </Router>
   );
 }
 
