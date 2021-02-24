@@ -84,7 +84,7 @@ export default function Graph() {
             top: '90%',
           }}
         >
-          <img src={drops} alt="drops" />
+          <img src={drops} alt="drops" className="p-1" />
         </button>
       </div>
     </div>
