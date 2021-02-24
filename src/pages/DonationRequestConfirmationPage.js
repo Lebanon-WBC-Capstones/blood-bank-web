@@ -1,6 +1,6 @@
 import React from 'react';
-import DonationRequest from './Donationrequestconfirmation';
-import BackPage from './BackPage';
+import DonationRequest from '../components/Donationrequestconfirmation';
+import BackPage from '../components/BackPage';
 
 const DonationRequestPage = () => {
   return (
