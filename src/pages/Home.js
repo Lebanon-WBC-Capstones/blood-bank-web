@@ -6,7 +6,10 @@ import Graph from '../components/graph';
 import CircleTR from '../assets/home-r-t-circles.svg';
 import CircleTL from '../assets/home-l-t-circle-and-logo.svg';
 import firstFooter from '../assets/home-first-page-footer.svg';
+import footer2 from '../assets/footer1.svg';
 import footer from '../assets/Component 13.svg';
+import header2 from '../assets/home-second-header.svg';
+import foohed from '../assets/full-footer-header.svg';
 
 export default function Home() {
   return (
@@ -40,13 +43,22 @@ export default function Home() {
             <Graph />
           </div>
 
-          <div style={{ marginTop: '20%' }}>
+          <div
+            className="w-full"
+            style={{
+              height: '100%',
+              marginTop: '20%',
+              backgroundImage: `url(${foohed})`,
+              backgroundRepeat: 'no-repeat',
+            }}
+          >
             {' '}
             {/*<div style={{marginBottom:"20%"}}><p> Blood <br /> Centers</p></div>*/}
-            <img className="w-screen" src={footer} alt="ta3je" />
+            {/*<img className="w-screen" src={foohed} alt="ta3je" />*/}
           </div>
         </div>
         <div className="bg-yellow-200 w-screen h-screen">
+          <div>{/*<img src={header2} alt="header" />*/}</div>
           <p>hfhjfdhjfghjfgd</p>
         </div>
         <div className="h-screen w-screen bottom-0 relative bg-green-200">
