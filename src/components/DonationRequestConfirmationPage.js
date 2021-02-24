@@ -6,7 +6,11 @@ const DonationRequestPage = () => {
   return (
     <div>
       <BackPage title="Donation From">
-        <DonationRequest />
+        <div>
+          <DonationRequest />
+        </div>
+
+        <div className=" h-48 m-4 rounded-md">map here</div>
       </BackPage>
     </div>
   );

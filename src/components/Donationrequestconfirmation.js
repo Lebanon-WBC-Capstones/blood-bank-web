@@ -7,7 +7,7 @@ import pints from './assets/pints.svg';
 
 const DonationRequest = () => {
   return (
-    <div className="border-2 border-gray-200 w-80 ml-7 mt-3 rounded-md ">
+    <div className="border-2 border-gray-200 w-80 h-52 ml-7 mt-3 rounded-md ">
       <div className="flex flex-col m-2">
         <div className="flex flex-row justify-between">
           <div>
