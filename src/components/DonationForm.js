@@ -10,7 +10,7 @@ function DonationForm() {
   return (
     <div>
       <form>
-        <div className="container max-w-screen-sm mt-5">
+        <div className="container max-w-screen-sm mt-10 sm:ml-12 sm:mt-20">
           <label className="font-Roboto text-gray-500 mr-32 sm:mr-80">
             Appointment date
           </label>
@@ -48,7 +48,7 @@ function DonationForm() {
               />
             </div>
           </div>
-          <div className="flex flex-row justify-evenly mt-32">
+          <div className="flex flex-row justify-evenly mb-8 mt-36">
             <button className="flex flex-row justify-evenly items-center w-3/4 rounded-lg h-9 text-md text-gray-500 font-Roboto bg-pink mt-10 mb-6 sm:pl-20 focus:outline-none focus:ring-2 focus:ring-gray-300 pl-5 sm:text-xl">
               Confirm Appointment
               <img src={Heart} alt="heart" className="pr-8 sm:pr-20" />

@@ -3,12 +3,12 @@ import Logo from '../assets/Logo.svg';
 
 function DonationConfirmed() {
   return (
-    <div className="flex flex-col align-center min-h-screen bg-pink">
-      <div className="text-gray-600 font-normal text-2xl mt-20 align-center p-10 sm:text-4xl">
+    <div className="flex flex-col align-center ">
+      <div className="text-gray-600 font-normal px-4 text-2xl align-center mt-10 sm:p-3 sm:text-4xl">
         Thank you for your donation.
         <br /> Please check your email for more information
       </div>
-      <div className="flex flex-row sitems-center ml-16 mt-16 ">
+      <div className="flex flex-row mb-7 items-center ml-16 mt-16 sm:mr-5 ">
         <img
           src={Logo}
           alt="Logo"

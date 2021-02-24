@@ -30,7 +30,7 @@ function BackPage(props) {
         />
       </div>
       <div>{props.children}</div>
-      <div style={{ marginTop: '27.5rem' }}>
+      <div>
         <img
           src={BottomWave}
           alt="Bottom"
