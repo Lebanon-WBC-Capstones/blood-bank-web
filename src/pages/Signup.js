@@ -8,17 +8,8 @@ const SignUpPage = () => {
   return (
     <div>
       <Layout>
-        {count === 1 ? <SignUp /> : null}
+        {count === 1 ? <SignUp setCount={setCount} count={count} /> : null}
         {count === 2 ? <EmailConfirmation /> : null}
-        {count === 1 ? (
-          <button
-            type="submit"
-            className="bg-pink  w-3/4 rounded-lg h-9 text-gray-500 font-Roboto self-center mb-6"
-            onClick={() => setCount(count + 1)}
-          >
-            Sign Up
-          </button>
-        ) : null}
       </Layout>
     </div>
   );
