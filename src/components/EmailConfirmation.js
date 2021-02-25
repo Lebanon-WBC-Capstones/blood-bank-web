@@ -2,7 +2,7 @@ import React from 'react';
 import signinlogo from '../assets/signinlogo.svg';
 const EmailConfirmation = () => {
   return (
-    <div className="text-gray-500 ">
+    <div className="text-gray-500 mb-16">
       <div className="mt-12">
         <img
           src={signinlogo}

@@ -100,13 +100,7 @@ export default function SignUp() {
           >
             I Agree to Terms Conditions and Privacy Policy
           </label>
-          <div className="flex justify-center mt-2">
-            <input
-              value="Sign Up"
-              type="submit"
-              className="bg-pink  w-3/4 rounded-lg h-9 text-gray-500 font-Roboto self-center"
-            />
-          </div>
+          <div className="flex justify-center mt-2"></div>
         </form>
       </div>
     </div>
