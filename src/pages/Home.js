@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <div className="overflow-auto">
       <div>
-        <div className="relative top-0 h-screen w-screen">
+        <div className="h-screen w-screen">
           <div className="flex flex-col">
             <div className="flex flex-row justify-between">
               <div>
@@ -39,23 +39,19 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div style={{ paddingLeft: '10%' }}>
+
+          <div>
+            <img src={foohed} className="w-screen absolute top-10" />
+          </div>
+          <div
+            style={{ paddingRight: '2%', paddingLeft: '8%' }}
+            className="relative"
+          >
             <Graph />
           </div>
 
-          <div
-            className="w-full"
-            style={{
-              height: '100%',
-              marginTop: '20%',
-              backgroundImage: `url(${foohed})`,
-              backgroundRepeat: 'no-repeat',
-            }}
-          >
-            {' '}
-            {/*<div style={{marginBottom:"20%"}}><p> Blood <br /> Centers</p></div>*/}
-            {/*<img className="w-screen" src={foohed} alt="ta3je" />*/}
-          </div>
+          {/*<div style={{marginBottom:"20%"}}><p> Blood <br /> Centers</p></div>*/}
+          {/*<img className="w-screen" src={foohed} alt="ta3je" />*/}
         </div>
         <div className="bg-yellow-200 w-screen h-screen">
           <div>{/*<img src={header2} alt="header" />*/}</div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import drops from '../assets/blood-drops.svg';
 import path from '../assets/whole-path.svg';
-
+import path2 from '../assets/home-pathwout-text.svg';
 export default function Graph() {
   return (
     <div>
@@ -10,11 +10,11 @@ export default function Graph() {
           display: 'inline-block',
           position: 'absolute',
           minWidth: '330px',
-          paddingLeft: '0.75rem',
+          paddingLeft: '2.75rem',
           paddingTop: '0.5rem',
         }}
       >
-        <img style={{ marginRight: '0px' }} src={path} alt="house" />
+        <img style={{ marginRight: '0px' }} src={path2} alt="house" />
         <button
           style={{
             borderRadius: '16px',
@@ -74,17 +74,6 @@ export default function Graph() {
           class=" bg-red-300 text-xs"
         >
           Fast Response
-        </button>
-        <button
-          style={{
-            backgroundColor: 'rgba(254, 254, 254, 0.83)',
-            borderRadius: '10px',
-            position: 'absolute',
-            left: '15%',
-            top: '90%',
-          }}
-        >
-          <img src={drops} alt="drops" className="p-1" />
         </button>
       </div>
     </div>
