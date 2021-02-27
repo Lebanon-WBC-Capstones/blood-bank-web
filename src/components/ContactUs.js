@@ -16,21 +16,21 @@ function ContactUs() {
       </div>
       <div class="z-10 grid justify-items-start absolute bottom-44 left-24 mb-6 w-8/12  mb-2">
         <input
-          class="bg-pink rounded pl-4 leading-8	 text-xs text-gray-500 font-Robot w-full	"
+          class="bg-pink rounded-md pl-4 leading-8	 text-xs text-gray-500 font-Robot w-full	"
           placeholder="Enter Your Name"
         />
 
         <input
-          class="bg-pink rounded pl-4 leading-8 mt-6	 text-xs text-gray-500 font-Robot w-full	"
+          class="bg-pink rounded-md pl-4 leading-8 mt-6	 text-xs text-gray-500 font-Robot w-full	"
           placeholder="E-mail"
         />
         <textarea
-          class="bg-pink rounded pl-4 leading-8 mt-6	h-24 text-xs text-gray-500 font-Robot w-full	"
+          class="bg-pink rounded-md pl-4 leading-8 mt-6	h-24 text-xs text-gray-500 font-Robot w-full	"
           placeholder="Enter Your Message..."
         ></textarea>
         <br />
         <div class="w-full flex justify-end">
-          <button class="text-gray-500 justify-center flex leadind-4 bg-pink rounded w-28 items-center	">
+          <button class="text-gray-500 justify-center flex leadind-4 bg-pink rounded-md w-28 items-center	">
             Send
             <img class="ml-2" src={send} alt="images" />
           </button>
