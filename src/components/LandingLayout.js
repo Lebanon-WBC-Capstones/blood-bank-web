@@ -7,7 +7,7 @@ function LandingLayout(props) {
         <img
           src={LandLayout}
           alt="bg"
-          className="relative flex w-full sm:w-full"
+          className="relative flex w-screen sm:w-full"
         />
         {props.children}
       </div>

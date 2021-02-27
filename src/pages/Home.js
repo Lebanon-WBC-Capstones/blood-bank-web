@@ -1,73 +1,44 @@
 import React from 'react';
 import TheNumberHydra from '../components/TheNumberHydra';
 import Footer from '../components/Footer';
-import Navbar from '../components/Navbar';
 import Graph from '../components/graph';
-import CircleTR from '../assets/home-r-t-circles.svg';
-import CircleTL from '../assets/home-l-t-circle-and-logo.svg';
-import firstFooter from '../assets/home-first-page-footer.svg';
-import footer2 from '../assets/footer1.svg';
-import footer from '../assets/Component 13.svg';
-import header2 from '../assets/home-second-header.svg';
-import foohed from '../assets/full-footer-header.svg';
+import LandingLayout from '../components/LandingLayout';
 
 export default function Home() {
   return (
-    <div className="overflow-auto">
+    <LandingLayout>
+      <div
+        className=" text-3xl font-bold font-roboto absolute"
+        style={{ top: '30vw', left: '8vw' }}
+      >
+        <p style={{ color: 'rgba(108, 105, 105, 0.81)' }}>
+          <span className="text-pri-red">Find</span> Local Blood <br /> Donors{' '}
+          <span className="text-pri-red">{'&'}</span> <br /> Blood{' '}
+          <span className="text-pri-red">Centers</span>{' '}
+        </p>
+      </div>
+      <div className="absolute mr-3" style={{ top: '135vw', left: '3vw' }}>
+        <p className="text-white font-roboto text-lg">
+          Blood <br /> Center
+        </p>
+      </div>
+      <div className="absolute" style={{ top: '60vw', left: '5vw' }}>
+        <Graph />
+      </div>
       <div>
-        <div className="h-screen w-screen">
-          <div className="flex flex-col">
-            <div className="flex flex-row justify-between">
-              <div>
-                {' '}
-                <img src={CircleTL} alt="circle1" />
-              </div>
-              <div>
-                {' '}
-                <img src={CircleTR} alt="circle2" />{' '}
-              </div>
-            </div>
-            <div
-              className=" text-3xl font-bold font-roboto"
-              style={{ marginLeft: '14%', marginTop: '-18vh' }}
-            >
-              <p style={{ color: 'rgba(108, 105, 105, 0.81)' }}>
-                {' '}
-                <span className="text-pri-red">Find</span> Local Blood <br />{' '}
-                Donors <span className="text-pri-red">{'&'}</span> <br /> Blood{' '}
-                <span className="text-pri-red">Centers</span>{' '}
-              </p>
-            </div>
-          </div>
-
-          <div>
-            <img src={foohed} className="w-screen absolute top-10" />
-          </div>
-          <div
-            style={{ paddingRight: '2%', paddingLeft: '8%' }}
-            className="relative"
-          >
-            <Graph />
-          </div>
-
-          {/*<div style={{marginBottom:"20%"}}><p> Blood <br /> Centers</p></div>*/}
-          {/*<img className="w-screen" src={foohed} alt="ta3je" />*/}
+        <div className="absolute" style={{ bottom: '140vw', left: '10vw' }}>
+          <p className="text-xl font-roboto text-gray-600"> So Far</p>
+          <p className="ml-3 text-lg font-roboto text-gray-500">We have</p>
+          <p className="ml-6 text-base font-roboto text-gray-400">Reached</p>
         </div>
-        <div className="bg-yellow-200 w-screen h-screen">
-          <div>{/*<img src={header2} alt="header" />*/}</div>
-          <p>hfhjfdhjfghjfgd</p>
+        <div className="absolute w-screen sm:h-full" style={{ bottom: '55vw' }}>
+          <TheNumberHydra />
         </div>
-        <div className="h-screen w-screen bottom-0 relative bg-green-200">
-          <div className="relative -mb-32">
-            <div style={{ paddingTop: '130%' }}>
-              <TheNumberHydra />
-            </div>
-          </div>
-          <div className="absolute bottom-0">
-            <Footer />
-          </div>
+        <div className="absolute w-screen sm:h-full" style={{ bottom: '0' }}>
+          {' '}
+          <Footer />
         </div>
       </div>
-    </div>
+    </LandingLayout>
   );
 }
