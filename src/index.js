@@ -3,11 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import DashProfile from './components/dash-profile';
 
 ReactDOM.render(
   <React.StrictMode>
-    <DashProfile />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -26,6 +26,7 @@ module.exports = {
       },
       gridTemplateRows: {
         layout: '1fr 3fr 1fr',
+        layout2: '4fr 1fr',
       },
     },
   },
