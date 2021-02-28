@@ -83,7 +83,7 @@ export default function DashProfile() {
   return (
     <div
       className=" flex flex-col justify-center relative"
-      style={{ backgroundImage: `url(${bg})` }}
+      style={{ backgroundImage: `url(${bg})`, backgroundSize: 'cover' }}
     >
       <div style={{ margin: '3vw' }} className="flex justify-center">
         {' '}
@@ -91,7 +91,7 @@ export default function DashProfile() {
       </div>
       <div
         style={{
-          margin: '3vw',
+          margin: '2vw',
         }}
         className="flex flex-row justify-center"
       >
@@ -112,13 +112,13 @@ export default function DashProfile() {
       </div>
       <div
         style={{
-          margin: '3vw',
+          margin: '2vw',
         }}
-        className="flex flex-row justify-center"
+        className="flex flex-row justify-center text-white font-roboto"
       >
         <img src={location} alt="location" /> <p>Tripoli</p>
       </div>
-      <div style={{ margin: '3vw' }} className="flex justify-center">
+      <div style={{ margin: '2vw' }} className="flex justify-center">
         {bloodtype(AB, Rhminus)}
       </div>
     </div>
