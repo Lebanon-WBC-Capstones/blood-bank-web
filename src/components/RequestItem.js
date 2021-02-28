@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import locationIcon from '../assets/locationIcon.svg';
 import callIcon from '../assets/callIcon.svg';
 import warningIcon from '../assets/warningIcon.svg';
