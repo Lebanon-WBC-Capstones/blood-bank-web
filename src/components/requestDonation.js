@@ -1,9 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
+import DatePicker from 'react-datepicker';
 import dropRequest from '../assets/dropRequest.svg';
 import Back from '../assets/back.svg';
 import Wave from '../assets/Wafe.svg';
 import Person from '../assets/Person.svg';
 import Send from '../assets/send.svg';
+import 'react-datepicker/dist/react-datepicker.css';
+
+const Example = () => {
+  const [startDate, setStartDate] = useState(new Date());
+  return (
+    <DatePicker
+      class="w-12"
+      selected={startDate}
+      onChange={(date) => setStartDate(date)}
+    />
+  );
+};
 function requestDonation() {
   return (
     <div class="h-screen w-full pt-24" style={{ backgroundColor: '#F26868' }}>
@@ -11,7 +24,7 @@ function requestDonation() {
         class="rounded-full h-52  -top-28 -left-8 -right-8 pt-32	 absolute  bg-white"
         style={{ backgroundColor: 'white' }}
       >
-        <div class="text-gray-500 text-2xl">Request Form</div>
+        <div class="heading text-gray-500 text-2xl">Request Form</div>
         <div class="text-gray-500">For Red Cells</div>
       </div>
       <div class="ml-4">
@@ -28,8 +41,14 @@ function requestDonation() {
             <option value="other">Other</option>
           </select>
         </div>
-        <div class="justify-items-start">
-          <img src={dropRequest} alt="images" />
+        <div class="flex justify-items-start">
+          <div class="relative	 flex-initial">
+            <span class=" absolute text-3xl top-2 left-3 text-white">A</span>
+            <button class="absolute -right-2 rounded-full w-7 h-7 text-lg align-top leading-4	 text-white bg-gray-600		border-2	border-white	">
+              +
+            </button>
+            <img src={dropRequest} alt="images" />
+          </div>
         </div>
       </div>
       <form class="mt-3">
@@ -50,13 +69,15 @@ function requestDonation() {
           placeholder="Emergncy"
         />
         <div
-          class="grid grid-cols-2 items-center mt-4 w-9/12"
-          style={{ marginLeft: '12.5%', marginRight: '12.5%' }}
+          class="grid grid-cols-2 items-center mt-4 w-full"
+          style={{ paddingLeft: '5%', paddingRight: '5%' }}
         >
-          <div class="flex justify-center">
-            <div class="rounded-full bg-white w-8 h-8">don</div>
+          <div class="flex justify-start">
+            <div class=" flex-1 w-2/4">
+              <Example />
+            </div>
           </div>
-          <div class="flex justify-center item-center">
+          <div class="flex-initial justify-center item-right">
             <input
               class="rounded-lg pl-4 leading-10	text-xs text-gray-500 font-Robot"
               placeholder="Pints need?"
