@@ -3,6 +3,7 @@ import TheNumberHydra from '../components/TheNumberHydra';
 import Footer from '../components/Footer';
 import Graph from '../components/graph';
 import LandingLayout from '../components/LandingLayout';
+import HeroesCircles from '../components/HeroesCircles';
 
 export default function Home() {
   return (
@@ -24,6 +25,23 @@ export default function Home() {
       </div>
       <div className="absolute" style={{ top: '60vw', left: '5vw' }}>
         <Graph />
+      </div>
+      <div
+        className="absolute text-white font-roboto text-2xl mr-5"
+        style={{ top: '185vw', right: '15vw' }}
+      >
+        <div>
+          <p>OUR</p>
+        </div>
+        <div className="flex flex-end pl-4">
+          <p>HEROES</p>
+        </div>
+      </div>
+      <div
+        className="absolute mx-auto my-auto overflow-hidden"
+        style={{ top: '210vw', left: '0vw' }}
+      >
+        <HeroesCircles className="overflow-hidden mx-auto my-auto" />
       </div>
       <div>
         <div className="absolute" style={{ bottom: '140vw', left: '10vw' }}>
