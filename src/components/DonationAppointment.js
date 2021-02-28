@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import Heart from '../assets/vector_1.svg';
-import Clock from '../assets/clock.svg';
+import Clock from '../assets/appointmentClock.svg';
 import DateIcon from '../assets/date.svg';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 
-function DonationForm() {
+function DonationAppointment() {
   const [startDate, setStartDate] = useState(new Date());
   return (
     <div>
@@ -39,7 +39,7 @@ function DonationForm() {
             <div className="flex flex-row justify-evenly mt-0.5">
               <input
                 type="text"
-                className="w-3/4 rounded-lg h-9 border-2 pt-3 focus:outline-none focus:ring-2 focus:ring-gray-300"
+                className="w-3/4  bg-white rounded-lg h-9 border-2 pt-3 focus:outline-none focus:ring-2 focus:ring-gray-300"
               />
               <img
                 src={Clock}
@@ -60,4 +60,4 @@ function DonationForm() {
   );
 }
 
-export default DonationForm;
+export default DonationAppointment;
