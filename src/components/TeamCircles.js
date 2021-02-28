@@ -11,7 +11,7 @@ function TeamCircles() {
     <div>
       <div
         className="rounded-full bg-none border-2 border-gray-300 flex items-center justify-center mt-20"
-        style={{ height: '453px', width: '436px' }}
+        style={{ height: '420px', width: '420px' }}
       >
         <div className="mb-72   absolute ">
           <img src={Layla} alt="hero" />
@@ -60,7 +60,7 @@ function TeamCircles() {
         </p>
         <div
           className="rounded-full bg-none border-2 border-solid border-gray-300 flex items-center justify-center "
-          style={{ height: '289px', width: '278px' }}
+          style={{ height: '270px', width: '270px' }}
         ></div>
       </div>
     </div>
