@@ -1,8 +1,8 @@
 import React from 'react';
-import BG from './assets/BG.svg';
-import Avatar from './assets/avter.svg';
-import Icon from './assets/Camera.svg';
-import EditInputs from './EditInputs.js';
+import BG from '../assets/bg.svg';
+import Avatar from '../assets/avataredit.svg';
+import Icon from '../assets/Camera.svg';
+import EditInputs from '../components/EditInputs';
 
 function EditPage() {
   const handleEdit = () => {};
@@ -16,7 +16,7 @@ function EditPage() {
       <img
         src={Icon}
         alt="camera"
-        className="absolute mt-56 ml-52 sm:h-1/12 sm:w-1/12 sm:mt-80 sm:ml-96 sm:h-12 max-w-screen-sm"
+        className="absolute mt-56 ml-52 sm:h-1/12 sm:w-1/12 sm:mt-80 sm:ml-96 sm:h-auto max-w-screen-sm"
         onClick={handleEdit}
       />
 

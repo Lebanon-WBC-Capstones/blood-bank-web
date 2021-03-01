@@ -1,5 +1,5 @@
 import React from 'react';
-import BloodDrop from './BloodDrop.js';
+import BloodDrop from '../components/BloodDrop';
 function EditInputs() {
   return (
     <div>

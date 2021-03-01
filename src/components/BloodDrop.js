@@ -1,5 +1,5 @@
 import React from 'react';
-import BloodDrops from './assets/Vector (3).svg';
+import BloodDrops from '../assets/drops.svg';
 function BloodDrop(props) {
   return (
     <div>
