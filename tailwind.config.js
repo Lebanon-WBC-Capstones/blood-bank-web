@@ -21,6 +21,9 @@ module.exports = {
         pink: 'rgba(252, 193, 193, 0.47)',
         white: '#FFF9F9',
       },
+      fontSize: {
+        tiny: '0.6rem',
+      },
     },
   },
   variants: {
