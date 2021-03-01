@@ -19,6 +19,15 @@ module.exports = {
       colors: {
         'pri-red': '#EC7676',
         pink: 'rgba(252, 193, 193, 0.47)',
+        white: '#FFF9F9',
+        greyfont: 'rgba(106, 104, 104, 1)',
+      },
+      boxShadow: {
+        sm: 'rgb(245 139 139) 0.25rem 0.25rem 0.25rem;',
+      },
+      gridTemplateRows: {
+        layout: '1fr 3fr 1fr',
+        layout2: '4fr 1fr',
       },
     },
   },
