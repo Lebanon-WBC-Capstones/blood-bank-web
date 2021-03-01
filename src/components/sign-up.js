@@ -2,7 +2,7 @@ import React from 'react';
 import logo from '../assets/logo.svg';
 import facebook from '../assets/facebook.svg';
 import gmail from '../assets/gmail.svg';
-export default function SignUp() {
+export default function SignUp({ setCount, count }) {
   return (
     <div
       className="mt-5 flex flex-col justify-center container"
@@ -100,13 +100,14 @@ export default function SignUp() {
           >
             I Agree to Terms Conditions and Privacy Policy
           </label>
-          <div className="flex justify-center mt-2">
-            <input
-              value="Sign Up"
-              type="submit"
-              className="bg-pink  w-3/4 rounded-lg h-9 text-gray-500 font-Roboto self-center"
-            />
-          </div>
+          <div className="flex justify-center mt-2"></div>
+          <button
+            type="submit"
+            className="bg-pink  w-3/4 rounded-lg h-9 text-gray-500 font-Roboto self-center"
+            onClick={() => setCount(count + 1)}
+          >
+            Sign Up
+          </button>
         </form>
       </div>
     </div>
