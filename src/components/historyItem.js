@@ -5,8 +5,6 @@ import location from '../sources/location.svg';
 import moment from 'moment';
 
 const HistoryItem = (props) => {
-  console.log(props.item);
-
   const checkDate = (myDate) => {
     if (moment().diff(myDate, 'days') > 7) {
       return moment(myDate).format('MMM DD, YYYY');
@@ -17,11 +15,11 @@ const HistoryItem = (props) => {
 
   return (
     <div className="border-b-2 border-gray-100">
-      <div class=" flex flex-col ">
+      <div className=" flex flex-col ">
         <div className="-ml-44 text-xs text-gray-400 mt-1">
           {checkDate(props.item.date)}
         </div>
-        <div class="">
+        <div>
           <div className="flex flex-row justify-between   ">
             <div className="flex flex-row">
               <div className="ml-5 transform -rotate-90 text-xs text-gray-400 mb-1">
