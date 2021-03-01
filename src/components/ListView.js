@@ -1,11 +1,14 @@
 import React from 'react';
 import Location from '../assets/location.svg';
 import Clock from '../assets/clock.svg';
-
+import moment from 'moment';
 function ListView(props) {
-  const formatDate = (string) => {
-    var options = { year: 'numeric', month: 'short', day: 'numeric' };
-    return new Date(string).toLocaleDateString([], options);
+  const formatDate = (myDate) => {
+    if (moment().diff(myDate, 'days') > 7) {
+      return moment(myDate).format('MMM DD, YYYY');
+    } else {
+      return moment(myDate).fromNow();
+    }
   };
   return (
     <div className="container max-w-screen-sm">

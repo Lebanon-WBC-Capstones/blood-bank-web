@@ -3,7 +3,6 @@ import BloodCells from '../assets/bloodcells.svg';
 import Platelets from '../assets/plasma.svg';
 import BloodTube from '../assets/bloodtube_1.svg';
 import BloodContainer from '../assets/bloodContainer.svg';
-import Buttons from './Buttons.js';
 
 import ListView from './ListView.js';
 
@@ -13,31 +12,30 @@ function ListItem() {
       donation_type: 'Plasma Request',
       icon: BloodTube,
       location: 'Nini Hospital',
-      date: '2021-04-10T15:47:40.314Z',
+      date: '2021-02-10T15:47:40.314Z',
     },
     {
       donation_type: 'Red Cells Request',
       icon: BloodCells,
       location: 'Haykal Hospital',
-      date: '2021-02-18T15:47:40.314Z',
+      date: '2021-02-28T15:47:40.314Z',
     },
 
     {
       donation_type: 'Platelets Request',
       icon: Platelets,
       location: 'Mazloum Hospital',
-      date: '2021-03-20T15:47:40.314Z',
+      date: '2021-02-20T15:47:40.314Z',
     },
     {
       donation_type: 'Blood Request',
       icon: BloodContainer,
       location: 'Monla Hospital',
-      date: '2021-02-23T15:47:40.314Z',
+      date: '2021-02-26T15:47:40.314Z',
     },
   ];
   return (
     <div>
-      <Buttons />
       {RequestList.length !== 0
         ? RequestList.map((e, i) => (
             <ListView
