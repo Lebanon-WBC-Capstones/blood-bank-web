@@ -1,6 +1,5 @@
 import React from 'react';
 import bloodIcon from '../sources/bloodIcon.svg';
-import circle from '../sources/thecircle.svg';
 import location from '../sources/location.svg';
 import moment from 'moment';
 
@@ -22,10 +21,14 @@ const HistoryItem = (props) => {
         <div>
           <div className="flex flex-row justify-between   ">
             <div className="flex flex-row">
-              <div className="ml-5 transform -rotate-90 text-xs text-gray-400 mb-1">
+              <div className="ml-5 transform -rotate-90 text-xs text-gray-400 mb-1 w-14">
                 {props.item.operation}
               </div>
-              <img className="-mt-8 -mb-3 -ml-12" src={circle} alt="circle" />
+              <img
+                className="-mt-8 -mb-3 -ml-12"
+                src={props.item.image}
+                alt="circle"
+              />
               <img
                 className="ml-1 mt-2 mb-5"
                 src={bloodIcon}
