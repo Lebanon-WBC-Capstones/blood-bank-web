@@ -6,8 +6,8 @@ import bloodDropIcon from '../assets/bloodDropIcon.svg';
 
 const RequestItem = (props) => {
   return (
-    <div className="container max-width: 640px">
-      <div className="flex flex-row rounded-xl ml-2 mr-2 mt-5 justify-between border-2">
+    <div className="container max-width: 640px ">
+      <div className="flex flex-row rounded-xl ml-2 mr-2 mt-3 justify-between border-2">
         <div className="flex flex-row">
           <div>
             <img
