@@ -3,6 +3,7 @@ import AboutLayout from '../components/AboutLayout';
 import AboutGraph from '../components/AboutGraph';
 import TeamCircles from '../components/TeamCircles';
 import ContactUs from '../components/ContactUs';
+import Footer from '../components/Footer';
 function AboutUsPage() {
   return (
     <>
@@ -31,6 +32,18 @@ function AboutUsPage() {
           style={{ top: '188vw', right: '0', left: '0' }}
         >
           <TeamCircles />
+        </div>
+        <div
+          className="absolute "
+          style={{ top: '370vw', right: '0', left: '0' }}
+        >
+          <ContactUs />
+        </div>
+        <div
+          className="absolute "
+          style={{ top: '460vw', right: '0', left: '0' }}
+        >
+          <Footer />
         </div>
       </AboutLayout>
     </>
