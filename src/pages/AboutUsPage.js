@@ -3,7 +3,7 @@ import AboutLayout from '../components/AboutLayout';
 import AboutGraph from '../components/AboutGraph';
 import TeamCircles from '../components/TeamCircles';
 import ContactUs from '../components/ContactUs';
-import Footer from '../components/Footer';
+import AboutFooter from '../components/AboutFooter';
 function AboutUsPage() {
   return (
     <>
@@ -27,10 +27,7 @@ function AboutUsPage() {
         >
           OUR TEAM
         </div>
-        <div
-          className="absolute overflow-hidden"
-          style={{ top: '188vw', right: '0', left: '0' }}
-        >
+        <div className="absolute " style={{ top: '190vw', right: '0' }}>
           <TeamCircles />
         </div>
         <div
@@ -41,9 +38,9 @@ function AboutUsPage() {
         </div>
         <div
           className="absolute "
-          style={{ top: '460vw', right: '0', left: '0' }}
+          style={{ top: '475vw', right: '0', left: '0' }}
         >
-          <Footer />
+          <AboutFooter />
         </div>
       </AboutLayout>
     </>

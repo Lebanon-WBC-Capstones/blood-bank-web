@@ -1,8 +1,5 @@
 import React from 'react';
 import wave from '../assets/waves.svg';
-import Facebook from '../assets/Facebook1.svg';
-import Twitter from '../assets/Twitter.svg';
-import Github from '../assets/Github.svg';
 
 const Footer = () => {
   return (
@@ -63,11 +60,7 @@ const Footer = () => {
         </div>
         <div className="flex-auto">
           <h2 className="text-lg underline pt-40 pr-8">
-            <img class="" src={Twitter} alt="twitter" />
-            <img class="mt-4" src={Github} alt="github" />
-            <img class="mt-4" src={Facebook} alt="facebook" />
-
-            {/* <a href="#">About Us</a> */}
+            <a href="#">About Us</a>
           </h2>
         </div>
       </div>
