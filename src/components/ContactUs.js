@@ -13,11 +13,11 @@ function ContactUs() {
         <div class="text-gray-500 mt-4 pl-12">We Appreciate</div>
         <div class="text-gray-500  pl-32">Your Feedback</div>
         <div class="absolute top-30	left-20">
-          <img src={ciclre} alt="images" />
+          {/* <img src={ciclre} alt="images" /> */}
         </div>
       </div>
       <div></div>
-      <div class="z-10 grid justify-items-start absolute bottom-44 left-24 mb-6 w-8/12  mb-2">
+      <div class="z-10 grid justify-items-start absolute -bottom-80 left-24 mb-6 w-8/12  mb-2">
         <input
           class="bg-pink rounded-md pl-4 leading-8	 text-xs text-gray-500 font-Robot w-full	"
           placeholder="Enter Your Name"
@@ -40,13 +40,13 @@ function ContactUs() {
         </div>
       </div>
 
-      <div class="absolute bottom-40 left-0 z-0	">
+      <div class="absolute -bottom-80 left-0 z-0	">
         <img src={path1} alt="images" />
       </div>
-      <div class="absolute bottom-40 left-0 ">
+      <div class="absolute -bottom-80 left-0 z-0	">
         <img src={path2} alt="images" />
       </div>
-      <div class="absolute bottom-40 left-0">
+      <div class="absolute -bottom-80 left-0 z-0	">
         <img src={path3} alt="images" />
       </div>
     </div>
