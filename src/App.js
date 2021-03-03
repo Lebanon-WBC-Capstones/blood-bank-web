@@ -71,7 +71,7 @@ function App() {
             <RequestFormPage />
           </Route>{' '}
           {/*auth */}
-          <Route exact path="/donate/dantionType">
+          <Route exact path="/donate/donationType">
             <DonationTypePage />
           </Route>{' '}
           {/*auth */}
