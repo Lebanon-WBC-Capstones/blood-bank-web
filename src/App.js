@@ -13,6 +13,7 @@ import NotificationPage from './pages/NotificationPage';
 import RequestFormPage from './pages/RequestFormPage';
 import DonationForm from './pages/DonationForm';
 import DonateAppointment from './pages/DonateAppointment';
+import DonationTypePage from './pages/DonationTypePage';
 import UrgentPage from './pages/UrgentPage';
 import VolunteerPage from './pages/VolunteerPage';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
@@ -70,11 +71,15 @@ function App() {
             <RequestFormPage />
           </Route>{' '}
           {/*auth */}
-          <Route exact path="/donate/volunteer">
+          <Route exact path="/donate/donationType">
+            <DonationTypePage />
+          </Route>{' '}
+          {/*auth */}
+          <Route exact path="/donationType/volunteer">
             <VolunteerPage />
           </Route>{' '}
           {/*auth */}
-          <Route exact path="/donate/urgent">
+          <Route exact path="/donationType/urgent">
             <UrgentPage />
           </Route>{' '}
           {/*auth */}
