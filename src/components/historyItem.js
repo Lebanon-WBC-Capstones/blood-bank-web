@@ -1,12 +1,9 @@
 import React from 'react';
 import bloodIcon from '../sources/bloodIcon.svg';
-import circle from '../sources/thecircle.svg';
 import location from '../sources/location.svg';
 import moment from 'moment';
 
 const HistoryItem = (props) => {
-  console.log(props.item);
-
   const checkDate = (myDate) => {
     if (moment().diff(myDate, 'days') > 7) {
       return moment(myDate).format('MMM DD, YYYY');
@@ -17,17 +14,21 @@ const HistoryItem = (props) => {
 
   return (
     <div className="border-b-2 border-gray-100">
-      <div class=" flex flex-col ">
+      <div className=" flex flex-col ">
         <div className="-ml-44 text-xs text-gray-400 mt-1">
           {checkDate(props.item.date)}
         </div>
-        <div class="">
+        <div>
           <div className="flex flex-row justify-between   ">
             <div className="flex flex-row">
-              <div className="ml-5 transform -rotate-90 text-xs text-gray-400 mb-1">
+              <div className="ml-5 transform -rotate-90 text-xs text-gray-400 mb-1 w-14">
                 {props.item.operation}
               </div>
-              <img className="-mt-8 -mb-3 -ml-12" src={circle} alt="circle" />
+              <img
+                className="-mt-8 -mb-3 -ml-12"
+                src={props.item.image}
+                alt="circle"
+              />
               <img
                 className="ml-1 mt-2 mb-5"
                 src={bloodIcon}
