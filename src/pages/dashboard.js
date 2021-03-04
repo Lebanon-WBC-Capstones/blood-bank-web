@@ -5,7 +5,7 @@ import DashProfile from '../components/dash-profile';
 import feeds from '../assets/dashFeeds.svg';
 import { useState } from 'react';
 import Menu from '../components/menu';
-import BottomWave from '../assets/backPageBottomWave.svg';
+import BottomWave from '../assets/backBottomWave.svg';
 import pp from '../assets/profilepic.png';
 
 export default function Dashboard() {
