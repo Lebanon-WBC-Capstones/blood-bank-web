@@ -17,7 +17,7 @@ const Example = () => {
     />
   );
 };
-function requestDonation() {
+function RequestFormPage() {
   return (
     <div class="h-screen w-full pt-24" style={{ backgroundColor: '#F26868' }}>
       <div
@@ -103,4 +103,4 @@ function requestDonation() {
   );
 }
 
-export default requestDonation;
+export default RequestFormPage;

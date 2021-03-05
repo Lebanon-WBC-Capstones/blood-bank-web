@@ -1,22 +1,23 @@
 import './App.css';
-import LandingPage from './pages/LandingPage';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Dashboard from './pages/DashboardPage.js';
+import EditDetails from './pages/EditPage.js';
+import Feeds from './pages/FeedsPage.js';
+import History from './pages/HistoryPage.js';
+import LandingPage from './pages/Home.js';
+import NotificationPage from './pages/NotificationPage.js';
+import RequestPage from './pages/RequestPage.js';
+import SignIn from './pages/SignInPage.js';
+import SignUp from './pages/SignUpPage.js';
+import RequestFormPage from './pages/RequestFormPage.js';
+
 import AboutUsPage from './pages/AboutUsPage';
-import Dashboard from './pages/DashboardPage';
-import SignIn from './pages/SignInPage';
-import SignUp from './pages/SignUpPage';
-import History from './pages/HistoryPage';
-import Feeds from './pages/FeedsPage';
-import EditDetails from './pages/EditPage';
-import RequestPage from './pages/RequestPage';
 import DonatePage from './pages/DonatePage';
-import NotificationPage from './pages/NotificationPage';
-import RequestFormPage from './pages/RequestFormPage'; //hydi l page yali bdk tn2lya mn lcomp w thtya bl pages .
 import DonationForm from './pages/DonationForm';
 import DonateAppointment from './pages/DonateAppointment';
 import DonationTypePage from './pages/DonationTypePage';
 import UrgentPage from './pages/UrgentPage';
 import VolunteerPage from './pages/VolunteerPage';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
   return (
@@ -26,7 +27,7 @@ function App() {
           <Route path="/">
             <LandingPage />
           </Route>{' '}
-          {/*no auth */}
+          {/*no auth*/}
           <Route exact path="/about">
             <AboutUsPage />
           </Route>{' '}
@@ -58,7 +59,7 @@ function App() {
           <Route exact path="/dashboard/request">
             <RequestPage />
           </Route>{' '}
-          {/*auth */}
+          {/*auth*/}
           <Route exact path="/dashboard/donate">
             <DonatePage />
           </Route>{' '}
@@ -70,19 +71,19 @@ function App() {
           <Route exact path="/request/requestForm">
             <RequestFormPage />
           </Route>{' '}
-          {/*auth */}
+          {/*auth*/}
           <Route exact path="/donate/donationType">
             <DonationTypePage />
           </Route>{' '}
-          {/*auth */}
+          {/*auth*/}
           <Route exact path="/donationType/volunteer">
             <VolunteerPage />
           </Route>{' '}
-          {/*auth */}
+          {/*auth*/}
           <Route exact path="/donationType/urgent">
             <UrgentPage />
           </Route>{' '}
-          {/*auth */}
+          {/*auth*/}
           <Route exact path="/donateAppointment">
             <DonateAppointment />
           </Route>{' '}
