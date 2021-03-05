@@ -31,7 +31,7 @@ export default function SignUp({ setCount, count }) {
           className="flex justify-around mx-auto"
         >
           <button
-            className="bg-pink p-2 font-roboto flex justify-between"
+            className="bg-pink p-2 font-roboto flex justify-between focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
             style={{
               borderRadius: '0.75rem',
               width: 'auto',
@@ -41,7 +41,7 @@ export default function SignUp({ setCount, count }) {
             <img src={gmail} alt="gmail" /> <p className="pl-2">Google</p>
           </button>
           <button
-            className="bg-pink p-2 font-roboto flex justify-between"
+            className="bg-pink p-2 font-roboto flex justify-between focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
             style={{
               borderRadius: '0.75rem',
               width: 'auto',
@@ -70,10 +70,10 @@ export default function SignUp({ setCount, count }) {
             style={{ color: 'rgba(103, 97, 97, 1)' }}
             className="font-roboto m-0.25 "
           >
-            Nickname
+            FullName
           </label>
           <br />
-          <input className="border-2 m-1 w-3/4 h-9 rounded-lg" />
+          <input className="border-2 m-1 w-3/4 h-9 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50" />
           <br />
           <label
             style={{ color: 'rgba(103, 97, 97, 1)' }}
@@ -82,7 +82,7 @@ export default function SignUp({ setCount, count }) {
             Password
           </label>
           <br />
-          <input className="border-2 m-1 w-3/4 h-9 rounded-lg" />
+          <input className="border-2 m-1 w-3/4 h-9 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50" />
           <br />
           <label
             style={{ color: 'rgba(103, 97, 97, 1)' }}
@@ -91,9 +91,13 @@ export default function SignUp({ setCount, count }) {
             Confirm Password
           </label>
           <br />
-          <input className="border-2 m-1 w-3/4 h-9 rounded-lg" />
+          <input className="border-2 m-1 w-3/4 h-9 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50" />
           <br />
-          <input type="checkbox" name="Terms" className="rounded-lg " />{' '}
+          <input
+            type="checkbox"
+            name="Terms"
+            className="rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50 "
+          />{' '}
           <label
             style={{ color: 'rgba(103, 97, 97, 1)' }}
             className="font-roboto m-0.25 text-xs"
@@ -103,7 +107,7 @@ export default function SignUp({ setCount, count }) {
           <div className="flex justify-center mt-2"></div>
           <button
             type="submit"
-            className="bg-pink  w-3/4 rounded-lg h-9 text-gray-500 font-Roboto self-center"
+            className="bg-pink  w-3/4 rounded-lg h-9 text-gray-500 font-Roboto self-center focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
             onClick={() => setCount(count + 1)}
           >
             Sign Up

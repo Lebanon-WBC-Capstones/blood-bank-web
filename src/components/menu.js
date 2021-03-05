@@ -25,7 +25,11 @@ export default function Menu(props) {
       </div>
       <div className="flex flex-row mt-2 w-2/4">
         <div>
-          <img src={props.pp} className="rounded-full border-4 border-white" />
+          <img
+            src={props.pp}
+            alt=" "
+            className="rounded-full border-4 border-white"
+          />
         </div>
         <div className="flex flex-col ml-2">
           <div className="text-lg self-start">
@@ -33,7 +37,7 @@ export default function Menu(props) {
           </div>
           <div className="flex flex-row">
             <div className="flex flex-col">
-              <img src={Edit} />
+              <img src={Edit} alt=" " />
             </div>
             <div className="text-xs">
               <p style={{ color: '#FFEEEE', whiteSpace: 'no-wrap' }}>
@@ -50,42 +54,47 @@ export default function Menu(props) {
         <div className="flex flex-row mb-8">
           <div className="self-center mr-8">
             {' '}
-            <img src={History} />
+            <img src={History} alt=" " />
           </div>
           <div className="mr-20">
             <p>History</p>
           </div>
           <div className="self-center">
-            <img src={arrow} />
+            <img src={arrow} alt=" " />
           </div>
         </div>
         <div className="flex flex-row mb-8">
           <div className="self-center mr-8">
-            <img src={RignBell} />
+            <img src={RignBell} alt=" " />
           </div>
           <div className="mr-11">
             <p>Notification</p>
           </div>
           <div className="self-center">
-            <img src={arrow} />
+            <img src={arrow} alt=" " />
           </div>
         </div>
         <div className="flex flex-row">
           <div className="self-center mr-8">
-            <img src={Language} />
+            <img src={Language} alt=" " />
           </div>
           <div className="mr-14" style={{ marginRight: '3.75rem' }}>
             <p>Language</p>
           </div>
           <div className="self-center">
-            <img src={arrow} />
+            <img src={arrow} alt=" " />
           </div>
         </div>
       </div>
       <div className="flex flex-row ml-6" style={{ marginTop: '40%' }}>
-        <img className="mr-9" src={LogOut} onClick={() => handleLogOut()} />
+        <img
+          className="mr-9"
+          alt=" "
+          src={LogOut}
+          onClick={() => handleLogOut()}
+        />
         <p className="mr-20">Log Out</p>
-        <img src={arrow} />
+        <img src={arrow} alt=" " />
       </div>
     </div>
   );

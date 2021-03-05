@@ -161,7 +161,7 @@ const FeedList = () => {
   ];
 
   return (
-    <div>
+    <div className="px-3 py-1">
       {feed.length !== 0
         ? feed.map((i) => <FeedItem item_user={i.user} item_data={i.data} />)
         : ''}

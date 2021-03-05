@@ -23,7 +23,7 @@ const SignIn = () => {
               type="text"
               id="email"
               name="email"
-              className="  w-3/4 rounded-lg h-9 border-2"
+              className="  w-3/4 rounded-lg h-9 border-2 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
             />
           </div>
 
@@ -36,7 +36,7 @@ const SignIn = () => {
               type="password"
               id="password"
               name="password"
-              className="  w-3/4 rounded-lg h-9 border-2"
+              className="  w-3/4 rounded-lg h-9 border-2 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
             />
           </div>
 
@@ -45,7 +45,7 @@ const SignIn = () => {
               type="checkbox"
               id="remember_me"
               name="remember_me"
-              className="rounded-lg"
+              className="rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
             />
             <label for="remember_me" className="text-gray-500 font-Roboto ml-2">
               Remember Me
@@ -56,7 +56,7 @@ const SignIn = () => {
             <input
               type="submit"
               value="Sign In"
-              className="bg-pink  w-3/4 rounded-lg h-9 text-gray-500 font-Roboto"
+              className="bg-pink  w-3/4 rounded-lg h-9 text-gray-500 font-Roboto focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
             />
           </div>
         </form>

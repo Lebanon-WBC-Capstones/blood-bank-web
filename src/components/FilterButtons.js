@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Filter from '../assets/filter.svg';
-import NotificationPage from '../pages/NotificationPage';
+
 function FilterButtons({ handleValue }) {
   const [type, setType] = useState('');
   const handleType = (e) => {

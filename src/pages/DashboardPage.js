@@ -73,6 +73,7 @@ export default function Dashboard() {
         <img
           src={BottomWave}
           className="w-screen"
+          alt=" "
           style={{ height: '100%', objectFit: 'cover', objectPosition: '0 0' }}
         />
       </div>
