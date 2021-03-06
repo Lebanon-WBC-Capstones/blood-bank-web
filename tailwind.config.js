@@ -20,6 +20,9 @@ module.exports = {
         'pri-red': '#EC7676',
         pink: 'rgba(252, 193, 193, 0.47)',
         white: '#FFF9F9',
+
+        transparent: 'rgba(255, 253, 254, 0)',
+
         greyfont: 'rgba(106, 104, 104, 1)',
       },
       boxShadow: {
