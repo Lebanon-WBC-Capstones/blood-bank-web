@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Filter from '../assets/filter.svg';
 
 function FilterButtons({ handleValue }) {
-  const [type, setType] = useState('');
   const handleType = (e) => {
     handleValue(e.target.value);
   };

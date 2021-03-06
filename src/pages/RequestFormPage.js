@@ -6,7 +6,7 @@ import Wave from '../assets/Wafe.svg';
 import Person from '../assets/Person.svg';
 import Send from '../assets/send.svg';
 import 'react-datepicker/dist/react-datepicker.css';
-import { useParams } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 
 const Example = () => {
   const [startDate, setStartDate] = useState(new Date());
@@ -19,6 +19,7 @@ const Example = () => {
   );
 };
 function RequestFormPage() {
+  const history = useHistory();
   const { type: typex } = useParams();
   return (
     <div class="h-screen w-full pt-24" style={{ backgroundColor: '#F26868' }}>
@@ -30,7 +31,7 @@ function RequestFormPage() {
         <div class="text-gray-500">For {typex}</div>
       </div>
       <div class="ml-4">
-        <img src={Back} alt="images" />
+        <img src={Back} alt="images" onClick={() => history.goBack()} />
       </div>
       <div class="grid grid-cols-2 items-center mt-4">
         <div class="justify-end	">
