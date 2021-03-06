@@ -1,6 +1,6 @@
 import React from 'react';
 import BackPage from '../components/BackPage';
-import Urgent from '../assets/Urgent.svg';
+import Urgent from '../assets/Urgent-2.svg';
 import Volunteer from '../assets/volunteer_1.svg';
 function DonationTypePage() {
   return (
