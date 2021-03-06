@@ -1,6 +1,87 @@
 .App {
   text-align: center;
 }
+.bldcl {
+  position: relative;
+  animation: mymove 1s infinite;
+  animation-timing-function: linear;
+}
+.bldcl2 {
+  position: relative;
+  bottom: 10px;
+  animation: mymove 1s infinite;
+  animation-timing-function: linear;
+  animation-delay: 1s;
+}
+#heart {
+  top: 55vw;
+  right: 8vw;
+}
+#bone {
+  top: 53vw;
+  left: 8vw;
+}
+
+.c1,
+.c2,
+.c3,
+.c4,
+.c5,
+.c6,
+.c7,
+.c8 {
+  position: absolute;
+  width: 5vw;
+}
+.c1 {
+  top: 55vw;
+  left: 20vw;
+  animation: 1s linear 0s infinite mymove;
+}
+.c2 {
+  top: 65vw;
+  left: 25vw;
+  animation: 1s linear 0.5s infinite mymove;
+}
+.c3 {
+  top: 70vw;
+  left: 30vw;
+  animation: 1s linear 0.3s infinite mymove;
+}
+.c4 {
+  top: 62vw;
+  left: 33vw;
+  animation: 1s linear 0.1s infinite mymove;
+}
+.c5 {
+  top: 67vw;
+  left: 43vw;
+  animation: 1s linear 0.7s infinite mymove;
+}
+.c6 {
+  top: 62vw;
+  left: 47vw;
+  animation: 1s linear 0s infinite mymove;
+}
+.c7 {
+  top: 73vw;
+  left: 50vw;
+  animation: 1s linear 0.4s infinite mymove;
+}
+.c8 {
+  top: 67vw;
+  left: 55vw;
+  animation: 1s linear 0.6s infinite mymove;
+}
+
+@keyframes mymove {
+  from {
+    left: 18vw;
+  }
+  to {
+    left: 70vw;
+  }
+}
 
 .App-logo {
   height: 40vmin;
