@@ -1,6 +1,6 @@
 import React from 'react';
 import Location from '../assets/location.svg';
-import Clock from '../assets/clock.svg';
+import Clock from '../assets/clock-2.svg';
 import moment from 'moment';
 function ListView(props) {
   const formatDate = (myDate) => {
