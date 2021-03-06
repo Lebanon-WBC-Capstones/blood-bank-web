@@ -4,32 +4,35 @@ import request from '../assets/dashboard-request-logo.svg';
 import drop from '../assets/dashboard-lastdonate-logo.svg';
 import sandhour from '../assets/dashboard-daysleft-logo.svg';
 import heart from '../assets/dashboard-totaldonate-logo.svg';
+import { Link } from 'react-router-dom';
 
 export default function DashCards() {
   return (
     <div className="pt-3 bg-transparent">
       <div className="mb-5 flex flex-row justify-evenly">
-        <button
-          style={{
-            backgroundColor: 'rgba(247, 244, 250, 0.98)',
-            width: '30vw',
-            height: '30vw',
-          }}
-          className="rounded-lg pl-1 pr-1 shadow-sm grid grid-rows-layout2"
-        >
-          <div className="pt-1 pl-2 pr-1 row-start-1 row-end-2">
-            <img
-              src={request}
-              style={{ height: '20vw' }}
-              className="self-center"
-              alt="donate-logo"
-            />
-          </div>
+        <Link to={`/request`}>
+          <button
+            style={{
+              backgroundColor: 'rgba(247, 244, 250, 0.98)',
+              width: '30vw',
+              height: '30vw',
+            }}
+            className="rounded-lg pl-1 pr-1 shadow-sm grid grid-rows-layout2"
+          >
+            <div className="pt-1 pl-2 pr-1 row-start-1 row-end-2">
+              <img
+                src={request}
+                style={{ height: '20vw' }}
+                className="self-center"
+                alt="donate-logo"
+              />
+            </div>
 
-          <p className="text-s self-center font-roboto text-greyfont row-start-2 row-end-3">
-            Request
-          </p>
-        </button>
+            <p className="text-s self-center font-roboto text-greyfont row-start-2 row-end-3">
+              Request
+            </p>
+          </button>
+        </Link>
 
         <button
           style={{

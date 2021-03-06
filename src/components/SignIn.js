@@ -1,5 +1,6 @@
 import React from 'react';
 import signInLogo from '../assets/logo.svg';
+import { Link } from 'react-router-dom';
 
 const SignIn = () => {
   return (
@@ -53,11 +54,13 @@ const SignIn = () => {
           </div>
 
           <div className="mt-32">
-            <input
-              type="submit"
-              value="Sign In"
-              className="bg-pink  w-3/4 rounded-lg h-9 text-gray-500 font-Roboto focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
-            />
+            <Link to={`/dashboard`}>
+              <input
+                type="submit"
+                value="Sign In"
+                className="bg-pink  w-3/4 rounded-lg h-9 text-gray-500 font-Roboto focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
+              />
+            </Link>
           </div>
         </form>
       </div>

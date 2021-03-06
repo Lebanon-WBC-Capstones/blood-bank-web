@@ -11,86 +11,53 @@ import SignIn from './pages/SignInPage.js';
 import SignUp from './pages/SignUpPage.js';
 import RequestFormPage from './pages/RequestFormPage.js';
 
-import AboutUsPage from './pages/AboutUsPage';
+/*import AboutUsPage from './pages/AboutUsPage';
 import DonatePage from './pages/DonatePage';
 import DonationForm from './pages/DonationForm';
 import DonateAppointment from './pages/DonateAppointment';
 import DonationTypePage from './pages/DonationTypePage';
 import UrgentPage from './pages/UrgentPage';
-import VolunteerPage from './pages/VolunteerPage';
+import VolunteerPage from './pages/VolunteerPage';*/
 
 function App() {
   return (
     <Router>
       <div className="App">
         <Switch>
-          <Route path="/">
-            <LandingPage />
-          </Route>{' '}
-          {/*no auth*/}
-          <Route exact path="/about">
-            <AboutUsPage />
-          </Route>{' '}
+          <Route exact path="/" component={LandingPage} />
           {/*no auth */}
-          <Route exact path="/dashboard">
-            <Dashboard />
-          </Route>{' '}
-          {/*auth */}
-          <Route exact path="/signin">
-            <SignIn />
-          </Route>{' '}
+          <Route path="/signup" component={SignUp} />
           {/*no auth */}
-          <Route exact path="/signup">
-            <SignUp />
-          </Route>{' '}
+          <Route path="/signin" component={SignIn} />
           {/*no auth */}
-          <Route exact path="/history">
-            <History />
-          </Route>{' '}
+          <Route path="/dashboard" component={Dashboard} />
           {/*auth */}
-          <Route exact path="/dashboard/feeds">
-            <Feeds />
-          </Route>{' '}
+          <Route path="/feeds" component={Feeds} />
           {/*auth */}
-          <Route exact path="/editdetails">
-            <EditDetails />
-          </Route>{' '}
+          <Route path="/history" component={History} />
           {/*auth */}
-          <Route exact path="/dashboard/request">
-            <RequestPage />
-          </Route>{' '}
-          {/*auth*/}
-          <Route exact path="/dashboard/donate">
-            <DonatePage />
-          </Route>{' '}
+          <Route path="/editdetails" component={EditDetails} />
           {/*auth */}
-          <Route exact path="/notification">
-            <NotificationPage />
-          </Route>{' '}
+          <Route path="/request" component={RequestPage} />
           {/*auth */}
-          <Route exact path="/request/requestForm">
-            <RequestFormPage />
-          </Route>{' '}
-          {/*auth*/}
-          <Route exact path="/donate/donationType">
-            <DonationTypePage />
-          </Route>{' '}
-          {/*auth*/}
-          <Route exact path="/donationType/volunteer">
-            <VolunteerPage />
-          </Route>{' '}
-          {/*auth*/}
-          <Route exact path="/donationType/urgent">
-            <UrgentPage />
-          </Route>{' '}
-          {/*auth*/}
-          <Route exact path="/donateAppointment">
-            <DonateAppointment />
-          </Route>{' '}
+          <Route path="/notification" component={NotificationPage} />
           {/*auth */}
-          <Route exact path="/donationForm">
-            <DonationForm />
-          </Route>{' '}
+          <Route path="/requestForm:type" component={RequestFormPage} />
+          {/*auth */}
+
+          {/*<Route path="/about" component={AboutUsPage} />
+          {/*no auth 
+          <Route path="/dashboard/donate" component={DonatePage} />
+          {/*auth 
+          <Route path="/donate/donationType" component={DonationTypePage} />
+          {/*auth 
+          <Route path="/donationType/volunteer" component={VolunteerPage} />
+          {/*auth 
+          <Route path="/donationType/urgent" component={UrgentPage} />
+          {/*auth 
+          <Route path="/donateAppointment" component={DonateAppointment} />
+          {/*auth 
+          <Route path="/donationForm" component={DonationForm} />
           {/*auth */}
         </Switch>
       </div>

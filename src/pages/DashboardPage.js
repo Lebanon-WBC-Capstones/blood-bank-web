@@ -55,9 +55,12 @@ export default function Dashboard() {
         <div className="flex justiy-center  text-lg font-roboto text-greyfont">
           <p>Layla</p>
         </div>
-        <div className="flex justiy-center">
-          <img src={feeds} alt="feeds" />
-        </div>
+
+        <Link to={`/feeds`}>
+          <div className="flex justiy-center">
+            <img src={feeds} alt="feeds" />
+          </div>
+        </Link>
       </div>
       <DashProfile pp={pp} />
 

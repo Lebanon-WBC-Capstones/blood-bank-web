@@ -6,6 +6,7 @@ import LogOut from '../assets/menuLogOut.svg';
 import arrow from '../assets/menuArrow.svg';
 import Edit from '../assets/menuEdit.svg';
 import menubg from '../assets/menuBg.svg';
+import { Link } from 'react-router-dom';
 
 export default function Menu(props) {
   function handleLogOut() {}
@@ -39,11 +40,13 @@ export default function Menu(props) {
             <div className="flex flex-col">
               <img src={Edit} alt=" " />
             </div>
-            <div className="text-xs">
-              <p style={{ color: '#FFEEEE', whiteSpace: 'no-wrap' }}>
-                Edit Profile
-              </p>
-            </div>
+            <Link to={`/editdetails`}>
+              <div className="text-xs">
+                <p style={{ color: '#FFEEEE', whiteSpace: 'no-wrap' }}>
+                  Edit Profile
+                </p>
+              </div>
+            </Link>
           </div>
         </div>
       </div>
@@ -51,29 +54,33 @@ export default function Menu(props) {
         className="text-black text-lg flex flex-col ml-6"
         style={{ marginTop: '70%' }}
       >
-        <div className="flex flex-row mb-8">
-          <div className="self-center mr-8">
-            {' '}
-            <img src={History} alt=" " />
+        <Link to={`/history`}>
+          <div className="flex flex-row mb-8">
+            <div className="self-center mr-8">
+              {' '}
+              <img src={History} alt=" " />
+            </div>
+            <div className="mr-20">
+              <p>History</p>
+            </div>
+            <div className="self-center">
+              <img src={arrow} alt=" " />
+            </div>
           </div>
-          <div className="mr-20">
-            <p>History</p>
+        </Link>
+        <Link to={`/notification`}>
+          <div className="flex flex-row mb-8">
+            <div className="self-center mr-8">
+              <img src={RignBell} alt=" " />
+            </div>
+            <div className="mr-11">
+              <p>Notification</p>
+            </div>
+            <div className="self-center">
+              <img src={arrow} alt=" " />
+            </div>
           </div>
-          <div className="self-center">
-            <img src={arrow} alt=" " />
-          </div>
-        </div>
-        <div className="flex flex-row mb-8">
-          <div className="self-center mr-8">
-            <img src={RignBell} alt=" " />
-          </div>
-          <div className="mr-11">
-            <p>Notification</p>
-          </div>
-          <div className="self-center">
-            <img src={arrow} alt=" " />
-          </div>
-        </div>
+        </Link>
         <div className="flex flex-row">
           <div className="self-center mr-8">
             <img src={Language} alt=" " />
@@ -86,16 +93,18 @@ export default function Menu(props) {
           </div>
         </div>
       </div>
-      <div className="flex flex-row ml-6" style={{ marginTop: '40%' }}>
-        <img
-          className="mr-9"
-          alt=" "
-          src={LogOut}
-          onClick={() => handleLogOut()}
-        />
-        <p className="mr-20">Log Out</p>
-        <img src={arrow} alt=" " />
-      </div>
+      <Link to={`/signin`}>
+        <div className="flex flex-row ml-6" style={{ marginTop: '40%' }}>
+          <img
+            className="mr-9"
+            alt=" "
+            src={LogOut}
+            onClick={() => handleLogOut()}
+          />
+          <p className="mr-20">Log Out</p>
+          <img src={arrow} alt=" " />
+        </div>
+      </Link>
     </div>
   );
 }
