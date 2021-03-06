@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../assets/logo.svg';
+import logo from '../assets/signlogo.svg';
 import facebook from '../assets/facebook.svg';
 import gmail from '../assets/gmail.svg';
 export default function SignUp({ setCount, count }) {

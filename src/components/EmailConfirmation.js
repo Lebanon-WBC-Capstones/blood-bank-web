@@ -1,5 +1,5 @@
 import React from 'react';
-import signinlogo from '../assets/logo.svg';
+import signinlogo from '../assets/signlogo.svg';
 import getstarted from '../assets/getstarted.svg';
 import { Link } from 'react-router-dom';
 const EmailConfirmation = () => {

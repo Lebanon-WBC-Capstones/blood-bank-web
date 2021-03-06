@@ -1,5 +1,5 @@
 import React from 'react';
-import signInLogo from '../assets/logo.svg';
+import signInLogo from '../assets/signlogo.svg';
 import { Link } from 'react-router-dom';
 
 const SignIn = () => {
