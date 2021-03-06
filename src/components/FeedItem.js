@@ -18,7 +18,7 @@ const FeedItem = (props) => {
   };
 
   return (
-    <div>
+    <div className="-mt-8 ">
       <div
         className={
           'flex flex-col rounded-lg border-2 bg-white mt-10 h-14 overflow-hidden ' +
