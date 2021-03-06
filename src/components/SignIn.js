@@ -16,9 +16,7 @@ const SignIn = () => {
       <div className=" mt-5">
         <form>
           <div>
-            <label for="email" className="text-gray-500 font-Roboto pr-56">
-              Email
-            </label>
+            <label className="text-gray-500 font-Roboto pr-56">Email</label>
             <br />
             <input
               type="text"
@@ -29,9 +27,7 @@ const SignIn = () => {
           </div>
 
           <div className="mt-6">
-            <label for="password" className="text-gray-500 font-Roboto pr-48">
-              Password
-            </label>
+            <label className="text-gray-500 font-Roboto pr-48">Password</label>
             <br />
             <input
               type="password"
@@ -48,7 +44,7 @@ const SignIn = () => {
               name="remember_me"
               className="rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
             />
-            <label for="remember_me" className="text-gray-500 font-Roboto ml-2">
+            <label className="text-gray-500 font-Roboto ml-2">
               Remember Me
             </label>
           </div>

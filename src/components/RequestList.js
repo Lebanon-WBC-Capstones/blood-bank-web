@@ -165,8 +165,8 @@ const RequestList = ({ type }) => {
   return (
     <div>
       <div className="mt-12">
-        {requestFilter.map((i) => (
-          <RequestItem item_user={i.user} item_data={i.data} />
+        {requestFilter.map((e, i) => (
+          <RequestItem item_user={e.user} item_data={e.data} key={i} />
         ))}
       </div>
     </div>

@@ -30,14 +30,14 @@ export default function DashProfile(props) {
         <path
           d="M30.2562 11.0206L20.3541 0.806967C19.8164 0.285421 18.9203 0.285419 18.3827 0.806962L8.48065 11.0205C2.47671 17.0617 2.52154 26.6234 8.5255 32.6646C14.5295 38.4451 24.2075 38.4451 30.2114 32.6647C36.2153 26.6235 36.2601 17.0618 30.2562 11.0206ZM29.2257 21.7122C29.2257 26.5365 24.7451 31.1 20.0405 31.1C19.2788 31.1 18.6964 30.535 18.6964 29.7962C18.6516 29.1008 19.234 28.5358 19.9509 28.4923C19.9957 28.4923 19.9957 28.4923 20.0405 28.4923C23.2665 28.4923 26.5373 25.0588 26.5373 21.7122C26.5373 20.9734 27.1198 20.4084 27.8815 20.4084C28.5984 20.3649 29.1808 20.9299 29.2257 21.6253C29.2257 21.6688 29.2257 21.6688 29.2257 21.7122Z"
           fill="#FCF7F7"
-          fill-opacity="0.96"
+          fillOpacity="0.96"
         />
         <path
           d="M35 8.93824C35 13.1041 31.6662 16.4607 27.5789 16.4607C23.4917 16.4607 20.1579 13.1041 20.1579 8.93824C20.1579 4.77238 23.4917 1.41577 27.5789 1.41577C31.6662 1.41577 35 4.77238 35 8.93824Z"
           fill="#979191"
-          fill-opacity="0.94"
+          fillOpacity="0.94"
           stroke="#FFF9F9"
-          stroke-width="2"
+          strokeWidth="2"
         />
         <path d={type} fill="#6A6868" />
         <path d={Rh} fill="#F7F9FB" />
@@ -49,9 +49,9 @@ export default function DashProfile(props) {
             width="38.7368"
             height="44.5842"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -100,16 +100,15 @@ export default function DashProfile(props) {
         className="flex flex-row justify-center"
       >
         <div
-          class="p-2"
           style={{
             backgroundColor: 'rgba(255, 231, 231, 1)',
             width: '33vw',
             height: '6vw',
           }}
-          className="flex flex-row justify-evenly rounded-2xl	items-center"
+          className="flex flex-row justify-evenly rounded-2xl	items-center p-2"
         >
           <img src={star} alt="location" className="mr-1" />{' '}
-          <p class=" font-roboto text-s text-greyfont" sty>
+          <p className=" font-roboto text-s text-greyfont" sty>
             Hero Donor
           </p>
         </div>

@@ -85,10 +85,8 @@ const HistoryList = ({ status }) => {
 
   return (
     <div>
-      {historyFilter.map((h) => (
-        <div>
-          <HistoryItem item={h} />
-        </div>
+      {historyFilter.map((h, i) => (
+        <HistoryItem item={h} key={i} />
       ))}
     </div>
   );
