@@ -5,8 +5,11 @@ import Back from '../assets/back.svg';
 import Wave from '../assets/Wafe.svg';
 import Person from '../assets/Person.svg';
 import Send from '../assets/send.svg';
+import Header from '../assets/headerRequest.svg';
 import 'react-datepicker/dist/react-datepicker.css';
+import DateIcon from '../assets/date.svg';
 import { useParams, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Example = () => {
   const [startDate, setStartDate] = useState(new Date());
@@ -22,7 +25,112 @@ function RequestFormPage() {
   const history = useHistory();
   const { type: typex } = useParams();
   return (
-    <div
+    <div>
+      <div className="flex flex-col bg-pri-red h-screen">
+        <div className="bg-pri-red h-screan">
+          <img src={Header} alt="Header" />
+        </div>
+        <div className="flex flex-col -mt-16">
+          <div className="text-gray-600">Request Form</div>
+          <div className="text-gray-400">For {typex}</div>
+        </div>
+        <div className=" flex flex-col ">
+          <div className="ml-4">
+            <img src={Back} alt="images" onClick={() => history.goBack()} />
+          </div>
+          <div className="flex flex-row mt-5 ml-28 ">
+            <div>
+              <select
+                className="text-xs	bg-pri-red	border-2 border-white	rounded-xl h-8 text-white
+               h-10"
+              >
+                <option value="">For Me / Others</option>
+                <option value="me">Me</option>
+                <option value="others">Others</option>
+              </select>
+            </div>
+            <div className="relative	flex-initial ml-8 -mt-4">
+              <span className=" absolute text-3xl top-2 left-3 text-white">
+                A
+              </span>
+              <button className="absolute -right-2 rounded-full w-7 h-7 text-lg align-top leading-4	 text-white bg-gray-600		border-2	border-white	">
+                +
+              </button>
+              <img src={dropRequest} alt="images" />
+            </div>
+          </div>
+
+          <div className="flex flex-col mt-8">
+            <input
+              type="text"
+              id="full-name"
+              name="full-name"
+              className=" w-3/4 rounded-lg h-9 border-2 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50 block mx-auto"
+              placeholder="Full Name"
+            />
+
+            <input
+              type="number"
+              id="phone"
+              name="phone"
+              className=" w-3/4 rounded-lg h-9 border-2 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50 block mx-auto mt-3"
+              placeholder="Phone"
+            />
+
+            <input
+              type="text"
+              id="address"
+              name="address"
+              className=" w-3/4 rounded-lg h-9 border-2 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50 block mx-auto mt-3"
+              placeholder="Address"
+            />
+
+            <input
+              type="text"
+              id="address"
+              name="address"
+              className=" w-3/4 rounded-lg h-9 border-2 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50 block mx-auto mt-3"
+              placeholder="Address"
+            />
+
+            <input
+              type="text"
+              id="purpose"
+              name="purpose"
+              className="h-24 w-3/4 rounded-lg  border-2 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50 block mx-auto mt-3"
+              placeholder="Purpose"
+            />
+            <div className="flex flex-row justify-between mt-3 ml-12 mr-6">
+              <div>
+                <Example />
+              </div>
+              <div>
+                <input
+                  type="number"
+                  id="pints"
+                  name="pints"
+                  className=" w-3/4 rounded-lg h-9 border-2  border-white   "
+                  placeholder="Pints Need?"
+                />
+              </div>
+            </div>
+
+            <div>
+              <div>
+                <img src={Wave} alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default RequestFormPage;
+
+{
+  /*<div
       className="h-screen w-full pt-24"
       style={{ backgroundColor: '#F26868' }}
     >
@@ -38,11 +146,13 @@ function RequestFormPage() {
       </div>
       <div className="grid grid-cols-2 items-center mt-4">
         <div className="justify-end	">
-          <select className="text-xs	bg-transparent	border-2 border-white	rounded-md h-8	 text-white">
-            <option value="">For Me/ Other</option>
-
-            <option value="forme">For mE</option>
-            <option value="other">Other</option>
+          <select
+            name="operation"
+            className="text-xs	bg-white	border-2 border-white	rounded-md h-8 text-black"
+          >
+            <option value="">For Me / Others</option>
+            <option value="me">Me</option>
+            <option value="others">Others</option>
           </select>
         </div>
         <div className="flex justify-items-start">
@@ -96,17 +206,16 @@ function RequestFormPage() {
         <img className="absolute -bottom-20" src={Wave} alt="" />
         <div className="flex mt-4">
           <img className="flex-initial mt-4 ml-4" src={Person} alt="" />
-          <button
-            className="flex-initial flex items-center justify-center mt-20 ml-10 bg-white w-24 rounded-xl	h-10"
-            type="submit"
-          >
-            <div className="flex-initial ">Send</div>
-            <img className=" ml-4 flex-initial" src={Send} alt="" />
-          </button>
+          <Link to={`/urgent`}>
+            <button
+              className="flex-initial flex items-center justify-center mt-20 ml-10 bg-white w-24 rounded-xl	h-10"
+              type="submit"
+            >
+              <div className="flex-initial ">Send</div>
+              <img className=" ml-4 flex-initial" src={Send} alt="" />
+            </button>
+          </Link>
         </div>
       </div>
-    </div>
-  );
+</div>*/
 }
-
-export default RequestFormPage;

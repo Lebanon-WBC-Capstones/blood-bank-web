@@ -33,28 +33,29 @@ export default function DashCards() {
             </p>
           </button>
         </Link>
+        <Link to={`/donation`}>
+          <button
+            style={{
+              backgroundColor: 'rgba(247, 244, 250, 0.98)',
+              width: '30vw',
+              height: '30vw',
+            }}
+            className="rounded-lg pl-1 pr-1 shadow-sm grid grid-rows-layout2"
+          >
+            <div className="pt-1 pl-1 pr-1 row-start-1 row-end-2">
+              <img
+                src={donate}
+                style={{ height: '22vw' }}
+                className="self-center"
+                alt="donate-logo"
+              />
+            </div>
 
-        <button
-          style={{
-            backgroundColor: 'rgba(247, 244, 250, 0.98)',
-            width: '30vw',
-            height: '30vw',
-          }}
-          className="rounded-lg pl-1 pr-1 shadow-sm grid grid-rows-layout2"
-        >
-          <div className="pt-1 pl-1 pr-1 row-start-1 row-end-2">
-            <img
-              src={donate}
-              style={{ height: '22vw' }}
-              className="self-center"
-              alt="donate-logo"
-            />
-          </div>
-
-          <p className="text-s self-center font-roboto pb-1 text-greyfont row-start-2 row-end-3">
-            Donate
-          </p>
-        </button>
+            <p className="text-s self-center font-roboto pb-1 text-greyfont row-start-2 row-end-3">
+              Donate
+            </p>
+          </button>
+        </Link>
       </div>
 
       <div className="ml-3 mb-3">

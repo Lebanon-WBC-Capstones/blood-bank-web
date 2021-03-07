@@ -1,5 +1,6 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import AboutUsPage from './pages/AboutUsPage.js';
 import Dashboard from './pages/DashboardPage.js';
 import EditDetails from './pages/EditPage.js';
 import Feeds from './pages/FeedsPage.js';
@@ -10,14 +11,16 @@ import RequestPage from './pages/RequestPage.js';
 import SignIn from './pages/SignInPage.js';
 import SignUp from './pages/SignUpPage.js';
 import RequestFormPage from './pages/RequestFormPage.js';
+import DonationTypePage from './pages/DonationTypePage.js';
+import UrgentPage from './pages/UrgentPage.js';
+import DonatePage from './pages/DonationRequestConfirmationPage.js';
+import DonateAppointment from './pages/DonateAppointment.js';
 
-/*import AboutUsPage from './pages/AboutUsPage';
-import DonatePage from './pages/DonatePage';
-import DonationForm from './pages/DonationForm';
-import DonateAppointment from './pages/DonateAppointment';
-import DonationTypePage from './pages/DonationTypePage';
-import UrgentPage from './pages/UrgentPage';
-import VolunteerPage from './pages/VolunteerPage';*/
+/*
+import DonateConfirm from './pages/DonationConfirmPage.js';
+import VolunteerPage from './pages/VolunteerPage.js';
+import DonateRejected from './pages/DonationRejectedPage.js';
+*/
 
 function App() {
   return (
@@ -25,6 +28,8 @@ function App() {
       <div className="App">
         <Switch>
           <Route exact path="/" component={LandingPage} />
+          {/*no auth */}
+          <Route path="/aboutus" component={AboutUsPage} />
           {/*no auth */}
           <Route path="/signup" component={SignUp} />
           {/*no auth */}
@@ -44,21 +49,23 @@ function App() {
           {/*auth */}
           <Route path="/requestForm:type" component={RequestFormPage} />
           {/*auth */}
-
-          {/*<Route path="/about" component={AboutUsPage} />
-          {/*no auth 
-          <Route path="/dashboard/donate" component={DonatePage} />
-          {/*auth 
-          <Route path="/donate/donationType" component={DonationTypePage} />
-          {/*auth 
-          <Route path="/donationType/volunteer" component={VolunteerPage} />
-          {/*auth 
-          <Route path="/donationType/urgent" component={UrgentPage} />
-          {/*auth 
-          <Route path="/donateAppointment" component={DonateAppointment} />
-          {/*auth 
-          <Route path="/donationForm" component={DonationForm} />
+          <Route path="/donation" component={DonationTypePage} />
           {/*auth */}
+          <Route path="/urgent" component={UrgentPage} />
+          {/*auth */}
+          <Route path="/donate" component={DonatePage} />
+          {/*auth */}
+          <Route path="/appointment" component={DonateAppointment} />
+          {/*auth */}
+
+          {/*
+          <Route path="/volunteer" component={VolunteerPage} />
+          {/*auth 
+            <Route path="/donateconfirm" component={DonateConfirm} />
+          {/*auth 
+          <Route path="/donaterejected" component={DonateRejected} />
+          {/*auth 
+          */}
         </Switch>
       </div>
     </Router>

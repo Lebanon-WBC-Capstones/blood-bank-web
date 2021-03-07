@@ -3,6 +3,7 @@ import BloodCells from '../assets/bloodcells.svg';
 import Platelets from '../assets/plasma.svg';
 import BloodTube from '../assets/bloodtube_1.svg';
 import BloodContainer from '../assets/bloodContainer.svg';
+import { Link } from 'react-router-dom';
 
 import ListView from './ListView.js';
 
@@ -38,13 +39,15 @@ function ListItem() {
     <div>
       {RequestList.length !== 0
         ? RequestList.map((e, i) => (
-            <ListView
-              photo={e.icon}
-              item_data={e.donation_type}
-              location={e.location}
-              date={e.date}
-              key={i}
-            />
+            <Link to={`/donate`}>
+              <ListView
+                photo={e.icon}
+                item_data={e.donation_type}
+                location={e.location}
+                date={e.date}
+                key={i}
+              />
+            </Link>
           ))
         : ''}
     </div>

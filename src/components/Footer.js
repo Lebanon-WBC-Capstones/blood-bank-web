@@ -3,6 +3,7 @@ import wave from '../assets/waves.svg';
 import Facebook from '../assets/Facebook1.svg';
 import Twitter from '../assets/Twitter.svg';
 import Github from '../assets/Github.svg';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
@@ -64,8 +65,11 @@ export default function Footer() {
               </li>
             </ul>
           </div>
+
           <div style={{ width: '20vw' }}>
-            <h2>About Us</h2>
+            <Link to={`/aboutus`}>
+              <h2>About Us</h2>
+            </Link>
           </div>
         </div>
         <div className="flex-auto">
