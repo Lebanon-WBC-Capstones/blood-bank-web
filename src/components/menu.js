@@ -1,5 +1,5 @@
 import React from 'react';
-import RignBell from '../assets/menuNotification.svg';
+import RignBell from '../assets/notificationIcon.svg';
 import Language from '../assets/menuLanguage.svg';
 import History from '../assets/menuHistory.svg';
 import LogOut from '../assets/menuLogOut.svg';
