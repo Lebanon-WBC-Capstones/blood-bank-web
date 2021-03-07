@@ -4,7 +4,7 @@ import Clock from '../assets/appointmentClock.svg';
 import DateIcon from '../assets/date.svg';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 
 function DonationAppointment() {
   const [startDate, setStartDate] = useState(new Date());
