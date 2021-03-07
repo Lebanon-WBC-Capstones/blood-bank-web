@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import HistoryItem from './HistoryItem.js';
+import HistoryItem from './HistoryItems.js';
 import circleblue from '../sources/circleblue.svg';
 import circlered from '../sources/circlered.svg';
 

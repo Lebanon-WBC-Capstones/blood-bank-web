@@ -3,7 +3,7 @@ import bloodIcon from '../sources/bloodIcon.svg';
 import location from '../sources/location.svg';
 import moment from 'moment';
 
-const HistoryItem = (props) => {
+const HistoryItems = (props) => {
   const checkDate = (myDate) => {
     if (moment().diff(myDate, 'days') > 7) {
       return moment(myDate).format('MMM DD, YYYY');
@@ -53,4 +53,4 @@ const HistoryItem = (props) => {
     </div>
   );
 };
-export default HistoryItem;
+export default HistoryItems;
