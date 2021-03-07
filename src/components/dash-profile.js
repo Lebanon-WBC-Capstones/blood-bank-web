@@ -108,9 +108,7 @@ export default function DashProfile(props) {
           className="flex flex-row justify-evenly rounded-2xl	items-center p-2"
         >
           <img src={star} alt="location" className="mr-1" />{' '}
-          <p className=" font-roboto text-s text-greyfont" sty>
-            Hero Donor
-          </p>
+          <p className=" font-roboto text-s text-greyfont">Hero Donor</p>
         </div>
       </div>
       <div
