@@ -60,10 +60,10 @@ export default function AboutFooter() {
             <h2>Terms</h2>
             <ul className="text-xs underline">
               <li>
-                <a href="#">Privacy Policy</a>
+                <span>Privacy Policy</span>
               </li>
               <li>
-                <a href="#">Terms and Agreement </a>
+                <span>Terms and Agreement </span>
               </li>
             </ul>
           </div>
