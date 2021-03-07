@@ -37,19 +37,17 @@ function ListItem() {
   ];
   return (
     <div>
-      {RequestList.length !== 0
-        ? RequestList.map((e, i) => (
-            <Link to={`/donate`}>
-              <ListView
-                photo={e.icon}
-                item_data={e.donation_type}
-                location={e.location}
-                date={e.date}
-                key={i}
-              />
-            </Link>
-          ))
-        : ''}
+      <Link to={`/donate`}>
+        {RequestList.map((e, i) => (
+          <ListView
+            photo={e.icon}
+            item_data={e.donation_type}
+            location={e.location}
+            date={e.date}
+            key={i}
+          />
+        ))}
+      </Link>
     </div>
   );
 }
