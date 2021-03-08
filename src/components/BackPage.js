@@ -21,7 +21,7 @@ function BackPage(props) {
               className="sm:w-full sm:h-full sm:mt-4 sm:ml-3"
             />
           </div>
-          <h3 className="absolute text-md font-Roboto ml-16 mt-8 font-medium text-2xl text-red-100 sm:ml-24 sm:mt-12 sm:text-4xl">
+          <h3 className="absolute text-md font-Roboto ml-16 mt-8 font-medium text-2xl text-white opacity-80 sm:ml-24 sm:mt-12 sm:text-4xl">
             {props.title}
           </h3>
           <div>

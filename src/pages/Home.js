@@ -4,6 +4,7 @@ import Footer from '../components/Footer';
 import Graph from '../components/graph';
 import LandingLayout from '../components/LandingLayout';
 import HeroesCircles from '../components/HeroesCircles';
+import { Link } from 'react-router-dom';
 
 export default function Home() {
   return (
@@ -12,6 +13,13 @@ export default function Home() {
         className=" text-3xl font-bold font-roboto absolute"
         style={{ top: '30vw', left: '8vw' }}
       >
+        <Link to={`/signup`}>
+          <button className="text-lg mr-8">goo sign up</button>
+        </Link>
+        <Link to={`/signin`}>
+          <button className="text-lg">goo sign in</button>
+        </Link>
+
         <p style={{ color: 'rgba(108, 105, 105, 0.81)' }}>
           <span className="text-pri-red">Find</span> Local Blood <br /> Donors{' '}
           <span className="text-pri-red">{'&'}</span> <br /> Blood{' '}

@@ -1,5 +1,6 @@
 import React from 'react';
 import BloodDrop from '../components/BloodDrop';
+import { Link } from 'react-router-dom';
 function EditInputs() {
   return (
     <div>
@@ -46,11 +47,13 @@ function EditInputs() {
             />
           </div>
           <BloodDrop bloodtype="A+" />
-          <input
-            type="submit"
-            value="Save Changes"
-            className="w-3/4 rounded-lg h-9 text-gray-500 font-Roboto bg-pink mt-10 mb-6 focus:outline-none focus:ring-2 focus:ring-gray-300 sm:text-xl"
-          />
+          <Link to={`/dashboard`}>
+            <input
+              type="submit"
+              value="Save Changes"
+              className="w-3/4 rounded-lg h-9 text-gray-500 font-Roboto bg-pink mt-10 mb-6 focus:outline-none focus:ring-2 focus:ring-gray-300 sm:text-xl"
+            />
+          </Link>
         </form>
       </div>
     </div>
