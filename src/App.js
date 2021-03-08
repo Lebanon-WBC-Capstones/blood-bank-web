@@ -1,96 +1,71 @@
 import './App.css';
-import LandingPage from './pages/LandingPage';
-import AboutUsPage from './pages/AboutUsPage';
-import Dashboard from './pages/DashboardPage';
-import SignIn from './pages/SignInPage';
-import SignUp from './pages/SignUpPage';
-import History from './pages/HistoryPage';
-import Feeds from './pages/FeedsPage';
-import EditDetails from './pages/EditPage';
-import RequestPage from './pages/RequestPage';
-import DonatePage from './pages/DonatePage';
-import NotificationPage from './pages/NotificationPage';
-import RequestFormPage from './pages/RequestFormPage';
-import DonationForm from './pages/DonationForm';
-import DonateAppointment from './pages/DonateAppointment';
-import DonationTypePage from './pages/DonationTypePage';
-import UrgentPage from './pages/UrgentPage';
-import VolunteerPage from './pages/VolunteerPage';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import AboutUsPage from './pages/AboutUsPage.js';
+import Dashboard from './pages/DashboardPage.js';
+import EditDetails from './pages/EditPage.js';
+import Feeds from './pages/FeedsPage.js';
+import History from './pages/HistoryPage.js';
+import LandingPage from './pages/Home.js';
+import NotificationPage from './pages/NotificationPage.js';
+import RequestPage from './pages/RequestPage.js';
+import SignIn from './pages/SignInPage.js';
+import SignUp from './pages/SignUpPage.js';
+import RequestFormPage from './pages/RequestFormPage.js';
+import DonationTypePage from './pages/DonationTypePage.js';
+import UrgentPage from './pages/UrgentPage.js';
+import DonatePage from './pages/DonationRequestConfirmationPage.js';
+import DonateAppointment from './pages/DonateAppointment.js';
+import VolunteerPage from './pages/VolunteerPage.js';
+
+/*
+import DonateConfirm from './pages/DonationConfirmPage.js';
+import DonateRejected from './pages/DonationRejectedPage.js';
+*/
 
 function App() {
   return (
     <Router>
       <div className="App">
         <Switch>
-          <Route path="/">
-            <LandingPage />
-          </Route>{' '}
+          <Route exact path="/" component={LandingPage} />
           {/*no auth */}
-          <Route exact path="/about">
-            <AboutUsPage />
-          </Route>{' '}
+          <Route path="/aboutus" component={AboutUsPage} />
           {/*no auth */}
-          <Route exact path="/dashboard">
-            <Dashboard />
-          </Route>{' '}
-          {/*auth */}
-          <Route exact path="/signin">
-            <SignIn />
-          </Route>{' '}
+          <Route path="/signup" component={SignUp} />
           {/*no auth */}
-          <Route exact path="/signup">
-            <SignUp />
-          </Route>{' '}
+          <Route path="/signin" component={SignIn} />
           {/*no auth */}
-          <Route exact path="/history">
-            <History />
-          </Route>{' '}
+          <Route path="/dashboard" component={Dashboard} />
           {/*auth */}
-          <Route exact path="/dashboard/feeds">
-            <Feeds />
-          </Route>{' '}
+          <Route path="/feeds" component={Feeds} />
           {/*auth */}
-          <Route exact path="/editdetails">
-            <EditDetails />
-          </Route>{' '}
+          <Route path="/history" component={History} />
           {/*auth */}
-          <Route exact path="/dashboard/request">
-            <RequestPage />
-          </Route>{' '}
+          <Route path="/editdetails" component={EditDetails} />
           {/*auth */}
-          <Route exact path="/dashboard/donate">
-            <DonatePage />
-          </Route>{' '}
+          <Route path="/request" component={RequestPage} />
           {/*auth */}
-          <Route exact path="/notification">
-            <NotificationPage />
-          </Route>{' '}
+          <Route path="/notification" component={NotificationPage} />
           {/*auth */}
-          <Route exact path="/request/requestForm">
-            <RequestFormPage />
-          </Route>{' '}
+          <Route path="/requestForm:type" component={RequestFormPage} />
           {/*auth */}
-          <Route exact path="/donate/donationType">
-            <DonationTypePage />
-          </Route>{' '}
+          <Route path="/donation" component={DonationTypePage} />
           {/*auth */}
-          <Route exact path="/donationType/volunteer">
-            <VolunteerPage />
-          </Route>{' '}
+          <Route path="/urgent" component={UrgentPage} />
           {/*auth */}
-          <Route exact path="/donationType/urgent">
-            <UrgentPage />
-          </Route>{' '}
+          <Route path="/donate" component={DonatePage} />
           {/*auth */}
-          <Route exact path="/donateAppointment">
-            <DonateAppointment />
-          </Route>{' '}
+          <Route path="/appointment" component={DonateAppointment} />
           {/*auth */}
-          <Route exact path="/donationForm">
-            <DonationForm />
-          </Route>{' '}
-          {/*auth */}
+          <Route path="/volunteer" component={VolunteerPage} />
+          {/*
+          <Route path="/volunteer" component={VolunteerPage} />
+          {/*auth 
+            <Route path="/donateconfirm" component={DonateConfirm} />
+          {/*auth 
+          <Route path="/donaterejected" component={DonateRejected} />
+          {/*auth 
+          */}
         </Switch>
       </div>
     </Router>
