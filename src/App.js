@@ -16,6 +16,7 @@ import UrgentPage from './pages/UrgentPage.js';
 import DonatePage from './pages/DonationRequestConfirmationPage.js';
 import DonateAppointment from './pages/DonateAppointment.js';
 import VolunteerPage from './pages/VolunteerPage.js';
+import TheContextProvidor from './Context';
 
 /*
 import DonateConfirm from './pages/DonationConfirmPage.js';
@@ -24,41 +25,42 @@ import DonateRejected from './pages/DonationRejectedPage.js';
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Switch>
-          <Route exact path="/" component={LandingPage} />
-          {/*no auth */}
-          <Route path="/aboutus" component={AboutUsPage} />
-          {/*no auth */}
-          <Route path="/signup" component={SignUp} />
-          {/*no auth */}
-          <Route path="/signin" component={SignIn} />
-          {/*no auth */}
-          <Route path="/dashboard" component={Dashboard} />
-          {/*auth */}
-          <Route path="/feeds" component={Feeds} />
-          {/*auth */}
-          <Route path="/history" component={History} />
-          {/*auth */}
-          <Route path="/editdetails" component={EditDetails} />
-          {/*auth */}
-          <Route path="/request" component={RequestPage} />
-          {/*auth */}
-          <Route path="/notification" component={NotificationPage} />
-          {/*auth */}
-          <Route path="/requestForm:type" component={RequestFormPage} />
-          {/*auth */}
-          <Route path="/donation" component={DonationTypePage} />
-          {/*auth */}
-          <Route path="/urgent" component={UrgentPage} />
-          {/*auth */}
-          <Route path="/donate" component={DonatePage} />
-          {/*auth */}
-          <Route path="/appointment" component={DonateAppointment} />
-          {/*auth */}
-          <Route path="/volunteer" component={VolunteerPage} />
-          {/*
+    <TheContextProvidor>
+      <Router>
+        <div className="App">
+          <Switch>
+            <Route exact path="/" component={LandingPage} />
+            {/*no auth */}
+            <Route path="/aboutus" component={AboutUsPage} />
+            {/*no auth */}
+            <Route path="/signup" component={SignUp} />
+            {/*no auth */}
+            <Route path="/signin" component={SignIn} />
+            {/*no auth */}
+            <Route path="/dashboard" component={Dashboard} />
+            {/*auth */}
+            <Route path="/feeds" component={Feeds} />
+            {/*auth */}
+            <Route path="/history" component={History} />
+            {/*auth */}
+            <Route path="/editdetails" component={EditDetails} />
+            {/*auth */}
+            <Route path="/request" component={RequestPage} />
+            {/*auth */}
+            <Route path="/notification" component={NotificationPage} />
+            {/*auth */}
+            <Route path="/requestForm:type" component={RequestFormPage} />
+            {/*auth */}
+            <Route path="/donation" component={DonationTypePage} />
+            {/*auth */}
+            <Route path="/urgent" component={UrgentPage} />
+            {/*auth */}
+            <Route path="/donate" component={DonatePage} />
+            {/*auth */}
+            <Route path="/appointment" component={DonateAppointment} />
+            {/*auth */}
+            <Route path="/volunteer" component={VolunteerPage} />
+            {/*
           <Route path="/volunteer" component={VolunteerPage} />
           {/*auth 
             <Route path="/donateconfirm" component={DonateConfirm} />
@@ -66,9 +68,10 @@ function App() {
           <Route path="/donaterejected" component={DonateRejected} />
           {/*auth 
           */}
-        </Switch>
-      </div>
-    </Router>
+          </Switch>
+        </div>
+      </Router>
+    </TheContextProvidor>
   );
 }
 
