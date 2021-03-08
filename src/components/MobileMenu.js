@@ -28,8 +28,8 @@ const MobileMenu = () => {
             <div className="flex flex-row mt-1">
               <img src={editIcon} alt="editIcon" />
 
-              <Link to="/EditProfile">
-                <span className="text-white text-xs ml-1">Edit Details</span>
+              <Link to={`/editdetails`}>
+                <div className="text-white text-xs ml-1">Edit Details</div>
               </Link>
             </div>
           </div>
@@ -37,7 +37,7 @@ const MobileMenu = () => {
       </div>
 
       <div className="flex flex-col  ml-16 mr-5 -mt-20">
-        <Link to="/History">
+        <Link to={`/history`}>
           <div className="flex flex-row justify-between">
             <div className="flex flex-row">
               <img src={historyIcon} alt="historyIcon" />
@@ -49,7 +49,7 @@ const MobileMenu = () => {
           </div>
         </Link>
 
-        <Link to="/Notification">
+        <Link to={`/notification`}>
           {' '}
           <div className="flex flex-row justify-between mt-10">
             <div className="flex flex-row">
@@ -72,7 +72,7 @@ const MobileMenu = () => {
           </div>
         </div>
 
-        <Link to="/SignIn">
+        <Link to={`/signin`}>
           <div className="flex flex-row justify-between mt-40">
             <div className="flex flex-row">
               <img src={logoutIcon} alt="languageIcon" />
