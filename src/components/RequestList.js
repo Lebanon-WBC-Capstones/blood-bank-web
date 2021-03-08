@@ -4,87 +4,104 @@ const RequestList = ({ type }) => {
   const request = useMemo(
     () => [
       {
-        username: 'Jolie Hobloss',
-        avatar:
-          'https://user-images.githubusercontent.com/12988551/108382684-1f03f000-721a-11eb-901b-3419f392e548.png',
-
-        blood_type: 'AB+',
-        request_type: 'Blood Cells',
-        location: 'Haykal Hospital',
-        amount: '2 pints',
-        phone: '70/4673728',
+        user: {
+          username: 'Jolie Hobloss',
+          avatar:
+            'https://user-images.githubusercontent.com/12988551/108382684-1f03f000-721a-11eb-901b-3419f392e548.png',
+        },
+        data: {
+          blood_type: 'AB+',
+          request_type: 'Blood Cells',
+          location: 'Haykal Hospital',
+          amount: '2 pints',
+          phone: '70/4673728',
+        },
+      },
+      {
+        user: {
+          username: 'Jana Zrayka',
+          avatar:
+            'https://user-images.githubusercontent.com/12988551/108382684-1f03f000-721a-11eb-901b-3419f392e548.png',
+        },
+        data: {
+          blood_type: 'O+',
+          request_type: 'Red Cells',
+          location: 'Nini Hospital',
+          amount: '3 pints',
+          phone: '70/4673728',
+        },
       },
 
       {
-        username: 'Jana Zrayka',
-        avatar:
-          'https://user-images.githubusercontent.com/12988551/108382684-1f03f000-721a-11eb-901b-3419f392e548.png',
-
-        blood_type: 'O+',
-        request_type: 'Red Cells',
-        location: 'Nini Hospital',
-        amount: '3 pints',
-        phone: '70/4673728',
+        user: {
+          username: 'Layla Hammoud',
+          avatar:
+            'https://user-images.githubusercontent.com/12988551/108382684-1f03f000-721a-11eb-901b-3419f392e548.png',
+        },
+        data: {
+          blood_type: 'A+',
+          request_type: 'Plasma',
+          location: 'Mazloum Hospital',
+          amount: '2 pints',
+          phone: '70/4673728',
+        },
+      },
+      {
+        user: {
+          username: 'Mohamad Tassieh',
+          avatar:
+            'https://user-images.githubusercontent.com/12988551/108382684-1f03f000-721a-11eb-901b-3419f392e548.png',
+        },
+        data: {
+          blood_type: 'O-',
+          request_type: 'Blood Cells',
+          location: 'Haykal Hospital',
+          amount: '2 pints',
+          phone: '70/4673728',
+        },
+      },
+      {
+        user: {
+          username: 'Jolie Hobloss',
+          avatar:
+            'https://user-images.githubusercontent.com/12988551/108382684-1f03f000-721a-11eb-901b-3419f392e548.png',
+        },
+        data: {
+          blood_type: 'AB+',
+          request_type: 'Platelets',
+          location: 'Haykal Hospital',
+          amount: '2 pints',
+          phone: '70/4673728',
+        },
       },
 
       {
-        username: 'Layla Hammoud',
-        avatar:
-          'https://user-images.githubusercontent.com/12988551/108382684-1f03f000-721a-11eb-901b-3419f392e548.png',
-
-        blood_type: 'A+',
-        request_type: 'Plasma',
-        location: 'Mazloum Hospital',
-        amount: '2 pints',
-        phone: '70/4673728',
+        user: {
+          username: 'Nabigha Mogharbel',
+          avatar:
+            'https://user-images.githubusercontent.com/12988551/108382684-1f03f000-721a-11eb-901b-3419f392e548.png',
+        },
+        data: {
+          blood_type: 'B+',
+          request_type: 'Blood Cells',
+          location: 'Monla Hospital',
+          amount: '4 pints',
+          phone: '70/4673728',
+        },
       },
-
       {
-        username: 'Mohamad Tassieh',
-        avatar:
-          'https://user-images.githubusercontent.com/12988551/108382684-1f03f000-721a-11eb-901b-3419f392e548.png',
-
-        blood_type: 'O-',
-        request_type: 'Blood Cells',
-        location: 'Haykal Hospital',
-        amount: '2 pints',
-        phone: '70/4673728',
-      },
-
-      {
-        username: 'Jolie Hobloss',
-        avatar:
-          'https://user-images.githubusercontent.com/12988551/108382684-1f03f000-721a-11eb-901b-3419f392e548.png',
-
-        blood_type: 'AB+',
-        request_type: 'Platelets',
-        location: 'Haykal Hospital',
-        amount: '2 pints',
-        phone: '70/4673728',
-      },
-
-      {
-        username: 'Nabigha Mogharbel',
-        avatar:
-          'https://user-images.githubusercontent.com/12988551/108382684-1f03f000-721a-11eb-901b-3419f392e548.png',
-
-        blood_type: 'B+',
-        request_type: 'Blood Cells',
-        location: 'Monla Hospital',
-        amount: '4 pints',
-        phone: '70/4673728',
-      },
-
-      {
-        username: 'AbdulRahman',
-        avatar:
-          'https://user-images.githubusercontent.com/12988551/108382684-1f03f000-721a-11eb-901b-3419f392e548.png',
-
-        blood_type: 'A-',
-        request_type: 'Platelets',
-        location: 'Monla Hospital',
-        amount: '2 pints',
-        phone: '70/4673728',
+        user: {
+          username: 'AbdulRahman',
+          avatar:
+            'https://user-images.githubusercontent.com/12988551/108382684-1f03f000-721a-11eb-901b-3419f392e548.png',
+        },
+        data: {
+          blood_type: 'A-',
+          request_type: 'Platelets',
+          location: 'Monla Hospital',
+          amount: '2 pints',
+          phone: '70/4673728',
+        },
       },
     ],
     []
@@ -153,16 +170,7 @@ const RequestList = ({ type }) => {
     <div>
       <div className="mt-12">
         {requestFilter.map((e, i) => (
-          <RequestItem
-            avatar={e.avatar}
-            location={e.location}
-            phone={e.phone}
-            username={e.username}
-            request_type={e.request_type}
-            blood_type={e.blood_type}
-            amount={e.amount}
-            key={i}
-          />
+          <RequestItem item_user={e.user} item_data={e.data} key={i} />
         ))}
       </div>
     </div>
