@@ -4,6 +4,7 @@ import Clock from '../assets/appointmentClock.svg';
 import DateIcon from '../assets/date.svg';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+//import { Link } from 'react-router-dom';
 
 function DonationAppointment() {
   const [startDate, setStartDate] = useState(new Date());
@@ -48,6 +49,7 @@ function DonationAppointment() {
               />
             </div>
           </div>
+
           <div className="flex flex-row justify-evenly mb-8 mt-36">
             <button className="flex flex-row justify-evenly items-center w-3/4 rounded-lg h-9 text-md text-gray-500 font-Roboto bg-pink mt-10 mb-6 sm:pl-20 focus:outline-none focus:ring-2 focus:ring-gray-300 pl-5 sm:text-xl">
               Confirm Appointment
