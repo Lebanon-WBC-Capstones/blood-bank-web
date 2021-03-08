@@ -1,5 +1,192 @@
 {
-  "btn": {
-    "Reset All": "Reset All"
+  "landingpage": {
+    "find_local_blood_donor_donation_centers": "Find Local Blood Donor Donation Centers",
+    "emergency_blood_request": "Emergency Blood Request",
+    "donate_and_help_others": "Donate And Help Others",
+    "flexible-scheduling": "Flexible Scheduling",
+    "fast_response": "Fast Response",
+    "blood_center": "Blood Center",
+    "meet_our_heroes": "Meet Our Heroes",
+    "so_far_we_have_reached": "So Far We Have Reached",
+    "life_saved": "Life Saved",
+    "requests": "Requests",
+    "requests_done": "Requests Done",
+    "donators": "Donators",
+    "hospitals": "Hospitals",
+    "nini": "Nini",
+    "mazloum": "Mazloum",
+    "haykel": "Haykel",
+    "monla": "Monla",
+    "terms": "Terms",
+    "privacy_policy": "Privacy Policy",
+    "terms_and_agreement": "Terms and agreement",
+    "about_us": "About Us",
+    "copyright": "Copyright",
+    "blood_bank_all_rights_reserved": "Blood Bank All rights reserved"
+  },
+
+  "aboutus": {
+    "about_our_service": "About Our Service",
+    "our_service_is_as_simple_as_saying_hello": "Our Service Is As Simple As Saying Hello",
+    "register": "Register",
+    "request": "Request",
+    "get_notified": "Get Notified",
+    "save_a_life": "Save A Life",
+    "our_team": "Our Team",
+    "contact_us": "Contact Us",
+    "we_appreciate_your_feedback": "We Appreciate Your Feedback",
+    "send": "Send",
+    "enter_your_name": "Enter Your Name",
+    "e_mail": "E-Mail",
+    "enter_your_message": "Enter Your Message",
+    "hospitals": "Hospitals",
+    "nini": "Nini",
+    "mazloum": "Mazloum",
+    "haykel": "Haykel",
+    "monla": "Monla",
+    "terms": "Terms",
+    "privacy_policy": "Privacy Policy",
+    "terms_and_agreement": "Terms and agreement"
+  },
+
+  "signup": {
+    "sign_up_with": "Sign up with",
+    "gmail": "Gmail",
+    "facebook": "Facebook",
+    "or": "Or",
+    "email": "Email",
+    "password": "Password",
+    "confirm_password": "Confirm Password",
+    "i_agree_to_terms_conditions_and_privacy_policy": "I Agree to Terms Conditions and Privacy Policy",
+    "sign_up": "Sign Up"
+  },
+
+  "signin": {
+    "sign_in": "Sign In",
+    "email": "Email",
+    "password": "Password",
+    "remember_me": "Remember Me"
+  },
+
+  "signupconfirm": {
+    "thank_you": "Thank you",
+    "please_check_your_email_to_verify_the_account": "Please check your email to verify the account"
+  },
+
+  "dashboard": {
+    "hero_donor": "Hero Donor",
+    "request": "Request",
+    "donate": "Donate",
+    "your_donations": "Your Donations",
+    "last_donation": "Last Donation",
+    "total_donation": "Total Donations",
+    "days_left": "Days Left"
+  },
+
+  "menu": {
+    "edit_details": "Edit Details",
+    "history": "History",
+    "notifications": "Notifications",
+    "language": "Language",
+    "log_out": "Log out"
+  },
+
+  "editprofile": {
+    "full_name": "Full Name",
+    "address": "Address",
+    "change_password": "Change Password",
+    "save_changes": "Save Changes"
+  },
+
+  "feeds": {
+    "feeds": "Feeds",
+    "request_is_fulfilled": "Request is Fulfilled",
+    "pints": "Pints"
+  },
+
+  "history": {
+    "donation": "Donation",
+    "request": "Request",
+    "all": "All",
+    "plasma": "Plasma",
+    "blood": "Blood",
+    "red_cells": "Red Cells",
+    "platelets": "Platelets"
+  },
+
+  "requesttype": {
+    "request_type": "Request Type",
+    "plasma": "Plasma",
+    "red_cells": "Red Cells",
+    "platelets": "Platelets",
+    "blood": "Blood"
+  },
+
+  "requestform": {
+    "request_form": "Request Form",
+    "for": "For",
+    "for_me": "For Me",
+    "others": "Others",
+    "full_name": "Full Name",
+    "phone": "Phone",
+    "address": "Address",
+    "emergency": "Emergency",
+    "purpose": "Purpose",
+    "pints_need": "Pints Need",
+    "send": "Send"
+  },
+
+  "notification": {
+    "request_type": "Request Type",
+    "blood_type": "Blood Type",
+    "reset_all": "Reset All",
+    "hospital": "Hospital",
+    "plasma": "Plasma",
+    "red_cells": "Red Cells",
+    "platelets": "Platelets",
+    "blood": "Blood",
+    "pints": "Pints"
+  },
+
+  "donatetype": {
+    "pick_your_target": "Pick your target",
+    "urgent": "Urgent",
+    "volunteer": "Volunteer"
+  },
+
+  "volunteerlist": {
+    "welcome_hero": "Welcome Hero",
+    "red_cells": "Red Cells",
+    "platelets": "Platelets",
+    "blood": "Blood",
+    "hospital": "Hospital",
+    "request": "Request"
+  },
+
+  "donationform": {
+    "donation_form": "Donation Form",
+    "red_cells": "Red Cells",
+    "platelets": "Platelets",
+    "blood": "Blood",
+    "pints": "Pints",
+    "hospital": "Hospital",
+    "request": "Request",
+    "done": "Done"
+  },
+
+  "donateappointment": {
+    "i_want_to_donate": "I Want to Donate",
+    "appointment_date": "Appointment Date",
+    "appointment_time": "Appointment Time",
+    "confirm_appointment": "Confirm Appointment"
+  },
+
+  "donationConfirm": {
+    "donation_confirmed": "Donation Confirmed",
+    "thank_you_for_your_donation_please_check_your_email_for_more_information": "Thank You For Your Donation Please Check Your Email For More Information"
+  },
+
+  "donatereject": {
+    "your_last_donation_was_days_ago_let_your_bones_do_their_job": "Your Last Donation Was days ago Let Your Bones do their job"
   }
 }
