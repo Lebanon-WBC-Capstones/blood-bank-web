@@ -2,7 +2,7 @@ import React from 'react';
 import path1 from '../assets/contactFormArm1.svg';
 import path2 from '../assets/contactFormArm2.svg';
 import path3 from '../assets/contactFormArm3.svg';
-import ciclre from '../assets/deco-circles.svg';
+
 import send from '../assets/ic-send.svg';
 
 function ContactUs() {
@@ -12,9 +12,7 @@ function ContactUs() {
         <div class="text-gray-500 text-2xl font-bold	mt-4">Contact Us</div>
         <div class="text-gray-500 mt-4 pl-12">We Appreciate</div>
         <div class="text-gray-500  pl-32">Your Feedback</div>
-        <div class="absolute top-30	left-20">
-          {/* <img src={ciclre} alt="images" /> */}
-        </div>
+        <div class="absolute top-30	left-20"></div>
       </div>
       <div></div>
       <div class="z-10 grid justify-items-start absolute -bottom-80 left-24 mb-6 w-8/12  mb-2">

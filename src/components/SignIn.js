@@ -1,5 +1,6 @@
 import React from 'react';
-import signInLogo from '../assets/logo.svg';
+import signInLogo from '../assets/signlogo.svg';
+import { Link } from 'react-router-dom';
 
 const SignIn = () => {
   return (
@@ -15,28 +16,24 @@ const SignIn = () => {
       <div className=" mt-5">
         <form>
           <div>
-            <label for="email" className="text-gray-500 font-Roboto pr-56">
-              Email
-            </label>
+            <label className="text-gray-500 font-Roboto pr-56">Email</label>
             <br />
             <input
               type="text"
               id="email"
               name="email"
-              className="  w-3/4 rounded-lg h-9 border-2"
+              className="  w-3/4 rounded-lg h-9 border-2 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
             />
           </div>
 
           <div className="mt-6">
-            <label for="password" className="text-gray-500 font-Roboto pr-48">
-              Password
-            </label>
+            <label className="text-gray-500 font-Roboto pr-48">Password</label>
             <br />
             <input
               type="password"
               id="password"
               name="password"
-              className="  w-3/4 rounded-lg h-9 border-2"
+              className="  w-3/4 rounded-lg h-9 border-2 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
             />
           </div>
 
@@ -45,19 +42,21 @@ const SignIn = () => {
               type="checkbox"
               id="remember_me"
               name="remember_me"
-              className="rounded-lg"
+              className="rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
             />
-            <label for="remember_me" className="text-gray-500 font-Roboto ml-2">
+            <label className="text-gray-500 font-Roboto ml-2">
               Remember Me
             </label>
           </div>
 
           <div className="mt-32">
-            <input
-              type="submit"
-              value="Sign In"
-              className="bg-pink  w-3/4 rounded-lg h-9 text-gray-500 font-Roboto"
-            />
+            <Link to={`/dashboard`}>
+              <input
+                type="submit"
+                value="Sign In"
+                className="bg-pink  w-3/4 rounded-lg h-9 text-gray-500 font-Roboto focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
+              />
+            </Link>
           </div>
         </form>
       </div>

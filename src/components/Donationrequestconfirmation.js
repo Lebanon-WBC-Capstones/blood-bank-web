@@ -1,9 +1,11 @@
 import React from 'react';
+
 import bloodIcon from '../assets/blood.svg';
 import personIcon from '../assets/person1.svg';
 import location from '../assets/locationIcon.svg';
 import call from '../assets/call.svg';
 import pints from '../assets/pints.svg';
+import { Link } from 'react-router-dom';
 
 const DonationRequest = () => {
   return (
@@ -53,9 +55,11 @@ const DonationRequest = () => {
           </div>
         </div>
         <div>
-          <button className="text-gray-500 bg-red-100 rounded-md px-3.5 py-0.5">
-            Donate
-          </button>
+          <Link to={`/appointment`}>
+            <button className="text-gray-500 bg-red-100 rounded-md px-3.5 py-0.5">
+              Donate
+            </button>
+          </Link>
         </div>
       </div>
     </div>
