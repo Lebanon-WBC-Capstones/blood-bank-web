@@ -2,8 +2,10 @@ import React from 'react';
 import BloodTube from '../assets/bloodtube_xl.svg';
 import Platelets from '../assets/Platelets_xl.svg';
 import RedCells from '../assets/RedCells_xl.svg';
-import Blood from '../assets/Blood_xl.svg';
 import { Link } from 'react-router-dom';
+
+import Blood from '../assets/blood.svg';
+
 function RequestCards() {
   return (
     <div className="flex flex-row mt-10 sm:ml-40 sm:mt-20 ">

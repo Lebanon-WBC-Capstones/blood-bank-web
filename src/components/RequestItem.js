@@ -1,5 +1,5 @@
 import React from 'react';
-import locationIcon from '../assets/locationIcon.svg';
+import locationIcon from '../assets/location.svg';
 import callIcon from '../assets/callIcon.svg';
 import warningIcon from '../assets/warningIcon.svg';
 import bloodDropIcon from '../assets/bloodDropIcon.svg';

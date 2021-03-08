@@ -1,6 +1,9 @@
 import React from 'react';
 
-import path2 from '../assets/home-pathwout-text.svg';
+import drops from '../assets/blood-drops.svg';
+import path from '../assets/whole-path.svg';
+import path2 from '../assets/graph.svg';
+
 export default function Graph() {
   return (
     <div>

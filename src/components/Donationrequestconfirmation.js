@@ -1,9 +1,10 @@
 import React from 'react';
-import bloodIcon from './assets/blood.svg';
-import personIcon from './assets/person.svg';
-import location from './assets/location.svg';
-import call from './assets/call.svg';
-import pints from './assets/pints.svg';
+
+import bloodIcon from '../assets/blood.svg';
+import personIcon from '../assets/person1.svg';
+import location from '../assets/locationIcon.svg';
+import call from '../assets/call.svg';
+import pints from '../assets/pints.svg';
 import { Link } from 'react-router-dom';
 
 const DonationRequest = () => {

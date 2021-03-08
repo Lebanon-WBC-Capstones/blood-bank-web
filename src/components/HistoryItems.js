@@ -1,6 +1,6 @@
 import React from 'react';
-import bloodIcon from '../sources/bloodIcon.svg';
-import location from '../sources/location.svg';
+import bloodIcon from '../assets/bloodIcon.svg';
+import location from '../assets/location-xs.svg';
 import moment from 'moment';
 
 const HistoryItems = (props) => {

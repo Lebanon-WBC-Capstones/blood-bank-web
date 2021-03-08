@@ -1,7 +1,8 @@
 import React from 'react';
 import Filter from '../assets/filter.svg';
+import { withNamespaces } from 'react-i18next';
 
-function FilterButtons({ handleValue }) {
+function FilterButtons({ handleValue, t }) {
   const handleType = (e) => {
     handleValue(e.target.value);
   };
@@ -48,10 +49,10 @@ function FilterButtons({ handleValue }) {
         className="bg-pink w-auto text-center text-xs text-gray-500 px-4 py-1 font-Roboto rounded-md focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50 "
         onClick={handleReset}
       >
-        Reset All
+        {t('btn.Reset All')}
       </button>
     </div>
   );
 }
 
-export default FilterButtons;
+export default withNamespaces()(FilterButtons);
