@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import logo from '../assets/signlogo.svg';
 import facebook from '../assets/facebook.svg';
 import gmail from '../assets/gmail.svg';
-import { auth } from './firebase.config';
+import { auth } from '../api/firebase.js';
 
 export default function SignUp({ setCount, count }) {
   const [email, setEmail] = useState('');
@@ -17,7 +17,7 @@ export default function SignUp({ setCount, count }) {
     }
   };
 
-  const handleSignUp = async (event, email, password) => {
+  const handleSignUp = async (event) => {
     event.preventDefault();
     auth
       .createUserWithEmailAndPassword(email, password)
@@ -93,11 +93,7 @@ export default function SignUp({ setCount, count }) {
       </div>
 
       <div className="m-5">
-        <form
-          onSubmit={(event) => {
-            handleSignUp(event, email, password);
-          }}
-        >
+        <form onSubmit={handleSignUp}>
           <label
             style={{ color: 'rgba(103, 97, 97, 1)' }}
             className="font-roboto m-0.25 "
@@ -152,7 +148,6 @@ export default function SignUp({ setCount, count }) {
           <button
             type="submit"
             className="bg-pink  w-3/4 rounded-lg h-9 text-gray-500 font-Roboto self-center focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
-            onClick={() => setCount(count + 1)}
           >
             Sign Up
           </button>
