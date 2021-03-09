@@ -1,8 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from '../assets/signlogo.svg';
 import facebook from '../assets/facebook.svg';
 import gmail from '../assets/gmail.svg';
+import { auth } from './firebase.config';
+
 export default function SignUp({ setCount, count }) {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const onChangeHandler = (event) => {
+    const { name, value } = event.currentTarget;
+    if (name === 'userEmail') {
+      setEmail(value);
+    } else {
+      setPassword(value);
+    }
+  };
+
+  const handleSignUp = async (event, email, password) => {
+    event.preventDefault();
+    auth
+      .createUserWithEmailAndPassword(email, password)
+      .then((userCredential) => {
+        let user = userCredential.user;
+        alert('done');
+      })
+      .catch((error) => {
+        let errorCode = error.code;
+        let errorMessage = error.message;
+      });
+  };
+
   return (
     <div
       className="mt-5 flex flex-col justify-center container"
@@ -65,15 +93,25 @@ export default function SignUp({ setCount, count }) {
       </div>
 
       <div className="m-5">
-        <form>
+        <form
+          onSubmit={(event) => {
+            handleSignUp(event, email, password);
+          }}
+        >
           <label
             style={{ color: 'rgba(103, 97, 97, 1)' }}
             className="font-roboto m-0.25 "
           >
-            FullName
+            Email
           </label>
           <br />
-          <input className="border-2 m-1 w-3/4 h-9 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50" />
+          <input
+            name="userEmail"
+            value={email}
+            type="email"
+            onChange={onChangeHandler}
+            className="border-2 m-1 w-3/4 h-9 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
+          />
           <br />
           <label
             style={{ color: 'rgba(103, 97, 97, 1)' }}
@@ -82,7 +120,13 @@ export default function SignUp({ setCount, count }) {
             Password
           </label>
           <br />
-          <input className="border-2 m-1 w-3/4 h-9 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50" />
+          <input
+            name="userPassword"
+            value={password}
+            type="password"
+            onChange={onChangeHandler}
+            className="border-2 m-1 w-3/4 h-9 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
+          />
           <br />
           <label
             style={{ color: 'rgba(103, 97, 97, 1)' }}
