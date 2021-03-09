@@ -4,16 +4,17 @@ import Clock from '../assets/appointmentClock.svg';
 import DateIcon from '../assets/date.svg';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+import { withNamespaces } from 'react-i18next';
 //import { Link } from 'react-router-dom';
 
-function DonationAppointment() {
+function DonationAppointment({ t }) {
   const [startDate, setStartDate] = useState(new Date());
   return (
     <div>
       <form>
         <div className="container max-w-screen-sm mt-10 sm:ml-12 sm:mt-20">
           <label className="font-Roboto text-gray-500 mr-32 sm:mr-80">
-            Appointment date
+            {t('donateappointment.appointment_date')}
           </label>
           <br />
           <div className="flex flex-row justify-evenly mt-0.5">
@@ -34,7 +35,7 @@ function DonationAppointment() {
           </div>
           <div className="mt-2">
             <label className="font-Roboto text-gray-500 mr-32 align-center sm:mr-80">
-              Appointment time
+              {t('donateappointment.appointment_time')}
             </label>
             <br />
             <div className="flex flex-row justify-evenly mt-0.5">
@@ -52,7 +53,7 @@ function DonationAppointment() {
 
           <div className="flex flex-row justify-evenly mb-8 mt-36">
             <button className="flex flex-row justify-evenly items-center w-3/4 rounded-lg h-9 text-md text-gray-500 font-Roboto bg-pink mt-10 mb-6 sm:pl-20 focus:outline-none focus:ring-2 focus:ring-gray-300 pl-5 sm:text-xl">
-              Confirm Appointment
+              {t('donateappointment.confirm_appointment')}
               <img src={Heart} alt="heart" className="pr-8 sm:pr-20" />
             </button>
           </div>
@@ -62,4 +63,4 @@ function DonationAppointment() {
   );
 }
 
-export default DonationAppointment;
+export default withNamespaces()(DonationAppointment);

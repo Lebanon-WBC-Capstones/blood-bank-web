@@ -3,8 +3,8 @@ import vectorOne from '../assets/vectorOne.svg';
 import vectorTwo from '../assets/vectorTwo.svg';
 import vectorThree from '../assets/vectorThree.svg';
 import vectorFour from '../assets/vectorFour.svg';
-
-const TheNumberHydra = () => {
+import { withNamespaces } from 'react-i18next';
+const TheNumberHydra = ({ t }) => {
   return (
     <div>
       <div class="absolute bottom-0 left-0 ml-44 mb-24 ">
@@ -14,7 +14,7 @@ const TheNumberHydra = () => {
               <p>10 K</p>
             </div>
             <div className="flex justify-center pb-1">
-              <p>Lives Saved</p>
+              <p>{t('landingpage.life_saved')}</p>
             </div>
           </div>
         </div>
@@ -24,7 +24,7 @@ const TheNumberHydra = () => {
               <p>12.8 K</p>
             </div>
             <div className="flex justify-center pb-1">
-              <p>Requests</p>
+              <p>{t('landingpage.requests')}</p>
             </div>
           </div>
         </div>
@@ -34,7 +34,7 @@ const TheNumberHydra = () => {
               <p>66%</p>
             </div>
             <div className="flex justify-center pb-1">
-              <p>Requests Done</p>
+              <p>{t('landingpage.requests_done')}</p>
             </div>
           </div>
         </div>
@@ -44,7 +44,7 @@ const TheNumberHydra = () => {
               <p>14.2 K</p>
             </div>
             <div className="flex justify-center pb-1">
-              <p>Donators</p>
+              <p>{t('landingpage.donators')}</p>
             </div>
           </div>
         </div>
@@ -66,4 +66,4 @@ const TheNumberHydra = () => {
   );
 };
 
-export default TheNumberHydra;
+export default withNamespaces()(TheNumberHydra);

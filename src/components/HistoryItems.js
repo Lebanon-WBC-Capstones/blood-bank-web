@@ -2,7 +2,7 @@ import React from 'react';
 import bloodIcon from '../assets/bloodIcon.svg';
 import location from '../assets/location-xs.svg';
 import moment from 'moment';
-
+import { withNamespaces } from 'react-i18next';
 const HistoryItems = (props) => {
   const checkDate = (myDate) => {
     if (moment().diff(myDate, 'days') > 7) {
@@ -22,7 +22,9 @@ const HistoryItems = (props) => {
           <div className="flex flex-row justify-between   ">
             <div className="flex flex-row">
               <div className="ml-5 transform -rotate-90 text-xs text-gray-400 mb-1 w-14">
-                {props.item.operation}
+                {props.item.operation === 'Donation'
+                  ? props.t('history.donation')
+                  : props.t('history.request')}
               </div>
               <img
                 className="-mt-8 -mb-3 -ml-12"
@@ -53,4 +55,4 @@ const HistoryItems = (props) => {
     </div>
   );
 };
-export default HistoryItems;
+export default withNamespaces()(HistoryItems);

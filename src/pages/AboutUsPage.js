@@ -4,7 +4,8 @@ import AboutGraph from '../components/AboutGraph';
 import TeamCircles from '../components/TeamCircles';
 import ContactUs from '../components/ContactUs';
 import AboutFooter from '../components/AboutFooter';
-function AboutUsPage() {
+import { withNamespaces } from 'react-i18next';
+function AboutUsPage({ t }) {
   return (
     <>
       <AboutLayout>
@@ -22,7 +23,7 @@ function AboutUsPage() {
           <AboutGraph />
         </div>
         <div className="absolute " style={{ top: '190vw', right: '0' }}>
-          OUR TEAM
+          {t('aboutus.our_team')}
         </div>
         <div
           className="absolute overflow-hidden"
@@ -47,4 +48,4 @@ function AboutUsPage() {
   );
 }
 
-export default AboutUsPage;
+export default withNamespaces()(AboutUsPage);

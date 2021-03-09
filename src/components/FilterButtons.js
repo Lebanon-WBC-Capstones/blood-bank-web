@@ -49,7 +49,7 @@ function FilterButtons({ handleValue, t }) {
         className="bg-pink w-auto text-center text-xs text-gray-500 px-4 py-1 font-Roboto rounded-md focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50 "
         onClick={handleReset}
       >
-        {t('btn.Reset All')}
+        {t('notification.reset_all')}
       </button>
     </div>
   );

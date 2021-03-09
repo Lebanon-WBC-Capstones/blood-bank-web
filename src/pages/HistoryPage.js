@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import BackPage from '../components/BackPage';
 import HistoryList from '../components/HistoryList';
-
-const HistoryPage = () => {
+import { withNamespaces } from 'react-i18next';
+const HistoryPage = ({ t }) => {
   const [status, setStatus] = useState('');
 
   const handleStatus = (e) => {
@@ -19,9 +19,9 @@ const HistoryPage = () => {
               className="float-right mr-5 border-2 h-10 w-24 rounded-lg pl-2 text-xs text-gray-500 "
               onChange={handleStatus}
             >
-              <option value="all">All</option>
-              <option value="Donation">Donation</option>
-              <option value="Request">Request</option>
+              <option value="all">{t('history.all')}</option>
+              <option value="Donation">{t('history.donation')}</option>
+              <option value="Request">{t('history.request')}</option>
             </select>
           </div>
           <div>
@@ -32,4 +32,4 @@ const HistoryPage = () => {
     </div>
   );
 };
-export default HistoryPage;
+export default withNamespaces()(HistoryPage);

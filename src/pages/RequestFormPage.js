@@ -10,8 +10,8 @@ import 'react-datepicker/dist/react-datepicker.css';
 //import DateIcon from '../assets/date.svg';
 import { useParams, useHistory } from 'react-router-dom';
 //import { Link } from 'react-router-dom';
-
-const Example = () => {
+import { withNamespaces } from 'react-i18next';
+const Example = ({ t }) => {
   const [startDate, setStartDate] = useState(new Date());
   return (
     <DatePicker
@@ -21,7 +21,7 @@ const Example = () => {
     />
   );
 };
-function RequestFormPage() {
+function RequestFormPage({ t }) {
   const history = useHistory();
   const { type: typex } = useParams();
   return (
@@ -31,7 +31,7 @@ function RequestFormPage() {
           <img src={Header} alt="Header" />
         </div>
         <div className="flex flex-col -mt-16">
-          <div className="text-gray-600">Request Form</div>
+          <div className="text-gray-600">{t('requestform.request_form')}</div>
           <div className="text-gray-400">For {typex}</div>
         </div>
         <div className=" flex flex-col ">
@@ -44,7 +44,9 @@ function RequestFormPage() {
                 className="text-xs	bg-pri-red	border-2 border-white	rounded-xl h-8 text-white
                h-10"
               >
-                <option value="">For Me / Others</option>
+                <option value="">
+                  {t('requestform.for')}/{t('requestform.others')}
+                </option>
                 <option value="me">Me</option>
                 <option value="others">Others</option>
               </select>
@@ -66,7 +68,7 @@ function RequestFormPage() {
               id="full-name"
               name="full-name"
               className=" w-3/4 rounded-lg h-9 border-2 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50 block mx-auto"
-              placeholder="Full Name"
+              placeholder={t('requestform.full_name')}
             />
 
             <input
@@ -74,7 +76,7 @@ function RequestFormPage() {
               id="phone"
               name="phone"
               className=" w-3/4 rounded-lg h-9 border-2 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50 block mx-auto mt-3"
-              placeholder="Phone"
+              placeholder={t('requestform.phone')}
             />
 
             <input
@@ -82,7 +84,7 @@ function RequestFormPage() {
               id="address"
               name="address"
               className=" w-3/4 rounded-lg h-9 border-2 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50 block mx-auto mt-3"
-              placeholder="Address"
+              placeholder={t('requestform.address')}
             />
 
             <input
@@ -90,7 +92,7 @@ function RequestFormPage() {
               id="Emergency"
               name="Emergency"
               className=" w-3/4 rounded-lg h-9 border-2 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50 block mx-auto mt-3"
-              placeholder="Emergency"
+              placeholder={t('requestform.emergency')}
             />
 
             <input
@@ -98,7 +100,7 @@ function RequestFormPage() {
               id="purpose"
               name="purpose"
               className="h-24 w-3/4 rounded-lg  border-2 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50 block mx-auto mt-3"
-              placeholder="Purpose"
+              placeholder={t('requestform.purpose')}
             />
             <div className="flex flex-row justify-between mt-3 ml-12 mr-6">
               <div>
@@ -110,7 +112,7 @@ function RequestFormPage() {
                   id="pints"
                   name="pints"
                   className=" w-3/4 rounded-lg h-9 border-2  border-white   "
-                  placeholder="Pints Need?"
+                  placeholder={t('requestform.pints_need')}
                 />
               </div>
             </div>
@@ -127,4 +129,4 @@ function RequestFormPage() {
   );
 }
 
-export default RequestFormPage;
+export default withNamespaces()(RequestFormPage);
