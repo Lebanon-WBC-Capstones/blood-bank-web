@@ -8,3 +8,4 @@ const TheContextProvidor = (props) => {
     <TheContextProvidor value={{ user }}>{props.children}</TheContextProvidor>
   );
 };
+export default TheContextProvidor;
