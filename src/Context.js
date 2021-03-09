@@ -2,10 +2,7 @@ import React, { createContext, useState } from 'react';
 
 export const TheContext = createContext();
 
-const TheContextProvidor = (props) => {
-  const { user, setUser } = useState('Guest');
-  return (
-    <TheContextProvidor value={{ user }}>{props.children}</TheContextProvidor>
-  );
+const Context = (props) => {
+  const { user } = useState('Guest');
+  return <Context.Providor value={{ user }}>{props.children}</Context.Providor>;
 };
-export default TheContextProvidor;
