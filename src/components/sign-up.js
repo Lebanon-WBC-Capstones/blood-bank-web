@@ -24,12 +24,13 @@ export default function SignUp({ setCount, count }) {
     auth
       .createUserWithEmailAndPassword(email, password)
       .then((userCredential) => {
-        let user = userCredential.user;
+        //let user = userCredential.user;
         history.push(`/confirm`);
       })
       .catch((error) => {
-        let errorCode = error.code;
-        let errorMessage = error.message;
+        /*let errorCode = error.code;
+        let errorMessage = error.message;*/
+        console.lo('failed');
       });
   };
 
