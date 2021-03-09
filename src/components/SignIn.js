@@ -1,28 +1,43 @@
 import React, { useState, useEffect } from 'react';
 import signInLogo from '../assets/signlogo.svg';
-import { Link } from 'react-router-dom';
-//import {auth} from './firebase.config';
+import { Link, useHistory } from 'react-router-dom';
+import { auth } from '../api/firebase';
 
 const SignIn = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [displayName, setDisplayName] = useState('');
-  /*useEffect(() => {
-    signIn()
-  }, [email.current.value, password.current.value])*/
-  const handleSubmit = async (e, email, password) => {
-    e.preventDefault();
-    console.log('trtttr');
-  };
+  const [error, setError] = useState('');
+  const history = useHistory();
 
-  const handleChange = (event) => {
-    const { name, value } = event.currentTarget;
+  /*const handleSignIn = (e, email, password) => {
+    e.preventDefault();
+    console.log('hello')
+    auth.signInWithEmailAndPassword(email, password)
+    history.push('/Dashboard');
+    .catch((error) => {
+      setError('Error signing in with password and email!');
+      console.error('Error signing in with password and email', error);
+    });
+    
+   
+  };*/
+  const handleSignIn = (e, email, password) => {
+    e.preventDefault();
+    try {
+      setError('');
+      auth.signInWithEmailAndPassword(email, password);
+      history.push('/dashboard');
+    } catch {
+      setError('Failed');
+    }
+  };
+  const onChangeHandler = (e) => {
+    const { name, value } = e.currentTarget;
+
     if (name === 'userEmail') {
       setEmail(value);
     } else if (name === 'userPassword') {
       setPassword(value);
-    } else if (name === 'displayName') {
-      setDisplayName(value);
     }
   };
 
@@ -37,16 +52,16 @@ const SignIn = () => {
       </div>
 
       <div className=" mt-5">
-        <form onSubmit={(e) => handleSubmit(e, email, password)}>
+        <form onSubmit={(e) => handleSignIn(e, email, password)}>
           <div>
             <label className="text-gray-500 font-Roboto pr-56">Email</label>
             <br />
             <input
               type="email"
-              id="email"
+              id="userEmail"
               name="userEmail"
               value={email}
-              onChange={handleChange}
+              onChange={(e) => onChangeHandler(e)}
               className="  w-3/4 rounded-lg h-9 border-2 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
             />
           </div>
@@ -56,10 +71,10 @@ const SignIn = () => {
             <br />
             <input
               type="password"
-              id="password"
+              id="userPassword"
               name="userPassword"
               value={password}
-              onChange={handleChange}
+              onChange={(e) => onChangeHandler(e)}
               className="  w-3/4 rounded-lg h-9 border-2 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
             />
           </div>
@@ -77,13 +92,11 @@ const SignIn = () => {
           </div>
 
           <div className="mt-32">
-            <Link to={`/dashboard`}>
-              <input
-                type="submit"
-                value="Sign In"
-                className="bg-pink  w-3/4 rounded-lg h-9 text-gray-500 font-Roboto focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
-              />
-            </Link>
+            <input
+              type="submit"
+              value="Sign In"
+              className="bg-pink  w-3/4 rounded-lg h-9 text-gray-500 font-Roboto focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
+            />
           </div>
         </form>
       </div>

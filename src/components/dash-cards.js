@@ -124,7 +124,7 @@ export default function DashCards() {
             </p>
           </div>
           <div className="row-start-3 row-end-4">
-            <p class="font-roboto text-xs text-greyfont">Total Donation</p>
+            <p className="font-roboto text-xs text-greyfont">Total Donation</p>
           </div>
         </button>
         <button
