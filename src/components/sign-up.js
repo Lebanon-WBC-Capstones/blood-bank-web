@@ -3,8 +3,10 @@ import logo from '../assets/signlogo.svg';
 import facebook from '../assets/facebook.svg';
 import gmail from '../assets/gmail.svg';
 import { auth } from '../api/firebase.js';
+import { useHistory } from 'react-router-dom';
 
 export default function SignUp({ setCount, count }) {
+  const history = useHistory();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -23,7 +25,7 @@ export default function SignUp({ setCount, count }) {
       .createUserWithEmailAndPassword(email, password)
       .then((userCredential) => {
         let user = userCredential.user;
-        alert('done');
+        history.push(`/confirm`);
       })
       .catch((error) => {
         let errorCode = error.code;
