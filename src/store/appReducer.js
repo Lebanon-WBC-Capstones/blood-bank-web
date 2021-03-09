@@ -26,13 +26,13 @@ export const initialState = {
 export function appReducer(state, action) {
   switch (action.type) {
     case 'signIn':
-      return { ...initialState.signIn, formSubmitted: true };
+      return { ...initialState.signIn, formSubmitted: false };
     case 'signUp':
-      return { ...initialState.signUp, formSubmitted: true };
+      return { ...initialState.signUp, formSubmitted: false };
     case 'sendRequest':
-      return { ...initialState.request, formSubmitted: true };
+      return { ...initialState.request, formSubmitted: false };
     case 'sendDonate':
-      return { ...initialState.donate, formSubmitted: true };
+      return { ...initialState.donate, formSubmitted: false };
     default:
       throw new Error();
   }
