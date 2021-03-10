@@ -1,8 +1,9 @@
 import React, { createContext, useState } from 'react';
 
-export const TheContext = createContext();
+export const Context = createContext();
 
-const Context = (props) => {
+function ContextProvidor(props) {
   const { user } = useState('Guest');
   return <Context.Providor value={{ user }}>{props.children}</Context.Providor>;
-};
+}
+export default ContextProvidor;
