@@ -6,7 +6,7 @@ import { auth } from '../api/firebase';
 const SignIn = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
+  //const [error, setError] = useState(''); will be used later just to make the app deploy
   const history = useHistory();
 
   const handleSignIn = (e, email, password) => {
