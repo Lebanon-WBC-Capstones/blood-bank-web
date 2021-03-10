@@ -14,5 +14,5 @@ export const ACTION_REQUEST_PLatelets = 'request_platelets';
 export const ACTION_DONATION_PLASMA = 'donation_plasma';
 export const ACTION_DONATION_BLOOD = 'donation_blood';
 export const ACTION_DONATION_REDCELLS = 'donation_redcells';
-export const ACTION_DONATION_PLatelets = 'donation_platelets';
+export const ACTION_DONATION_PLATELETS = 'donation_platelets';
 export const ACTION_TRANSLATE = 'translate';
