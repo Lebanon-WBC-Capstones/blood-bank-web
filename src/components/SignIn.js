@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import signInLogo from '../assets/signlogo.svg';
-import { Link, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { auth } from '../api/firebase';
 
 const SignIn = () => {
