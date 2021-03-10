@@ -121,9 +121,10 @@
     "request": "Request",
     "all": "All",
     "plasma": "Plasma",
-    "blood": "Blood",
+    "blood": "blood",
     "red_cells": "Red Cells",
-    "platelets": "Platelets"
+    "platelets": "Platelets",
+    "hospital": " hospital"
   },
 
   "requesttype": {
@@ -152,12 +153,12 @@
     "request_type": "Request Type",
     "blood_type": "Blood Type",
     "reset_all": "Reset All",
-    "hospital": "Hospital",
+    "hospital": " Hospital",
     "plasma": "Plasma",
     "red_cells": "Red Cells",
     "platelets": "Platelets",
     "blood": "Blood",
-    "pints": "Pints"
+    "pints": " Pints"
   },
 
   "donatetype": {

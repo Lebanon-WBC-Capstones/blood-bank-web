@@ -14,17 +14,17 @@ function FilterButtons({ handleValue, t }) {
       <img src={Filter} alt="filterbtn" />
 
       <select
-        name="Request Type"
+        name={t('notification.request_type')}
         className="bg-pink w-auto text-center text-xs text-gray-500 px-3 py-1 font-Roboto rounded-md focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50 "
         onChange={handleType}
       >
-        <option value="Plasma">Plasma</option>
-        <option value="Red Cells">Red Cells</option>
-        <option value="Blood Cells">Blood Cells</option>
-        <option value="Platelets">Platelets</option>
+        <option value="Plasma">{t('notification.plasma')}</option>
+        <option value="Red Cells">{t('notification.red_cells')}</option>
+        <option value="Blood Cells">{t('notification.blood')}</option>
+        <option value="Platelets">{t('notification.platelets')}</option>
       </select>
       <select
-        name="Blood Type"
+        name={t('notification.blood_type')}
         className="bg-pink w-auto text-center text-xs text-gray-500 px-3 py-1 font-Roboto rounded-md focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50  "
         onChange={handleType}
       >
