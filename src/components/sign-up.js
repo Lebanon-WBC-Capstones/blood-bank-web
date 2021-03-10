@@ -4,33 +4,68 @@ import facebook from '../assets/facebook.svg';
 import gmail from '../assets/gmail.svg';
 import { auth } from '../api/firebase.js';
 import { useHistory } from 'react-router-dom';
+import { provider } from '../api/firebase.js';
 
 export default function SignUp({ setCount, count }) {
   const history = useHistory();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [confirmpass, setConfirmpass] = useState('');
+  const [msg, setMsg] = useState('');
 
   const onChangeHandler = (event) => {
     const { name, value } = event.currentTarget;
     if (name === 'userEmail') {
       setEmail(value);
-    } else {
+    } else if (name === 'userPassword') {
       setPassword(value);
+    } else {
+      setConfirmpass(value);
     }
   };
 
   const handleSignUp = async (event) => {
     event.preventDefault();
+    if (password !== confirmpass) {
+      setMsg('the password not macth');
+    } else {
+      auth
+        .createUserWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+          //let user = userCredential.user;
+          history.push(`/confirm`);
+          setMsg('');
+        })
+        .catch((error) => {
+          //let errorCode = error.code;
+          // let errorMessage = error.message;
+        });
+    }
+  };
+
+  const signInWithGoogle = async (event) => {
+    event.preventDefault();
     auth
-      .createUserWithEmailAndPassword(email, password)
-      .then((userCredential) => {
-        //let user = userCredential.user;
+      .signInWithPopup(provider)
+      .then((result) => {
+        /** @type {firebase.auth.OAuthCredential} */
         history.push(`/confirm`);
+        //let credential = result.credential;
+        // This gives you a Google Access Token. You can use it to access the Google API.
+        //let token = credential.accessToken;
+        // The signed-in user info.
+        // let user = result.user;
+        // ...
       })
       .catch((error) => {
-        /*let errorCode = error.code;
-        let errorMessage = error.message;*/
-        console.lo('failed');
+        // Handle Errors here.
+        // let errorCode = error.code;
+        // let errorMessage = error.message;
+        // The email of the user's account used.
+        //let email = error.email;
+        // The firebase.auth.AuthCredential type that was used.
+        // let credential = error.credential;
+        // ...
       });
   };
 
@@ -67,6 +102,7 @@ export default function SignUp({ setCount, count }) {
               borderRadius: '0.75rem',
               width: 'auto',
             }}
+            onClick={signInWithGoogle}
           >
             {' '}
             <img src={gmail} alt="gmail" /> <p className="pl-2">Google</p>
@@ -134,7 +170,15 @@ export default function SignUp({ setCount, count }) {
             Confirm Password
           </label>
           <br />
-          <input className="border-2 m-1 w-3/4 h-9 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50" />
+          <input
+            type="password"
+            name="userConfirm"
+            value={confirmpass}
+            onChange={onChangeHandler}
+            className="border-2 m-1 w-3/4 h-9 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
+          />
+          <br />
+          <div>{msg}</div>
           <br />
           <input
             type="checkbox"
