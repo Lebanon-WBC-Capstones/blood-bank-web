@@ -9,27 +9,12 @@ const SignIn = () => {
   const [error, setError] = useState('');
   const history = useHistory();
 
-  /*const handleSignIn = (e, email, password) => {
-    e.preventDefault();
-    console.log('hello')
-    auth.signInWithEmailAndPassword(email, password)
-    history.push('/Dashboard');
-    .catch((error) => {
-      setError('Error signing in with password and email!');
-      console.error('Error signing in with password and email', error);
-    });
-    
-   
-  };*/
   const handleSignIn = (e, email, password) => {
     e.preventDefault();
-    try {
-      setError('');
-      auth.signInWithEmailAndPassword(email, password);
-      history.push('/dashboard');
-    } catch {
-      setError('Failed');
-    }
+    const promise = auth.signInWithEmailAndPassword(email, password);
+    promise
+      .then(() => history.push('/dashboard'))
+      .catch((e) => console.log('failed'));
   };
   const onChangeHandler = (e) => {
     const { name, value } = e.currentTarget;
@@ -40,6 +25,13 @@ const SignIn = () => {
       setPassword(value);
     }
   };
+  //This will be in the context file
+  useEffect(() => {
+    const userListener = auth.onAuthStateChanged((user) =>
+      user ? console.log('authen') : console.log('not authen')
+    );
+    return userListener;
+  }, []);
 
   return (
     <div className="bg-transparent container max-width: 640px">
