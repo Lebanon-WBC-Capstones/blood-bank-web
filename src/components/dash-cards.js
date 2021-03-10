@@ -5,8 +5,8 @@ import drop from '../assets/dashboard-lastdonate-logo.svg';
 import sandhour from '../assets/dashboard-daysleft-logo.svg';
 import heart from '../assets/dashboard-totaldonate-logo.svg';
 import { Link } from 'react-router-dom';
-
-export default function DashCards() {
+import { withNamespaces } from 'react-i18next';
+function DashCards({ t }) {
   return (
     <div className="pt-3 bg-transparent">
       <div className="mb-5 flex flex-row justify-evenly">
@@ -29,7 +29,7 @@ export default function DashCards() {
             </div>
 
             <p className="text-s self-center font-roboto text-greyfont row-start-2 row-end-3">
-              Request
+              {t('dashboard.request')}
             </p>
           </button>
         </Link>
@@ -52,7 +52,7 @@ export default function DashCards() {
             </div>
 
             <p className="text-s self-center font-roboto pb-1 text-greyfont row-start-2 row-end-3">
-              Donate
+              {t('dashboard.donate')}
             </p>
           </button>
         </Link>
@@ -60,7 +60,7 @@ export default function DashCards() {
 
       <div className="ml-3 mb-3">
         <p className="text-m font-bold font-roboto text-greyfont">
-          Your Donations
+          {t('dashboard.your_donations')}
         </p>
       </div>
 
@@ -90,7 +90,10 @@ export default function DashCards() {
             </p>
           </div>
           <div className="row-start-3 row-end-4">
-            <p className="font-roboto text-xs text-white">Last Donation</p>
+            <p className="font-roboto text-xs text-white">
+              {' '}
+              {t('dashboard.last_donation')}
+            </p>
           </div>
         </button>
 
@@ -124,7 +127,10 @@ export default function DashCards() {
             </p>
           </div>
           <div className="row-start-3 row-end-4">
-            <p class="font-roboto text-xs text-greyfont">Total Donation</p>
+            <p class="font-roboto text-xs text-greyfont">
+              {' '}
+              {t('dashboard.total_donation')}
+            </p>
           </div>
         </button>
         <button
@@ -153,10 +159,14 @@ export default function DashCards() {
             </p>
           </div>
           <div className="row-start-3 row-end-4">
-            <p className="font-roboto text-xs text-greyfont">Days Left</p>
+            <p className="font-roboto text-xs text-greyfont">
+              {' '}
+              {t('dashboard.days_left')}
+            </p>
           </div>
         </button>
       </div>
     </div>
   );
 }
+export default withNamespaces()(DashCards);

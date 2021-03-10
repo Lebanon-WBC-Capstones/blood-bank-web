@@ -2,16 +2,19 @@ import React from 'react';
 import path1 from '../assets/contactFormArm1.svg';
 import path2 from '../assets/contactFormArm2.svg';
 import path3 from '../assets/contactFormArm3.svg';
-
+import { withNamespaces } from 'react-i18next';
 import send from '../assets/ic-send.svg';
 
-function ContactUs() {
+function ContactUs({ t }) {
   return (
     <div>
       <div>
-        <div class="text-gray-500 text-2xl font-bold	mt-4">Contact Us</div>
-        <div class="text-gray-500 mt-4 pl-12">We Appreciate</div>
-        <div class="text-gray-500  pl-32">Your Feedback</div>
+        <div class="text-gray-500 text-2xl font-bold	mt-4">
+          {' '}
+          {t('aboutus.contact_us')}
+        </div>
+        <div class="text-gray-500 mt-4 pl-12">{t('aboutus.we_appreciate')}</div>
+        <div class="text-gray-500  pl-32">{t('aboutus.your_feedback')}</div>
         <div class="absolute top-30	left-20"></div>
       </div>
       <div></div>
@@ -32,7 +35,7 @@ function ContactUs() {
         <br />
         <div class="w-full flex justify-end">
           <button class="text-gray-500 justify-center flex leadind-4 bg-pink rounded-md w-28 items-center	">
-            Send
+            {t('aboutus.send')}
             <img class="ml-2" src={send} alt="images" />
           </button>
         </div>
@@ -51,4 +54,4 @@ function ContactUs() {
   );
 }
 
-export default ContactUs;
+export default withNamespaces()(ContactUs);

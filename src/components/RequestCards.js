@@ -3,10 +3,10 @@ import BloodTube from '../assets/bloodtube_xl.svg';
 import Platelets from '../assets/Platelets_xl.svg';
 import RedCells from '../assets/RedCells_xl.svg';
 import { Link } from 'react-router-dom';
-
+import { withNamespaces } from 'react-i18next';
 import Blood from '../assets/blood.svg';
 
-function RequestCards() {
+function RequestCards({ t }) {
   return (
     <div className="flex flex-row mt-10 sm:ml-40 sm:mt-20 ">
       <div className="mb-5 flex flex-col justify-between ml-10">
@@ -23,7 +23,7 @@ function RequestCards() {
               </div>
 
               <p className="text-sm font-medium bottom-0 mt-24 font-roboto text-greyfont ">
-                Plasma
+                {t('requesttype.plasma')}
               </p>
             </button>
           </Link>
@@ -41,7 +41,7 @@ function RequestCards() {
               </div>
 
               <p className="text-sm font-medium bottom-0 mt-24 font-roboto text-greyfont ">
-                Red Cells
+                {t('requesttype.red_cells')}
               </p>
             </button>
           </Link>
@@ -61,7 +61,7 @@ function RequestCards() {
               </div>
 
               <p className="text-sm font-medium bottom-0 mt-24 font-roboto text-greyfont ">
-                Platelets
+                {t('requesttype.platelets')}
               </p>
             </button>
           </Link>
@@ -78,7 +78,7 @@ function RequestCards() {
                 <img src={RedCells} alt="tube" className="absolute" />
               </div>
               <p className="text-sm font-medium bottom-0 mt-24 font-roboto text-greyfont ">
-                Blood
+                {t('requesttype.blood')}
               </p>
             </button>
           </Link>
@@ -88,4 +88,4 @@ function RequestCards() {
   );
 }
 
-export default RequestCards;
+export default withNamespaces()(RequestCards);
