@@ -5,7 +5,7 @@ import humanLogo from '../assets/humanLogo.svg';
 import clock from '../assets/clock.svg';
 import smallBlood from '../assets/smallBlood.svg';
 import smallTahaleb from '../assets/smallTahaleb.svg';
-
+import { withNamespaces } from 'react-i18next';
 const FeedItem = (props) => {
   const [open, setOpen] = useState(false);
 
@@ -40,7 +40,9 @@ const FeedItem = (props) => {
               <span className="text-gray-500 text-sm">
                 {props.item_data.operation} is{' '}
               </span>
-              <span className="text-pri-red text-sm">Fulfilled</span>
+              <span className="text-pri-red text-sm">
+                {props.t('feeds.request_is_fulfilled')}
+              </span>
             </p>
           </div>
           <div className="text-gray-300 text-xs mr-2 mt-4 flex flex-row ">
@@ -61,7 +63,8 @@ const FeedItem = (props) => {
                 className=" w-6 h-6 mt-2 ml-2"
               />
               <span className="text-gray-500 text-xs mt-2 ml-1">
-                {props.item_data.amount}{' '}
+                {props.item_data.amount}
+                {props.t('feeds.pints')}
               </span>
             </div>
 
@@ -101,4 +104,4 @@ const FeedItem = (props) => {
   );
 };
 
-export default FeedItem;
+export default withNamespaces()(FeedItem);

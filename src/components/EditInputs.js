@@ -1,14 +1,15 @@
 import React from 'react';
 import BloodDrop from '../components/BloodDrop';
 import { Link } from 'react-router-dom';
-function EditInputs() {
+import { withNamespaces } from 'react-i18next';
+function EditInputs({ t }) {
   return (
     <div>
       <div className="flex flex-col mt-12 sm:mt-20">
         <form>
           <div className="sm:mt-2">
             <label className="font-Roboto text-gray-500 mr-48 sm:mr-96 sm:text-xl">
-              FullName
+              {t('editprofile.full_name')}
             </label>
             <br />
             <input
@@ -18,7 +19,7 @@ function EditInputs() {
           </div>
           <div className="mt-2 sm:mt-3">
             <label className="font-Roboto text-gray-500 mr-52 sm:mr-96 sm:text-xl">
-              Address
+              {t('editprofile.address')}
             </label>
             <br />
             <input
@@ -28,7 +29,7 @@ function EditInputs() {
           </div>
           <div className="mt-2 sm:mt-3">
             <label className="font-Roboto text-gray-500 mr-40 sm:mr-80 sm:text-xl">
-              New password
+              {t('editprofile.change_password')}
             </label>
             <br />
             <input
@@ -38,7 +39,7 @@ function EditInputs() {
           </div>
           <div className="mt-2 sm:mt-3">
             <label className="font-Roboto text-gray-500 mr-36 sm:mr-72 sm:text-xl">
-              Confirm password
+              {t('editprofile.save_changes')}
             </label>
             <br />
             <input
@@ -60,4 +61,4 @@ function EditInputs() {
   );
 }
 
-export default EditInputs;
+export default withNamespaces()(EditInputs);

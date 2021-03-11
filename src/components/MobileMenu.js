@@ -7,8 +7,8 @@ import languageIcon from '../assets/languageIcon.svg';
 import logoutIcon from '../assets/logoutIcon.svg';
 import smallGo from '../assets/smallGo.svg';
 import { Link } from 'react-router-dom';
-
-const MobileMenu = () => {
+import { withNamespaces } from 'react-i18next';
+const MobileMenu = ({ t }) => {
   return (
     <div className="container max-width: 640px">
       <div className="flex flex-row">
@@ -29,7 +29,9 @@ const MobileMenu = () => {
               <img src={editIcon} alt="editIcon" />
 
               <Link to={`/editdetails`}>
-                <div className="text-white text-xs ml-1">Edit Details</div>
+                <div className="text-white text-xs ml-1">
+                  {t('menu.edit_details')}
+                </div>
               </Link>
             </div>
           </div>
@@ -41,7 +43,7 @@ const MobileMenu = () => {
           <div className="flex flex-row justify-between">
             <div className="flex flex-row">
               <img src={historyIcon} alt="historyIcon" />
-              <span className="ml-3">History</span>
+              <span className="ml-3">{t('menu.history')}</span>
             </div>
             <div>
               <img src={smallGo} alt="smallGo" className="mt-1" />
@@ -54,7 +56,7 @@ const MobileMenu = () => {
           <div className="flex flex-row justify-between mt-10">
             <div className="flex flex-row">
               <img src={notificationIcon} alt="notificationIcon" />
-              <span className="ml-3">Notification</span>
+              <span className="ml-3">{t('menu.notifications')}</span>
             </div>
             <div>
               <img src={smallGo} alt="smallGo" className="mt-1" />
@@ -65,7 +67,7 @@ const MobileMenu = () => {
         <div className="flex flex-row justify-between mt-10">
           <div className="flex flex-row">
             <img src={languageIcon} alt="languageIcon" />
-            <span className="ml-3">Language</span>
+            <span className="ml-3">{t('menu.language')}</span>
           </div>
           <div>
             <img src={smallGo} alt="smallGo" className="mt-1" />
@@ -76,7 +78,7 @@ const MobileMenu = () => {
           <div className="flex flex-row justify-between mt-40">
             <div className="flex flex-row">
               <img src={logoutIcon} alt="languageIcon" />
-              <span className="ml-3">Log out</span>
+              <span className="ml-3">{t('menu.log_out')}</span>
             </div>
             <div>
               <img src={smallGo} alt="smallGo" className="mt-1" />

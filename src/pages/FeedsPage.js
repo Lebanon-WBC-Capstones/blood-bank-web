@@ -1,12 +1,12 @@
 import React from 'react';
 import BackPage from '../components/BackPage.js';
 import FeedList from '../components/FeedList.js';
-
-const FeedsPage = () => {
+import { withNamespaces } from 'react-i18next';
+const FeedsPage = ({ t }) => {
   return (
     <div>
-      <BackPage title="Feeds" children={<FeedList />}></BackPage>
+      <BackPage title={t('feeds.feeds')} children={<FeedList />}></BackPage>
     </div>
   );
 };
-export default FeedsPage;
+export default withNamespaces()(FeedsPage);
