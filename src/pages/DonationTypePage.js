@@ -3,10 +3,11 @@ import BackPage from '../components/BackPage';
 import Urgent from '../assets/Urgent-2.svg';
 import Volunteer from '../assets/volunteer_1.svg';
 import { Link } from 'react-router-dom';
-function DonationTypePage() {
+import { withNamespaces } from 'react-i18next';
+function DonationTypePage({ t }) {
   return (
     <div>
-      <BackPage title="Request Type">
+      <BackPage title={t('donatetype.pick_your_target')}>
         <div className="mt16 mb-5 flex flex-wrap   justify-center content-center h-full">
           <div class="mr-8">
             <Link to={`/urgent`}>
@@ -25,7 +26,7 @@ function DonationTypePage() {
                 </div>
 
                 <p className="text-sm font-medium bottom-0 mt-24 font-roboto text-greyfont ">
-                  Urgent
+                  {t('donatetype.urgent')}
                 </p>
               </button>
             </Link>
@@ -47,7 +48,7 @@ function DonationTypePage() {
                 </div>
 
                 <p className="text-sm font-medium bottom-0 mt-24 font-roboto text-greyfont ">
-                  Volunteer
+                  {t('donatetype.volunteer')}
                 </p>
               </button>
             </Link>
@@ -58,4 +59,4 @@ function DonationTypePage() {
   );
 }
 
-export default DonationTypePage;
+export default withNamespaces()(DonationTypePage);

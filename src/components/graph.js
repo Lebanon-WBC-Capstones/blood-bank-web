@@ -1,7 +1,7 @@
 import React from 'react';
 import path2 from '../assets/graph.svg';
-
-export default function Graph() {
+import { withNamespaces } from 'react-i18next';
+function Graph({ t }) {
   return (
     <div>
       <div
@@ -27,7 +27,7 @@ export default function Graph() {
           }}
           class="  bg-red-300  text-xs "
         >
-          Emergency Blood Request
+          {t('landingpage.Emergency_Blood_Request')}
         </button>
         <button
           style={{
@@ -42,7 +42,7 @@ export default function Graph() {
           }}
           class=" bg-red-300  text-xs "
         >
-          Donate and help others
+          {t('landingpage.Donate_and_help_others')}
         </button>
         <button
           style={{
@@ -57,7 +57,7 @@ export default function Graph() {
           }}
           class=" bg-red-300 text-xs "
         >
-          Flexible scheduling
+          {t('landingpage.Flexible_scheduling')}
         </button>
         <button
           style={{
@@ -72,9 +72,10 @@ export default function Graph() {
           }}
           class=" bg-red-300 text-xs"
         >
-          Fast Response
+          {t('landingpage.Fast_Response')}
         </button>
       </div>
     </div>
   );
 }
+export default withNamespaces()(Graph);

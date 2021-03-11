@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import logo from '../assets/signlogo.svg';
 import facebook from '../assets/facebook.svg';
 import gmail from '../assets/gmail.svg';
+import { withNamespaces } from 'react-i18next';
 import { auth } from '../api/firebase.js';
 import { useHistory } from 'react-router-dom';
 import { provider } from '../api/firebase.js';
-
-export default function SignUp({ setCount, count }) {
+function SignUp({ setCount, count, t }) {
   const history = useHistory();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -68,7 +68,6 @@ export default function SignUp({ setCount, count }) {
         // ...
       });
   };
-
   return (
     <div
       className="mt-5 flex flex-col justify-center container"
@@ -87,7 +86,7 @@ export default function SignUp({ setCount, count }) {
           borderBottomWidth: 1,
         }}
       >
-        <p className="text-center font-roboto">Sign Up With</p>
+        <p className="text-center font-roboto">{t('signup.sign_up_with')}</p>
       </div>
       <div>
         <div
@@ -105,7 +104,8 @@ export default function SignUp({ setCount, count }) {
             onClick={signInWithGoogle}
           >
             {' '}
-            <img src={gmail} alt="gmail" /> <p className="pl-2">Google</p>
+            <img src={gmail} alt="gmail" />{' '}
+            <p className="pl-2">{t('signup.gmail')}</p>
           </button>
           <button
             className="bg-pink p-2 font-roboto flex justify-between focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
@@ -115,7 +115,8 @@ export default function SignUp({ setCount, count }) {
             }}
           >
             {' '}
-            <img src={facebook} alt="gmail" /> <p className="pl-2">Facebook</p>
+            <img src={facebook} alt="gmail" />{' '}
+            <p className="pl-2">{t('signup.facebook')}</p>
           </button>
         </div>
 
@@ -127,7 +128,7 @@ export default function SignUp({ setCount, count }) {
             borderBottomWidth: 1,
           }}
         >
-          <p className="text-center font-roboto">Or</p>
+          <p className="text-center font-roboto">{t('signup.or')}</p>
         </div>
       </div>
 
@@ -137,7 +138,7 @@ export default function SignUp({ setCount, count }) {
             style={{ color: 'rgba(103, 97, 97, 1)' }}
             className="font-roboto m-0.25 "
           >
-            Email
+            {t('signup.gmail')}
           </label>
           <br />
           <input
@@ -152,7 +153,7 @@ export default function SignUp({ setCount, count }) {
             style={{ color: 'rgba(103, 97, 97, 1)' }}
             className="font-roboto m-1"
           >
-            Password
+            {t('signup.password')}
           </label>
           <br />
           <input
@@ -167,7 +168,7 @@ export default function SignUp({ setCount, count }) {
             style={{ color: 'rgba(103, 97, 97, 1)' }}
             className="font-roboto m-0.25"
           >
-            Confirm Password
+            {t('signup.confirm_password')}
           </label>
           <br />
           <input
@@ -189,17 +190,18 @@ export default function SignUp({ setCount, count }) {
             style={{ color: 'rgba(103, 97, 97, 1)' }}
             className="font-roboto m-0.25 text-xs"
           >
-            I Agree to Terms Conditions and Privacy Policy
+            {t('signup.i_agree_to_terms_conditions_and_privacy_policy')}
           </label>
           <div className="flex justify-center mt-2"></div>
           <button
             type="submit"
             className="bg-pink  w-3/4 rounded-lg h-9 text-gray-500 font-Roboto self-center focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
           >
-            Sign Up
+            {t('signup.sign_up')}
           </button>
         </form>
       </div>
     </div>
   );
 }
+export default withNamespaces()(SignUp);

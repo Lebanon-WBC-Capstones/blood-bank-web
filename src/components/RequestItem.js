@@ -3,8 +3,23 @@ import locationIcon from '../assets/location.svg';
 import callIcon from '../assets/callIcon.svg';
 import warningIcon from '../assets/warningIcon.svg';
 import bloodDropIcon from '../assets/bloodDropIcon.svg';
-
+import { withNamespaces } from 'react-i18next';
 const RequestItem = (props) => {
+  const gettype = () => {
+    switch (props.item_data.request_type) {
+      case 'Plasma':
+        return props.t('notification.plasma');
+      case 'Red Cells':
+        return props.t('notification.red_cells');
+      case 'Blood Cells':
+        return props.t('notification.blood');
+      case 'Platelets':
+        return props.t('notification.platelets');
+      default:
+        return null;
+    }
+  };
+
   return (
     <div className="container max-width: 640px ">
       <div className="flex flex-row rounded-xl ml-2 mr-2 mt-3 justify-between border-2">
@@ -24,6 +39,7 @@ const RequestItem = (props) => {
               <img src={locationIcon} alt="location" className="w-3 h-3" />
               <span className="text-xs ml-1 mb-1">
                 {props.item_data.location}
+                {props.t('notification.hospital')}
               </span>
             </div>
 
@@ -35,8 +51,11 @@ const RequestItem = (props) => {
             <div className="flex flex-row ml-2">
               <img src={warningIcon} alt="warningIcon" className="w-3 h-3" />
               <span className="text-xs ml-1 mb-1">
-                {props.item_data.request_type} |{' '}
-                <span className="text-red-600">{props.item_data.amount}</span>
+                {gettype()} |{' '}
+                <span className="text-red-600">
+                  {props.item_data.amount}
+                  {props.t('notification.pints')}
+                </span>
               </span>
             </div>
           </div>
@@ -54,4 +73,4 @@ const RequestItem = (props) => {
   );
 };
 
-export default RequestItem;
+export default withNamespaces()(RequestItem);
