@@ -16,7 +16,7 @@ import UrgentPage from './pages/UrgentPage.js';
 import DonatePage from './pages/DonationRequestConfirmationPage.js';
 import DonateAppointment from './pages/DonateAppointment.js';
 import VolunteerPage from './pages/VolunteerPage.js';
-import ContextProvidor from './Context';
+import ContextProvider from './Context';
 
 /*
 import DonateConfirm from './pages/DonationConfirmPage.js';
@@ -25,7 +25,7 @@ import DonateRejected from './pages/DonationRejectedPage.js';
 
 function App() {
   return (
-    <ContextProvidor>
+    <ContextProvider>
       <Router>
         <div className="App">
           <Switch>
@@ -71,7 +71,7 @@ function App() {
           </Switch>
         </div>
       </Router>
-    </ContextProvidor>
+    </ContextProvider>
   );
 }
 
