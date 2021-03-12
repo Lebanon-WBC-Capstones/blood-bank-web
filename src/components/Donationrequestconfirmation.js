@@ -1,5 +1,6 @@
 import React from 'react';
-
+import { useContext } from 'react';
+import { Context } from '../Context';
 import bloodIcon from '../assets/blood.svg';
 import personIcon from '../assets/person1.svg';
 import location from '../assets/locationIcon.svg';
@@ -8,6 +9,7 @@ import pints from '../assets/pints.svg';
 import { Link } from 'react-router-dom';
 import { withNamespaces } from 'react-i18next';
 const DonationRequest = ({ t }) => {
+  const [context, setContext] = useContext(Context);
   return (
     <div className="border-2 border-gray-200 w-80 h-52 ml-7 mt-3 rounded-md ">
       <div className="flex flex-col m-2">

@@ -1,7 +1,9 @@
 import React, { useCallback, useEffect, useState, useMemo } from 'react';
 import RequestItem from './RequestItem.js';
-const RequestList = ({ type }) => {
-  const request = useMemo(
+import firebase from 'firebase';
+import { getDefaultNormalizer } from '@testing-library/dom';
+const RequestList = ({ type, donReq }) => {
+  /*const request = useMemo(
     () => [
       {
         user: {
@@ -105,63 +107,63 @@ const RequestList = ({ type }) => {
       },
     ],
     []
-  );
+  );*/
   const [requestFilter, setRequestFilter] = useState([]);
 
   const filteredHandler = useCallback(() => {
     switch (type) {
       case 'Blood Cells':
         setRequestFilter(
-          request.filter((r) => r.data.request_type === 'Blood Cells')
+          donReq.filter((r) => r.data.donation_type === 'Blood Cells')
         );
         break;
       case 'Red Cells':
         setRequestFilter(
-          request.filter((r) => r.data.request_type === 'Red Cells')
+          donReq.filter((r) => r.data.donation_type === 'Red Cells')
         );
         break;
       case 'Plasma':
         setRequestFilter(
-          request.filter((r) => r.data.request_type === 'Plasma')
+          donReq.filter((r) => r.data.donation_type === 'Plasma')
         );
         break;
       case 'Platelets':
         setRequestFilter(
-          request.filter((r) => r.data.request_type === 'Platelets')
+          donReq.filter((r) => r.data.donation_type === 'Platelets')
         );
         break;
       case 'AB+':
-        setRequestFilter(request.filter((r) => r.data.blood_type === 'AB+'));
+        setRequestFilter(donReq.filter((r) => r.data.bloodType === 'AB+'));
         break;
       case 'AB-':
-        setRequestFilter(request.filter((r) => r.data.blood_type === 'AB-'));
+        setRequestFilter(donReq.filter((r) => r.data.bloodType === 'AB-'));
         break;
       case 'A+':
-        setRequestFilter(request.filter((r) => r.data.blood_type === 'A+'));
+        setRequestFilter(donReq.filter((r) => r.data.bloodType === 'A+'));
         break;
       case 'A-':
-        setRequestFilter(request.filter((r) => r.data.blood_type === 'A-'));
+        setRequestFilter(donReq.filter((r) => r.data.bloodType === 'A-'));
         break;
       case 'B+':
-        setRequestFilter(request.filter((r) => r.data.blood_type === 'B+'));
+        setRequestFilter(donReq.filter((r) => r.data.bloodType === 'B+'));
         break;
       case 'B-':
-        setRequestFilter(request.filter((r) => r.data.blood_type === 'B-'));
+        setRequestFilter(donReq.filter((r) => r.data.bloodType === 'B-'));
         break;
       case 'O+':
-        setRequestFilter(request.filter((r) => r.data.blood_type === 'O+'));
+        setRequestFilter(donReq.filter((r) => r.data.bloodType === 'O+'));
         break;
       case 'O-':
-        setRequestFilter(request.filter((r) => r.data.blood_type === 'O-'));
+        setRequestFilter(donReq.filter((r) => r.data.bloodType === 'O-'));
         break;
       case 'Reset':
         setRequestFilter([]);
         break;
       default:
-        setRequestFilter(request);
+        setRequestFilter(donReq);
         break;
     }
-  }, [request, type]);
+  }, [donReq, type]);
 
   useEffect(() => {
     filteredHandler();
@@ -170,7 +172,7 @@ const RequestList = ({ type }) => {
     <div>
       <div className="mt-12">
         {requestFilter.map((e, i) => (
-          <RequestItem item_user={e.user} item_data={e.data} key={i} />
+          <RequestItem data={e} key={i} />
         ))}
       </div>
     </div>
