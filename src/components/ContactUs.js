@@ -9,27 +9,15 @@ function ContactUs({ t }) {
   return (
     <div>
       <div>
-        <div class="text-gray-500 text-2xl font-bold	mt-4">
-          {' '}
-          {t('aboutus.contact_us')}
-        </div>
+        <div> {t('aboutus.contact_us')}</div>
         <div class="text-gray-500 mt-4 pl-12">{t('aboutus.we_appreciate')}</div>
-        <div class="text-gray-500  pl-32">{t('aboutus.your_feedback')}</div>
-        <div class="absolute top-30	left-20"></div>
-      </div>
-      <div></div>
-      <div class="z-10 grid justify-items-start absolute -bottom-80 left-24 mb-6 w-8/12  mb-2">
-        <input
-          class="bg-pink rounded-md pl-4 leading-8	 text-xs text-gray-500 font-Robot w-full	"
-          placeholder="Enter Your Name"
-        />
 
         <input
-          class="bg-pink rounded-md pl-4 leading-8 mt-6	 text-xs text-gray-500 font-Robot w-full	"
+          className="bg-pink rounded-md pl-4 leading-8 mt-6	 text-xs text-gray-500 font-Robot w-full	"
           placeholder="E-mail"
         />
         <textarea
-          class="bg-pink rounded-md pl-4 leading-8 mt-6	h-24 text-xs text-gray-500 font-Robot w-full	"
+          className="bg-pink rounded-md pl-4 leading-8 mt-6	h-24 text-xs text-gray-500 font-Robot w-full	"
           placeholder="Enter Your Message..."
         ></textarea>
         <br />
@@ -41,13 +29,13 @@ function ContactUs({ t }) {
         </div>
       </div>
 
-      <div class="absolute -bottom-80 left-0 z-0	">
+      <div className="absolute -bottom-80 left-0 z-0	">
         <img src={path1} alt="images" />
       </div>
-      <div class="absolute -bottom-80 left-0 z-0	">
+      <div className="absolute -bottom-80 left-0 z-0	">
         <img src={path2} alt="images" />
       </div>
-      <div class="absolute -bottom-80 left-0 z-0	">
+      <div className="absolute -bottom-80 left-0 z-0	">
         <img src={path3} alt="images" />
       </div>
     </div>
