@@ -4,7 +4,7 @@ import signInLogo from '../assets/signlogo.svg';
 import { useHistory } from 'react-router-dom';
 import { auth } from '../api/firebase';
 
-const SignIn = ({t}) => {
+const SignIn = ({ t }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   //const [error, setError] = useState(''); will be used later just to make the app deploy

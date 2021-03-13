@@ -8,11 +8,8 @@ import send from '../assets/ic-send.svg';
 function ContactUs({ t }) {
   return (
     <div>
-    <div>
       <div>
-          {' '}
-          {t('aboutus.contact_us')}
-        </div>
+        <div> {t('aboutus.contact_us')}</div>
         <div class="text-gray-500 mt-4 pl-12">{t('aboutus.we_appreciate')}</div>
 
         <input
