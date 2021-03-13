@@ -1,70 +1,50 @@
-import React, { useEffect, useCallback, useState } from 'react';
+import React, { useEffect, useCallback, useState, useContext } from 'react';
 import HistoryItem from './HistoryItems.js';
 import circleblue from '../assets/circleblue.svg';
 import circlered from '../assets/circlered.svg';
+import { firestore } from '../api/firebase.js';
+import { Context } from '../Context';
 
-const history = [
-  {
-    operation: 'Donation',
-    type: 'Red Cells',
-    amount: '4 pints',
-    location: 'Mazloum',
-    date: '2021-03-01T15:47:40.314Z',
-    image: circleblue,
-  },
-  {
-    operation: 'Request',
-    type: 'blood',
-    amount: '10 pints',
-    location: 'Monla ',
-    date: '2021-02-18T15:47:40.314Z',
-    image: circlered,
-  },
-  {
-    operation: 'Donation',
-    type: 'Platelets',
-    amount: '6 pints',
-    location: 'Nini',
-    date: '2021-02-18T15:47:40.314Z',
-    image: circleblue,
-  },
-  {
-    operation: 'Donation',
-    type: 'Plazma donation',
-    amount: '6 pints',
-    location: 'Nini',
-    date: '2021-02-18T15:47:40.314Z',
-    image: circleblue,
-  },
-  {
-    operation: 'Request',
-    type: 'Plazma donation',
-    amount: '6 pints',
-    location: 'Nini',
-    date: '2021-02-18T15:47:40.314Z',
-    image: circlered,
-  },
-  {
-    operation: 'Donation',
-    type: 'Plazma donation',
-    amount: '6 pints',
-    location: 'Nini',
-    date: '2021-02-18T15:47:40.314Z',
-    image: circleblue,
-  },
-  {
-    operation: 'Request',
-    type: 'Plazma donation',
-    amount: '6 pints',
-    location: 'Nini',
-    date: '2021-02-18T15:47:40.314Z',
-    image: circlered,
-  },
-];
 const HistoryList = ({ status }) => {
   const [historyFilter, setHistoryFilter] = useState([]);
+  const [state, dispatch] = useContext(Context);
+
+  const [request, setRequest] = useState([]);
+  const [donation, setDonation] = useState([]);
+  const RequestList = [];
+  const DonationList = [];
+
+  const getRequest = async () => {
+    return firestore
+      .collection('Request')
+      .where('userId', '==', state.setUser.uid)
+      .onSnapshot((snapshot) => {
+        snapshot.forEach((doc) =>
+          RequestList.push({ ...doc.data(), image: circleblue })
+        );
+        setRequest(RequestList);
+      });
+  };
+
+  const getDonation = async () => {
+    return firestore
+      .collection('Donation')
+      .where('userId', '==', state.setUser.uid)
+      .onSnapshot((snapshot) => {
+        snapshot.forEach((doc) =>
+          DonationList.push({ ...doc.data(), image: circlered })
+        );
+        setDonation(DonationList);
+      });
+  };
+
+  useEffect(() => {
+    getDonation();
+    getRequest();
+  }, []);
 
   const filteredHandler = useCallback(() => {
+    let history = [...request, ...donation];
     switch (status) {
       case 'Donation':
         setHistoryFilter(history.filter((h) => h.operation === 'Donation'));
@@ -76,7 +56,8 @@ const HistoryList = ({ status }) => {
         setHistoryFilter(history);
         break;
     }
-  }, [status]);
+  }, [status, request, donation]);
+
   useEffect(() => {
     filteredHandler();
   }, [filteredHandler]);

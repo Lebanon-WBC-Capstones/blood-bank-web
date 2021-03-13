@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import donate from '../assets/dashboard-donate-logo.svg';
 import request from '../assets/dashboard-request-logo.svg';
 import drop from '../assets/dashboard-lastdonate-logo.svg';
@@ -6,7 +6,27 @@ import sandhour from '../assets/dashboard-daysleft-logo.svg';
 import heart from '../assets/dashboard-totaldonate-logo.svg';
 import { Link } from 'react-router-dom';
 import { withNamespaces } from 'react-i18next';
+import { firestore } from '../api/firebase.js';
+import { Context } from '../Context';
 function DashCards({ t }) {
+  const [state, dispatch] = useContext(Context);
+  let d = new Date();
+  const [donation, setDonation] = useState([]);
+  const DonationList = [];
+  const getDonation = async () => {
+    return firestore
+      .collection('Donation')
+      .where('userId', '==', state.setUser.uid)
+      .onSnapshot((snapshot) => {
+        snapshot.forEach((doc) => DonationList.push({ ...doc.data() }));
+        setDonation(DonationList);
+      });
+  };
+
+  useEffect(() => {
+    getDonation();
+  }, []);
+
   return (
     <div className="pt-3 bg-transparent">
       <div className="mb-5 flex flex-row justify-evenly">
@@ -83,10 +103,10 @@ function DashCards({ t }) {
           </div>
           <div className="flex justify-center row-start-2 row-end-3">
             <p className="font-roboto text-white" style={{ fontSize: '10vw' }}>
-              9{' '}
+              {d.getDate()}{' '}
             </p>{' '}
             <p className="font-roboto text-white" style={{ fontSize: '5vw' }}>
-              June
+              {d.toLocaleString('en-us', { month: 'long' })}
             </p>
           </div>
           <div className="row-start-3 row-end-4">
@@ -123,7 +143,7 @@ function DashCards({ t }) {
               className="font-roboto text-greyfont"
               style={{ fontSize: '10vw' }}
             >
-              10
+              {donation.length}
             </p>
           </div>
           <div className="row-start-3 row-end-4">

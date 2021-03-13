@@ -1,20 +1,30 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { withNamespaces } from 'react-i18next';
 import signInLogo from '../assets/signlogo.svg';
 import { useHistory } from 'react-router-dom';
 import { auth } from '../api/firebase';
+import { Context } from '../Context';
 
 const SignIn = ({ t }) => {
+  const [state, dispatch] = useContext(Context);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  //const [error, setError] = useState(''); will be used later just to make the app deploy
   const history = useHistory();
 
   const handleSignIn = (e, email, password) => {
     e.preventDefault();
     const promise = auth.signInWithEmailAndPassword(email, password);
     promise
-      .then(() => history.push('/dashboard'))
+      .then((userCredential) => {
+        let user = userCredential.user;
+        dispatch({
+          type: 'CREATE_USER',
+          isLogged: 'true',
+          setUser: user,
+          language: 'english',
+        });
+        history.push('/dashboard');
+      })
       .catch((e) => console.log('failed'));
   };
   const onChangeHandler = (e) => {

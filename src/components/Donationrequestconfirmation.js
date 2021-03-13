@@ -1,5 +1,5 @@
-import React from 'react';
-
+import React, { useState, useContext } from 'react';
+import { useParams } from 'react-router-dom';
 import bloodIcon from '../assets/blood.svg';
 import personIcon from '../assets/person1.svg';
 import location from '../assets/locationIcon.svg';
@@ -7,18 +7,42 @@ import call from '../assets/call.svg';
 import pints from '../assets/pints.svg';
 import { Link } from 'react-router-dom';
 import { withNamespaces } from 'react-i18next';
+import BloodCells from '../assets/bloodcells.svg';
+import Platelets from '../assets/plasma.svg';
+import BloodTube from '../assets/bloodtube_1.svg';
+import BloodContainer from '../assets/bloodContainer.svg';
+
 const DonationRequest = ({ t }) => {
+  const { name: namex } = useParams();
+  const { phone: phonex } = useParams();
+  const { location: locationx } = useParams();
+  const { pints: pintsx } = useParams();
+  const { type: typex } = useParams();
+
+  const gettype = () => {
+    switch (typex) {
+      case 'Plasma Request':
+        return BloodTube;
+      case 'Red Cells Request':
+        return BloodCells;
+      case 'Blood Request':
+        return BloodContainer;
+      case 'Platelets Request':
+        return Platelets;
+      default:
+        return null;
+    }
+  };
+
   return (
     <div className="border-2 border-gray-200 w-80 h-52 ml-7 mt-3 rounded-md ">
       <div className="flex flex-col m-2">
         <div className="flex flex-row justify-between">
           <div>
-            <h3 className="text-gray-500">
-              Red Blood {t('donationform.request')}
-            </h3>
+            <h3 className="text-gray-500">{typex}</h3>
           </div>
           <div>
-            <img src={bloodIcon} alt="blood icon" />
+            <img src={gettype()} alt="blood icon" />
           </div>
         </div>
         <div className="flex flex-col -mt-4">
@@ -27,9 +51,7 @@ const DonationRequest = ({ t }) => {
               {' '}
               <img src={personIcon} alt="person icon" />{' '}
             </div>
-            <div className="text-xs text-gray-500 ml-2 mt-1">
-              Nabigha mogharbel
-            </div>
+            <div className="text-xs text-gray-500 ml-2 mt-1">{namex}</div>
           </div>
 
           <div className="flex flex-row mb-1 ">
@@ -38,7 +60,7 @@ const DonationRequest = ({ t }) => {
               <img src={location} alt="location icon" />{' '}
             </div>
             <div className="text-xs text-gray-500 ml-2 mt-1">
-              Nini {t('donationform.hospital')}
+              {locationx} {t('donationform.hospital')}
             </div>
           </div>
 
@@ -47,7 +69,7 @@ const DonationRequest = ({ t }) => {
               {' '}
               <img src={call} alt="call icon" />{' '}
             </div>
-            <div className="text-xs text-gray-500 ml-2 mt-1">4567890</div>
+            <div className="text-xs text-gray-500 ml-2 mt-1">{phonex}</div>
           </div>
 
           <div className="flex flex-row mb-1">
@@ -56,12 +78,12 @@ const DonationRequest = ({ t }) => {
               <img src={pints} alt="pints icon" />{' '}
             </div>
             <div className="text-xs text-gray-500 ml-2 mt-1">
-              6 {t('donationform.pints')}
+              {pintsx} {t('donationform.pints')}
             </div>
           </div>
         </div>
         <div>
-          <Link to={`/appointment`}>
+          <Link to={`/appointment/${locationx}/${pintsx}/${typex}`}>
             <button className="text-gray-500 bg-red-100 rounded-md px-3.5 py-0.5">
               {t('donationform.done')}
             </button>

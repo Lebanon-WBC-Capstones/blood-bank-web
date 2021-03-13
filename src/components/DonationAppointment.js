@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import Heart from '../assets/vector_1.svg';
 import Clock from '../assets/appointmentClock.svg';
 import DateIcon from '../assets/date.svg';
@@ -6,11 +6,37 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { withNamespaces } from 'react-i18next';
 //import { Link } from 'react-router-dom';
+import { firestore } from '../api/firebase.js';
+import { Context } from '../Context';
+import { useParams } from 'react-router-dom';
 
 function DonationAppointment({ t }) {
+  const [state, dispatch] = useContext(Context);
+  const [time, setTime] = useState('');
   const [startDate, setStartDate] = useState(new Date());
+  const { location: locationx } = useParams();
+  const { pints: pintsx } = useParams();
+  const { type: typex } = useParams();
+
+  const onChangeHandler = (e) => {
+    setTime(e.current.value);
+  };
+  const handleDonate = () => {
+    firestore.collection('Donation').add({
+      operation: 'Donation',
+      userId: state.setUser.uid,
+      pints: pintsx,
+      donation_type: typex + ' Request',
+      location: locationx,
+      date: new Date(),
+      time: '10',
+    });
+  };
   return (
     <div>
+      <div>
+        <button onClick={handleDonate}>create donation</button>
+      </div>
       <form>
         <div className="container max-w-screen-sm mt-10 sm:ml-12 sm:mt-20">
           <label className="font-Roboto text-gray-500 mr-32 sm:mr-80">
@@ -41,6 +67,7 @@ function DonationAppointment({ t }) {
             <div className="flex flex-row justify-evenly mt-0.5">
               <input
                 type="text"
+                onChange={onChangeHandler}
                 className="w-3/4  bg-white rounded-lg h-9 border-2 pt-3 focus:outline-none focus:ring-2 focus:ring-gray-300"
               />
               <img

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import logo from '../assets/signlogo.svg';
 import facebook from '../assets/facebook.svg';
 import gmail from '../assets/gmail.svg';
@@ -6,12 +6,23 @@ import { withNamespaces } from 'react-i18next';
 import { auth } from '../api/firebase.js';
 import { useHistory } from 'react-router-dom';
 import { provider } from '../api/firebase.js';
+import { Context } from '../Context';
+import { firestore } from '../api/firebase.js';
+
 function SignUp({ setCount, count, t }) {
+  const [state, dispatch] = useContext(Context);
   const history = useHistory();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmpass, setConfirmpass] = useState('');
   const [msg, setMsg] = useState('');
+
+  /*const handleProfile = () => {
+    firestore.collection('Profile').add({
+      userId: state.setUser.uid,
+      name:
+    });
+  };*/
 
   const onChangeHandler = (event) => {
     const { name, value } = event.currentTarget;
@@ -32,7 +43,14 @@ function SignUp({ setCount, count, t }) {
       auth
         .createUserWithEmailAndPassword(email, password)
         .then((userCredential) => {
-          //let user = userCredential.user;
+          let user = userCredential.user;
+          dispatch({
+            type: 'CREATE_USER',
+            isLogged: 'true',
+            setUser: user,
+            language: 'english',
+          });
+
           history.push(`/confirm`);
           setMsg('');
         })
@@ -49,12 +67,21 @@ function SignUp({ setCount, count, t }) {
       .signInWithPopup(provider)
       .then((result) => {
         /** @type {firebase.auth.OAuthCredential} */
+        let credential = result.credential;
+        let token = credential.accessToken;
+        let user = result.user;
+        dispatch({
+          type: 'CREATE_USER',
+          isLogged: 'true',
+          setUser: user,
+          language: 'english',
+        });
         history.push(`/confirm`);
-        //let credential = result.credential;
+
         // This gives you a Google Access Token. You can use it to access the Google API.
-        //let token = credential.accessToken;
+
         // The signed-in user info.
-        // let user = result.user;
+
         // ...
       })
       .catch((error) => {

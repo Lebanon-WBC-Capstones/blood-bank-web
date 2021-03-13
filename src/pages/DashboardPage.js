@@ -3,12 +3,15 @@ import { Link } from 'react-router-dom';
 import DashCards from '../components/dash-cards';
 import DashProfile from '../components/dash-profile';
 import feeds from '../assets/dashFeeds.svg';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import Menu from '../components/menu';
 import BottomWave from '../assets/backBottomWave.svg';
 import pp from '../assets/profilepic.png';
+import { Context } from '../Context';
 
 export default function Dashboard() {
+  const [state, dispatch] = useContext(Context);
+  console.log(state);
   const [MenuIsVisible, setMenuIsVisible] = useState(false);
   function toggleMenu() {
     setMenuIsVisible((prevMenuIsVisible) => !prevMenuIsVisible);
@@ -53,7 +56,7 @@ export default function Dashboard() {
           {Icon('#716A6A')}
         </div>
         <div className="flex justiy-center  text-lg font-roboto text-greyfont">
-          <p>Layla</p>
+          <p>{state.setUser.email}</p>
         </div>
 
         <Link to={`/feeds`}>
