@@ -26,7 +26,7 @@ function AboutUsPage({ t }) {
           {t('aboutus.our_team')}
         </div>
         <div
-          className="absolute overflow-hidden"
+          className="absolute "
           style={{ top: '188vw', right: '0', left: '0' }}
         >
           <TeamCircles />
