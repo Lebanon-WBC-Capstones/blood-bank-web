@@ -18,6 +18,7 @@ import DonateAppointment from './pages/DonateAppointment.js';
 import VolunteerPage from './pages/VolunteerPage.js';
 import ContextProvider from './Context';
 import ConfirmEmail from './pages/ConfirmEmail.js';
+import DonateConfirm from './pages/DonationConfirmPage';
 
 /*
 import DonateRejected from './pages/DonationRejectedPage.js';
@@ -62,10 +63,11 @@ function App() {
             <Route path="/volunteer" component={VolunteerPage} />
 
             <Route path="/confirm" component={ConfirmEmail} />
+            <Route path="/donateconfirm" component={DonateConfirm} />
             {/*
           <Route path="/volunteer" component={VolunteerPage} />
           {/*auth 
-            <Route path="/donateconfirm" component={DonateConfirm} />
+           
           {/*auth 
           <Route path="/donaterejected" component={DonateRejected} />
           {/*auth 

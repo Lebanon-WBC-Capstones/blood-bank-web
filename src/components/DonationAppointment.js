@@ -52,7 +52,7 @@ function DonationAppointment({ t }) {
           </div>
 
           <div className="flex flex-row justify-evenly mb-8 mt-36">
-            <Link to={`/DonationConfirmed`}>
+            <Link to={`/donateconfirm`}>
               <button className="flex flex-row justify-evenly items-center w-3/4 rounded-lg h-9 text-md text-gray-500 font-Roboto bg-pink mt-10 mb-6 sm:pl-20 focus:outline-none focus:ring-2 focus:ring-gray-300 pl-5 sm:text-xl">
                 {t('donateappointment.confirm_appointment')}
                 <img src={Heart} alt="heart" className="pr-8 sm:pr-20" />

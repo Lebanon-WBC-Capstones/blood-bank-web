@@ -8,8 +8,8 @@ import { Link } from 'react-router-dom';
 import { withNamespaces } from 'react-i18next';
 function DashCards({ t }) {
   return (
-    <div className="pt-3 bg-transparent">
-      <div className="mb-5 flex flex-row justify-evenly">
+    <div className="p-3">
+      <div className="mb-4 flex flex-row justify-evenly">
         <Link to={`/request`}>
           <button
             style={{
@@ -71,7 +71,7 @@ function DashCards({ t }) {
             width: '27vw',
             height: '27vw',
           }}
-          className="rounded-lg pl-1 pr-1 grid grid-rows-layout shadow-sm"
+          className=" focus:outline-none focus:ring-2 focus:ring-pink focus:ring-opacity-50  rounded-lg pl-1 pr-1 grid grid-rows-layout shadow-sm"
         >
           <div className="flex justify-end row-start-1 row-end-2">
             <img
@@ -103,7 +103,7 @@ function DashCards({ t }) {
             width: '27vw',
             height: '27vw',
           }}
-          className="rounded-lg pl-1 pr-1 grid grid-rows-layout shadow-sm"
+          className="focus:outline-none focus:ring-2 focus:ring-pink focus:ring-opacity-50 rounded-lg pl-1 pr-1 grid grid-rows-layout shadow-sm"
         >
           <div className="flex justify-end row-start-1 row-end-2">
             <img
@@ -139,7 +139,7 @@ function DashCards({ t }) {
             width: '27vw',
             height: '27vw',
           }}
-          className="rounded-lg pl-1 pr-1 grid grid-rows-layout shadow-sm"
+          className="focus:outline-none focus:ring-2 focus:ring-pink focus:ring-opacity-50  rounded-lg pl-1 pr-1 grid grid-rows-layout shadow-sm"
         >
           {' '}
           <div className="flex justify-end row-start-1 row-end-2">

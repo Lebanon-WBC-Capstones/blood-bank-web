@@ -14,7 +14,6 @@ const RequestList = ({ type }) => {
           request_type: 'Blood Cells',
           location: 'Haykal',
           amount: '2',
-          phone: '70/4673728',
         },
       },
       {
@@ -28,7 +27,6 @@ const RequestList = ({ type }) => {
           request_type: 'Red Cells',
           location: 'Nini',
           amount: '3',
-          phone: '70/4673728',
         },
       },
 
@@ -43,7 +41,6 @@ const RequestList = ({ type }) => {
           request_type: 'Plasma',
           location: 'Mazloum',
           amount: '2',
-          phone: '70/4673728',
         },
       },
       {
@@ -57,7 +54,6 @@ const RequestList = ({ type }) => {
           request_type: 'Blood Cells',
           location: 'Haykal',
           amount: '2',
-          phone: '70/4673728',
         },
       },
       {
@@ -71,7 +67,6 @@ const RequestList = ({ type }) => {
           request_type: 'Platelets',
           location: 'Haykal',
           amount: '2',
-          phone: '70/4673728',
         },
       },
 
@@ -86,7 +81,6 @@ const RequestList = ({ type }) => {
           request_type: 'Blood Cells',
           location: 'Monla',
           amount: '4',
-          phone: '70/4673728',
         },
       },
       {
@@ -100,7 +94,6 @@ const RequestList = ({ type }) => {
           request_type: 'Platelets',
           location: 'Monla',
           amount: '2',
-          phone: '70/4673728',
         },
       },
     ],

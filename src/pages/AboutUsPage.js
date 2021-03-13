@@ -4,6 +4,7 @@ import AboutGraph from '../components/AboutGraph';
 import TeamCircles from '../components/TeamCircles';
 import ContactUs from '../components/ContactUs';
 import AboutFooter from '../components/AboutFooter';
+
 import { withNamespaces } from 'react-i18next';
 function AboutUsPage({ t }) {
   return (

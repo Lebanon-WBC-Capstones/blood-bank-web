@@ -102,13 +102,13 @@ function DashProfile(props) {
         <div
           style={{
             backgroundColor: 'rgba(255, 231, 231, 1)',
-            width: '33vw',
+            width: '30vw',
             height: '6vw',
           }}
           className="flex flex-row justify-evenly rounded-2xl	items-center p-2"
         >
           <img src={star} alt="location" className="mr-1" />{' '}
-          <p className=" font-roboto text-s text-greyfont">
+          <p className=" font-roboto text-xs font-medium text-greyfont">
             {' '}
             {props.t('dashboard.hero_donor')}
           </p>

@@ -33,10 +33,7 @@ export default function Dashboard() {
     );
   }
   return (
-    <div
-      className=" w-screen h-screen m-0 pt-2"
-      style={{ backgroundColor: 'rgba(255, 249, 249, 1)' }}
-    >
+    <div className="bg-white w-screen h-screen m-0 pt-2">
       {MenuIsVisible && (
         <Menu
           className="fixed"

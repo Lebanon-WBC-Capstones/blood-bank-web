@@ -69,7 +69,7 @@ function SignUp({ setCount, count, t }) {
   };
   return (
     <div
-      className="mt-5 flex flex-col justify-center "
+      className=" flex flex-col justify-center "
       style={{
         maxWidth: '600px',
       }}
@@ -92,23 +92,22 @@ function SignUp({ setCount, count, t }) {
       <div>
         <div className="flex justify-around mx-auto w-full">
           <button
-            className="bg-pink p-2 font-roboto flex justify-between focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
+            className="border-pink border-2 h-9 bg-pink w-1/2 mb-2 p-2 font-roboto flex justify-evenly focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
             style={{
               borderRadius: '0.75rem',
-              width: 'auto',
             }}
             onClick={signInWithGoogle}
           >
             {' '}
             <img src={gmail} alt="gmail" />{' '}
-            <p className="pl-2 text-gray-500 font-roboto">
+            <p className="font-medium text-gray-500 font-roboto">
               {t('signup.gmail')}
             </p>
           </button>
         </div>
 
         <div
-          className="mb-5 pb-1 mx-auto"
+          className=" pb-1 mx-auto"
           style={{
             width: '90%',
             borderBottomColor: 'rgba(202, 199, 199, 1)',
@@ -123,11 +122,8 @@ function SignUp({ setCount, count, t }) {
 
       <div className="m-5">
         <form onSubmit={handleSignUp}>
-          <label
-            style={{ color: 'rgba(103, 97, 97, 1)' }}
-            className="font-roboto m-0.25 "
-          >
-            {t('signup.gmail')}
+          <label className="font-roboto m-0.25 text-gray-500 mr-48">
+            {t('signup.email')}
           </label>
           <br />
           <input
@@ -135,13 +131,10 @@ function SignUp({ setCount, count, t }) {
             value={email}
             type="email"
             onChange={onChangeHandler}
-            className="border-2 m-1 w-full h-9 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
+            className="pl-2 text-gray-500 border-2 m-1 w-full h-9 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
           />
           <br />
-          <label
-            style={{ color: 'rgba(103, 97, 97, 1)' }}
-            className="font-roboto m-1"
-          >
+          <label className="font-roboto m-1 text-gray-500 mr-44">
             {t('signup.password')}
           </label>
           <br />
@@ -150,13 +143,10 @@ function SignUp({ setCount, count, t }) {
             value={password}
             type="password"
             onChange={onChangeHandler}
-            className="border-2 m-1 w-full h-9 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
+            className="pl-2 text-gray-500 border-2 m-1 w-full h-9 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
           />
           <br />
-          <label
-            style={{ color: 'rgba(103, 97, 97, 1)' }}
-            className="font-roboto m-0.25"
-          >
+          <label className="font-roboto m-0.25 text-gray-500 mr-28 mt-1">
             {t('signup.confirm_password')}
           </label>
           <br />
@@ -165,16 +155,16 @@ function SignUp({ setCount, count, t }) {
             name="userConfirm"
             value={confirmpass}
             onChange={onChangeHandler}
-            className="border-2 m-1 w-full h-9 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
+            className="pl-2 text-gray-500 border-2 m-1 w-full h-9 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
           />
           <br />
           <div>{msg}</div>
           <br />
 
-          <div className="flex justify-center mt-2"></div>
+          <div className="flex justify-center "></div>
           <button
             type="submit"
-            className="bg-pink  w-full rounded-lg h-9 text-gray-500 font-Roboto self-center focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
+            className="ml-1 border-2 border-pink bg-pink w-full rounded-lg h-9 text-gray-500 font-Roboto self-center focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
           >
             {t('signup.sign_up')}
           </button>

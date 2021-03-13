@@ -30,7 +30,11 @@ const EmailConfirmation = ({ t }) => {
         <div className="mt-20 ml-44 flex flex-row">
           <div className="mt-1 ml-24">
             {' '}
-            <img src={getstarted} alt="getstarted" className="w-6 h-5" />
+            <img
+              src={getstarted}
+              alt="getstarted"
+              className="w-6 h-5 animate-bounce"
+            />
           </div>
         </div>
       </Link>
