@@ -1,8 +1,8 @@
 import React from 'react';
 import line from '../assets/AboutPath.svg';
 import Save from '../assets/SaveLife.svg';
-
-function AboutGraph() {
+import { withNamespaces } from 'react-i18next';
+function AboutGraph({ t }) {
   return (
     <div>
       <div
@@ -28,7 +28,7 @@ function AboutGraph() {
             color: 'rgba(94, 89, 89, 0.87)',
           }}
         >
-          Register
+          {t('aboutus.register')}
         </button>
         <button
           style={{
@@ -41,9 +41,9 @@ function AboutGraph() {
             backgroundColor: 'rgba(136, 129, 129, 0.22)',
             color: 'rgba(94, 89, 89, 0.87)',
           }}
-          class=" bg-red-300 text-xs "
+          className=" bg-red-300 text-xs "
         >
-          Post a request
+          {t('aboutus.request')}
         </button>
         <button
           style={{
@@ -56,9 +56,9 @@ function AboutGraph() {
             backgroundColor: 'rgba(136, 129, 129, 0.22)',
             color: 'rgba(94, 89, 89, 0.87)',
           }}
-          class=" bg-red-300 text-xs"
+          className=" bg-red-300 text-xs"
         >
-          Get notified
+          {t('aboutus.get_notified')}
         </button>
         <button
           style={{
@@ -76,4 +76,4 @@ function AboutGraph() {
   );
 }
 
-export default AboutGraph;
+export default withNamespaces()(AboutGraph);

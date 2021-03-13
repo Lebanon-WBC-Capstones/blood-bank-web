@@ -16,7 +16,8 @@ import UrgentPage from './pages/UrgentPage.js';
 import DonatePage from './pages/DonationRequestConfirmationPage.js';
 import DonateAppointment from './pages/DonateAppointment.js';
 import VolunteerPage from './pages/VolunteerPage.js';
-import ContextProvidor from './Context';
+import ContextProvider from './Context';
+import ConfirmEmail from './pages/ConfirmEmail.js';
 
 /*
 import DonateConfirm from './pages/DonationConfirmPage.js';
@@ -25,7 +26,7 @@ import DonateRejected from './pages/DonationRejectedPage.js';
 
 function App() {
   return (
-    <ContextProvidor>
+    <ContextProvider>
       <Router>
         <div className="App">
           <Switch>
@@ -60,6 +61,8 @@ function App() {
             <Route path="/appointment" component={DonateAppointment} />
             {/*auth */}
             <Route path="/volunteer" component={VolunteerPage} />
+
+            <Route path="/confirm" component={ConfirmEmail} />
             {/*
           <Route path="/volunteer" component={VolunteerPage} />
           {/*auth 
@@ -71,7 +74,7 @@ function App() {
           </Switch>
         </div>
       </Router>
-    </ContextProvidor>
+    </ContextProvider>
   );
 }
 

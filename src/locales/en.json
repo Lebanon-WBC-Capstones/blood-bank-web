@@ -1,13 +1,23 @@
 {
   "landingpage": {
-    "find_local_blood_donor_donation_centers": "Find Local Blood Donor Donation Centers",
-    "emergency_blood_request": "Emergency Blood Request",
-    "donate_and_help_others": "Donate And Help Others",
-    "flexible-scheduling": "Flexible Scheduling",
-    "fast_response": "Fast Response",
-    "blood_center": "Blood Center",
-    "meet_our_heroes": "Meet Our Heroes",
-    "so_far_we_have_reached": "So Far We Have Reached",
+    "find": "Find",
+    "local_blood": "Local Blood",
+    "donor": "Donor",
+    "donation": "Donation",
+    "centers": "Centers",
+    "goo_sign_up": "goo sign up",
+    "goo_sign_in": "goo sign in",
+    "Emergency_Blood_Request": "Emergency Blood Request",
+    "Donate_and_help_others": "Donate and help others",
+    "Flexible_scheduling": "Flexible scheduling",
+    "Fast_Response": "Fast Response",
+    "blood": "Blood",
+    "center": "Center",
+    "our": "Our",
+    "heroes": "Heroes",
+    "so_far": "So Far",
+    "we_have": "We Have",
+    "reached": "Reached",
     "life_saved": "Life Saved",
     "requests": "Requests",
     "requests_done": "Requests Done",
@@ -34,7 +44,8 @@
     "save_a_life": "Save A Life",
     "our_team": "Our Team",
     "contact_us": "Contact Us",
-    "we_appreciate_your_feedback": "We Appreciate Your Feedback",
+    "we_appreciate": "We Appreciate",
+    "your_feedback": "Your Feedback",
     "send": "Send",
     "enter_your_name": "Enter Your Name",
     "e_mail": "E-Mail",
@@ -70,7 +81,8 @@
 
   "signupconfirm": {
     "thank_you": "Thank you",
-    "please_check_your_email_to_verify_the_account": "Please check your email to verify the account"
+    "please_check_your_email_to_verify_the_account": "Please check your email to verify the account",
+    "get_started": "Get started"
   },
 
   "dashboard": {
@@ -109,9 +121,10 @@
     "request": "Request",
     "all": "All",
     "plasma": "Plasma",
-    "blood": "Blood",
+    "blood": "blood",
     "red_cells": "Red Cells",
-    "platelets": "Platelets"
+    "platelets": "Platelets",
+    "hospital": " hospital"
   },
 
   "requesttype": {
@@ -140,12 +153,12 @@
     "request_type": "Request Type",
     "blood_type": "Blood Type",
     "reset_all": "Reset All",
-    "hospital": "Hospital",
+    "hospital": " Hospital",
     "plasma": "Plasma",
     "red_cells": "Red Cells",
     "platelets": "Platelets",
     "blood": "Blood",
-    "pints": "Pints"
+    "pints": " Pints"
   },
 
   "donatetype": {
@@ -187,6 +200,8 @@
   },
 
   "donatereject": {
-    "your_last_donation_was_days_ago_let_your_bones_do_their_job": "Your Last Donation Was days ago Let Your Bones do their job"
+    "your_last_donation": "Your Last Donation",
+    "was_days_ago": "Was days ago",
+    "let_your_bones_do_their_job": "Let Your Bones do their job"
   }
 }
