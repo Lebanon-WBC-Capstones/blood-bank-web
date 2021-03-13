@@ -3,8 +3,8 @@ import wave from '../assets/footerWaves.svg';
 import Facebook from '../assets/Facebook1.svg';
 import Twitter from '../assets/Twitter.svg';
 import Github from '../assets/Github.svg';
-
-export default function AboutFooter() {
+import { withNamespaces } from 'react-i18next';
+function AboutFooter({ t }) {
   return (
     <div className="relative text-white text-left font-roboto">
       <div>
@@ -16,7 +16,7 @@ export default function AboutFooter() {
           className="flex flex-row pb-3 w-screen"
         >
           <div style={{ width: '30vw' }}>
-            <h2>Hospital</h2>
+            <h2>{t('aboutus.hospitals')}</h2>
             <ul className="text-xs underline">
               <li>
                 <a
@@ -24,7 +24,7 @@ export default function AboutFooter() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Nini
+                  {t('aboutus.nini')}
                 </a>
               </li>
               <li>
@@ -33,7 +33,7 @@ export default function AboutFooter() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Mazloum
+                  {t('aboutus.mazloum')}
                 </a>
               </li>
               <li>
@@ -42,7 +42,7 @@ export default function AboutFooter() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Haykal
+                  {t('aboutus.haykel')}
                 </a>
               </li>
               <li>
@@ -51,19 +51,19 @@ export default function AboutFooter() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Monla
+                  {t('aboutus.monla')}
                 </a>
               </li>
             </ul>
           </div>
           <div className="mx-0" style={{ width: '40vw' }}>
-            <h2>Terms</h2>
+            <h2> {t('aboutus.terms')}</h2>
             <ul className="text-xs underline">
               <li>
-                <span>Privacy Policy</span>
+                <span> {t('aboutus.privacy_policy')}</span>
               </li>
               <li>
-                <span>Terms and Agreement </span>
+                <span> {t('aboutus.terms_and_agreement')} </span>
               </li>
             </ul>
           </div>
@@ -84,3 +84,4 @@ export default function AboutFooter() {
     </div>
   );
 }
+export default withNamespaces()(AboutFooter);

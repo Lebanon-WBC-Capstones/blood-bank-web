@@ -5,8 +5,8 @@ import Graph from '../components/graph';
 import LandingLayout from '../components/LandingLayout';
 import HeroesCircles from '../components/HeroesCircles';
 import { Link } from 'react-router-dom';
-
-export default function Home() {
+import { withNamespaces } from 'react-i18next';
+function Home({ t }) {
   return (
     <LandingLayout>
       <div
@@ -14,21 +14,27 @@ export default function Home() {
         style={{ top: '30vw', left: '8vw' }}
       >
         <Link to={`/signup`}>
-          <button className="text-lg mr-8">goo sign up</button>
+          <button className="text-lg mr-8">
+            {t('landingpage.goo_sign_up')}
+          </button>
         </Link>
         <Link to={`/signin`}>
-          <button className="text-lg">goo sign in</button>
+          <button className="text-lg">{t('landingpage.goo_sign_in')}</button>
         </Link>
 
         <p style={{ color: 'rgba(108, 105, 105, 0.81)' }}>
-          <span className="text-pri-red">Find</span> Local Blood <br /> Donors{' '}
-          <span className="text-pri-red">{'&'}</span> <br /> Blood{' '}
-          <span className="text-pri-red">Centers</span>{' '}
+          <span className="text-pri-red">{t('landingpage.find')}</span>
+          {t('landingpage.local_blood')}
+          <br />
+          {t('landingpage.donor')} <span className="text-pri-red">{'&'}</span>{' '}
+          <br />
+          {t('landingpage.donation')}{' '}
+          <span className="text-pri-red">{t('landingpage.centers')}</span>{' '}
         </p>
       </div>
       <div className="absolute mr-3" style={{ top: '135vw', left: '3vw' }}>
         <p className="text-white font-roboto text-lg">
-          Blood <br /> Center
+          {t('landingpage.blood')} <br /> {t('landingpage.center')}
         </p>
       </div>
       <div className="absolute" style={{ top: '60vw', left: '5vw' }}>
@@ -39,10 +45,10 @@ export default function Home() {
         style={{ top: '185vw', right: '15vw' }}
       >
         <div>
-          <p>OUR</p>
+          <p>{t('landingpage.our')}</p>
         </div>
         <div className="flex flex-end pl-4">
-          <p>HEROES</p>
+          <p>{t('landingpage.heroes')}</p>
         </div>
       </div>
       <div
@@ -53,9 +59,15 @@ export default function Home() {
       </div>
       <div>
         <div className="absolute" style={{ bottom: '140vw', left: '10vw' }}>
-          <p className="text-xl font-roboto text-gray-600"> So Far</p>
-          <p className="ml-3 text-lg font-roboto text-gray-500">We have</p>
-          <p className="ml-6 text-base font-roboto text-gray-400">Reached</p>
+          <p className="text-xl font-roboto text-gray-600">
+            {t('landingpage.so_far')}
+          </p>
+          <p className="ml-3 text-lg font-roboto text-gray-500">
+            {t('landingpage.we_have')}
+          </p>
+          <p className="ml-6 text-base font-roboto text-gray-400">
+            {t('landingpage.reached')}
+          </p>
         </div>
         <div className="absolute w-screen sm:h-full" style={{ bottom: '55vw' }}>
           <TheNumberHydra />
@@ -68,3 +80,4 @@ export default function Home() {
     </LandingLayout>
   );
 }
+export default withNamespaces()(Home);

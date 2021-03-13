@@ -1,11 +1,11 @@
 import React from 'react';
 import DonationRequest from '../components/Donationrequestconfirmation';
 import BackPage from '../components/BackPage';
-
-const DonationRequestPage = () => {
+import { withNamespaces } from 'react-i18next';
+const DonationRequestPage = ({ t }) => {
   return (
     <div>
-      <BackPage title="Donation From">
+      <BackPage title={t('donationform.donation_form')}>
         <div>
           <DonationRequest />
         </div>
@@ -15,4 +15,4 @@ const DonationRequestPage = () => {
     </div>
   );
 };
-export default DonationRequestPage;
+export default withNamespaces()(DonationRequestPage);

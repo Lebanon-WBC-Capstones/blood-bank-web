@@ -7,8 +7,8 @@ import arrow from '../assets/menuArrow.svg';
 import Edit from '../assets/menuEdit.svg';
 import menubg from '../assets/menuBg.svg';
 import { Link } from 'react-router-dom';
-
-export default function Menu(props) {
+import { withNamespaces } from 'react-i18next';
+function Menu(props) {
   function handleLogOut() {}
   return (
     <div
@@ -43,7 +43,7 @@ export default function Menu(props) {
             <Link to={`/editdetails`}>
               <div className="text-xs">
                 <p style={{ color: '#FFEEEE', whiteSpace: 'no-wrap' }}>
-                  Edit Profile
+                  {props.t('menu.edit_details')}
                 </p>
               </div>
             </Link>
@@ -61,7 +61,7 @@ export default function Menu(props) {
               <img src={History} alt=" " />
             </div>
             <div className="mr-20">
-              <p>History</p>
+              <p> {props.t('menu.history')}</p>
             </div>
             <div className="self-center">
               <img src={arrow} alt=" " />
@@ -74,7 +74,7 @@ export default function Menu(props) {
               <img src={RignBell} alt=" " />
             </div>
             <div className="mr-11">
-              <p>Notification</p>
+              <p> {props.t('menu.notifications')}</p>
             </div>
             <div className="self-center">
               <img src={arrow} alt=" " />
@@ -86,7 +86,7 @@ export default function Menu(props) {
             <img src={Language} alt=" " />
           </div>
           <div className="mr-14" style={{ marginRight: '3.75rem' }}>
-            <p>Language</p>
+            <p>{props.t('menu.language')}</p>
           </div>
           <div className="self-center">
             <img src={arrow} alt=" " />
@@ -101,10 +101,11 @@ export default function Menu(props) {
             src={LogOut}
             onClick={() => handleLogOut()}
           />
-          <p className="mr-20">Log Out</p>
+          <p className="mr-20">{props.t('menu.log_out')}</p>
           <img src={arrow} alt=" " />
         </div>
       </Link>
     </div>
   );
 }
+export default withNamespaces()(Menu);
