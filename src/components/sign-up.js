@@ -1,12 +1,11 @@
 import React from 'react';
 import logo from '../assets/signlogo.svg';
-import facebook from '../assets/facebook.svg';
 import gmail from '../assets/gmail.svg';
 import { withNamespaces } from 'react-i18next';
 function SignUp({ setCount, count, t }) {
   return (
     <div
-      className="mt-5 flex flex-col justify-center container"
+      className="mt-5 flex flex-col justify-center "
       style={{
         maxWidth: '600px',
       }}
@@ -22,15 +21,12 @@ function SignUp({ setCount, count, t }) {
           borderBottomWidth: 1,
         }}
       >
-        <p className="text-center font-roboto">{t('signup.sign_up_with')}</p>
+        <p className="text-center text-gray-500 font-roboto">
+          {t('signup.sign_up_with')}
+        </p>
       </div>
       <div>
-        <div
-          style={{
-            width: '90%',
-          }}
-          className="flex justify-around mx-auto"
-        >
+        <div className="flex justify-around mx-auto w-full">
           <button
             className="bg-pink p-2 font-roboto flex justify-between focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
             style={{
@@ -40,18 +36,9 @@ function SignUp({ setCount, count, t }) {
           >
             {' '}
             <img src={gmail} alt="gmail" />{' '}
-            <p className="pl-2">{t('signup.gmail')}</p>
-          </button>
-          <button
-            className="bg-pink p-2 font-roboto flex justify-between focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
-            style={{
-              borderRadius: '0.75rem',
-              width: 'auto',
-            }}
-          >
-            {' '}
-            <img src={facebook} alt="gmail" />{' '}
-            <p className="pl-2">{t('signup.facebook')}</p>
+            <p className="pl-2 text-gray-500 font-roboto">
+              {t('signup.gmail')}
+            </p>
           </button>
         </div>
 
@@ -63,7 +50,9 @@ function SignUp({ setCount, count, t }) {
             borderBottomWidth: 1,
           }}
         >
-          <p className="text-center font-roboto">{t('signup.or')}</p>
+          <p className="text-center text-gray-500 font-roboto">
+            {t('signup.or')}
+          </p>
         </div>
       </div>
 
@@ -76,7 +65,7 @@ function SignUp({ setCount, count, t }) {
             {t('signup.gmail')}
           </label>
           <br />
-          <input className="border-2 m-1 w-3/4 h-9 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50" />
+          <input className="border-2 m-1 w-full h-9 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50" />
           <br />
           <label
             style={{ color: 'rgba(103, 97, 97, 1)' }}
@@ -85,7 +74,7 @@ function SignUp({ setCount, count, t }) {
             {t('signup.password')}
           </label>
           <br />
-          <input className="border-2 m-1 w-3/4 h-9 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50" />
+          <input className="border-2 m-1 w-full h-9 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50" />
           <br />
           <label
             style={{ color: 'rgba(103, 97, 97, 1)' }}
@@ -94,23 +83,13 @@ function SignUp({ setCount, count, t }) {
             {t('signup.confirm_password')}
           </label>
           <br />
-          <input className="border-2 m-1 w-3/4 h-9 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50" />
+          <input className="border-2 m-1 w-full h-9 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50" />
           <br />
-          <input
-            type="checkbox"
-            name="Terms"
-            className="rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50 "
-          />{' '}
-          <label
-            style={{ color: 'rgba(103, 97, 97, 1)' }}
-            className="font-roboto m-0.25 text-xs"
-          >
-            {t('signup.i_agree_to_terms_conditions_and_privacy_policy')}
-          </label>
+
           <div className="flex justify-center mt-2"></div>
           <button
             type="submit"
-            className="bg-pink  w-3/4 rounded-lg h-9 text-gray-500 font-Roboto self-center focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
+            className="bg-pink  w-full rounded-lg h-9 text-gray-500 font-Roboto self-center focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
             onClick={() => setCount(count + 1)}
           >
             {t('signup.sign_up')}

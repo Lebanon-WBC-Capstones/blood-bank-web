@@ -14,7 +14,7 @@ function AboutFooter({ t }) {
           className="flex flex-row pb-3 w-screen"
         >
           <div style={{ width: '30vw' }}>
-            <h2>{t('landingpage.Hospitals')}</h2>
+            <h2>{t('landingpage.hospitals')}</h2>
             <ul className="text-xs underline">
               <li>
                 <a
@@ -65,7 +65,7 @@ function AboutFooter({ t }) {
               </li>
             </ul>
           </div>
-          <div className=" text-lg underline">
+          <div className=" text-lg mb-16 underline">
             {' '}
             <Link to={`/aboutus`}>
               <h2>{t('landingpage.about_us')}</h2>

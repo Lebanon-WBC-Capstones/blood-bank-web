@@ -5,7 +5,7 @@ import DateIcon from '../assets/date.svg';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { withNamespaces } from 'react-i18next';
-//import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function DonationAppointment({ t }) {
   const [startDate, setStartDate] = useState(new Date());
@@ -52,10 +52,12 @@ function DonationAppointment({ t }) {
           </div>
 
           <div className="flex flex-row justify-evenly mb-8 mt-36">
-            <button className="flex flex-row justify-evenly items-center w-3/4 rounded-lg h-9 text-md text-gray-500 font-Roboto bg-pink mt-10 mb-6 sm:pl-20 focus:outline-none focus:ring-2 focus:ring-gray-300 pl-5 sm:text-xl">
-              {t('donateappointment.confirm_appointment')}
-              <img src={Heart} alt="heart" className="pr-8 sm:pr-20" />
-            </button>
+            <Link to={`/DonationConfirmed`}>
+              <button className="flex flex-row justify-evenly items-center w-3/4 rounded-lg h-9 text-md text-gray-500 font-Roboto bg-pink mt-10 mb-6 sm:pl-20 focus:outline-none focus:ring-2 focus:ring-gray-300 pl-5 sm:text-xl">
+                {t('donateappointment.confirm_appointment')}
+                <img src={Heart} alt="heart" className="pr-8 sm:pr-20" />
+              </button>
+            </Link>
           </div>
         </div>
       </form>

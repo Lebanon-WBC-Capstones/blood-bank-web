@@ -5,8 +5,12 @@ import { withNamespaces } from 'react-i18next';
 const SignIn = ({ t }) => {
   return (
     <div className="bg-transparent container max-width: 640px">
-      <div className="mt-12 ">
-        <img src={signInLogo} alt="images" className="block mx-auto" />
+      <div className="mb-8 ">
+        <img
+          src={signInLogo}
+          alt="images"
+          className="h-24 w-24 block mx-auto"
+        />
       </div>
 
       <div className="font-Roboto text-3xl mt-5 text-gray-500">
@@ -25,7 +29,7 @@ const SignIn = ({ t }) => {
               type="text"
               id="email"
               name="email"
-              className="  w-3/4 rounded-lg h-9 border-2 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
+              className="  w-11/12 rounded-lg h-9 border-2 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
             />
           </div>
 
@@ -38,7 +42,7 @@ const SignIn = ({ t }) => {
               type="password"
               id="password"
               name="password"
-              className="  w-3/4 rounded-lg h-9 border-2 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
+              className="  w-11/12 rounded-lg h-9 border-2 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
             />
           </div>
 
@@ -54,12 +58,12 @@ const SignIn = ({ t }) => {
             </label>
           </div>
 
-          <div className="mt-32">
+          <div className="mt-24">
             <Link to={`/dashboard`}>
               <input
                 type="submit"
                 value="Sign In"
-                className="bg-pink  w-3/4 rounded-lg h-9 text-gray-500 font-Roboto focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
+                className="bg-pink border-2 border-pink font-Roboto font-medium w-11/12 rounded-lg h-9 text-gray-500 font-Roboto focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
               />
             </Link>
           </div>

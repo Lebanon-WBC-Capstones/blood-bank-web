@@ -25,28 +25,28 @@ function Menu(props) {
         {props.Icon}
       </div>
       <div className="flex flex-row mt-2 w-2/4">
-        <div>
+        <div className="pt-2">
           <img
             src={props.pp}
             alt=" "
-            className="rounded-full border-4 border-white"
+            className="rounded-full border-2 border-white w-80"
           />
         </div>
-        <div className="flex flex-col ml-2">
-          <div className="text-lg self-start">
+        <div className="flex flex-col ml-2 pt-2 ">
+          <div className="text-lg self-start mb-1">
             <p style={{ color: '#FFEEEE' }}>Layla</p>
           </div>
           <div className="flex flex-row">
-            <div className="flex flex-col">
-              <img src={Edit} alt=" " />
+            <div>
+              <img src={Edit} alt=" " className="pr-2" />
             </div>
-            <Link to={`/editdetails`}>
-              <div className="text-xs">
-                <p style={{ color: '#FFEEEE', whiteSpace: 'no-wrap' }}>
+            <div className="text-xs w-20 ">
+              <Link to={`/editdetails`}>
+                <span style={{ color: '#FFEEEE' }}>
                   {props.t('menu.edit_details')}
-                </p>
-              </div>
-            </Link>
+                </span>
+              </Link>
+            </div>
           </div>
         </div>
       </div>

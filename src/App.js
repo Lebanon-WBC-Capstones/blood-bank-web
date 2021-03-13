@@ -16,9 +16,9 @@ import UrgentPage from './pages/UrgentPage.js';
 import DonatePage from './pages/DonationRequestConfirmationPage.js';
 import DonateAppointment from './pages/DonateAppointment.js';
 import VolunteerPage from './pages/VolunteerPage.js';
+import DonationConfirmPage from './pages/DonationConfirmPage.js';
 
 /*
-import DonateConfirm from './pages/DonationConfirmPage.js';
 import DonateRejected from './pages/DonationRejectedPage.js';
 */
 
@@ -58,8 +58,8 @@ function App() {
           <Route path="/appointment" component={DonateAppointment} />
           {/*auth */}
           <Route path="/volunteer" component={VolunteerPage} />
-          {/*
-          <Route path="/volunteer" component={VolunteerPage} />
+          <Route path="/donateconfirm" component={DonationConfirmPage} />
+
           {/*auth 
             <Route path="/donateconfirm" component={DonateConfirm} />
           {/*auth 

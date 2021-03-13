@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../assets/Logo.svg';
+import Logo from '../assets/logo.svg';
 import { withNamespaces } from 'react-i18next';
 function DonationConfirmed({ t }) {
   return (
