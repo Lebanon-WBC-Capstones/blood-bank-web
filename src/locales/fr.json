@@ -1,5 +1,207 @@
 {
-  "btn": {
-    "Reset All": "Effacer Tout"
+  "landingpage": {
+    "find": "Trouvez",
+    "local_blood": "de sang local",
+    "donor": "Un doneur",
+    "donation": "Donation",
+    "centers": "Centres",
+    "goo_sign_up": "Allez vous inscrire",
+    "goo_sign_in": "Aller s'identifier",
+    "Emergency_Blood_Request": "Demande urgente de sang",
+    "Donate_and_help_others": "Donner et aider les autres",
+    "Flexible_scheduling": "Planification flexible",
+    "Fast_Response": "Réponse rapide",
+    "blood": "Sang",
+    "center": "Centre",
+    "our": "Nos",
+    "heroes": "Héros",
+    "so_far": " Jusque là",
+    "we_have": "Nous avons",
+    "reached": "Atteindre",
+    "life_saved": "Vie sauvée",
+    "requests": "Demandes",
+    "requests_done": "Demandes accomplies",
+    "donators": "Donneurs",
+    "hospitals": "Hôpitaux",
+    "nini": "Nini",
+    "mazloum": "Mazloum",
+    "haykel": "Haykel",
+    "monla": "Monla",
+    "terms": "Termes",
+    "privacy_policy": "Politique de confidentialité",
+    "terms_and_agreement": "Termes et entente",
+    "about_us": "À propos de nous",
+    "copyright": "Droit d'auteur",
+    "blood_bank_all_rights_reserved": "Banque de sang Tous droits réservés"
+  },
+
+  "aboutus": {
+    "about_our_service": "À propos de nos services",
+    "our_service_is_as_simple_as_saying_hello": "Nos Services Sont Aussi Simple Que De Dire Bonjour",
+    "register": "Enregistrer",
+    "request": "Demande",
+    "get_notified": "Être notifié",
+    "save_a_life": "Sauver une vie",
+    "our_team": "NOTRE ÉQUIPE",
+    "contact_us": "Contactez-nous",
+    "we_appreciate": "On Apprécie",
+    "your_feedback": "Vos Commentaires",
+    "send": "Envoyer",
+    "enter_your_name": "Entrer Ton Nom",
+    "e_mail": "E-mail",
+    "enter_your_message": "Entrer Ton Message",
+    "hospitals": "Hôpitaux",
+    "nini": "Nini",
+    "mazloum": "Mazloum",
+    "haykel": "Haykel",
+    "monla": "Monla",
+    "terms": "Termes",
+    "privacy_policy": "Politique de confidentialité",
+    "terms_and_agreement": "Termes et entente"
+  },
+
+  "signup": {
+    "sign_up_with": "S'inscrire avec",
+    "gmail": "Gmail",
+    "facebook": "Facebook",
+    "or": "ou",
+    "email": "Email",
+    "password": "Mot de passe",
+    "confirm_password": "Confirmer mot de passe",
+    "i_agree_to_terms_conditions_and_privacy_policy": "J'accepte les termes et la politique de confidentialité",
+    "sign_up": "S'inscrire"
+  },
+
+  "signin": {
+    "sign_in": "S'identifier",
+    "email": "Email",
+    "password": "Mot de passe",
+    "remember_me": "Se rappeler de moi"
+  },
+
+  "signupconfirm": {
+    "thank_you": "Merci",
+    "please_check_your_email_to_verify_the_account": "S'il vous plaît voire votre courriel pour vérifier le compte",
+    "get_started": "Commencer"
+  },
+
+  "dashboard": {
+    "hero_donor": "Héro Donneur",
+    "request": "Demande",
+    "donate": "Donner",
+    "your_donations": "Tes donations",
+    "last_donation": "Dernière Donation",
+    "total_donation": "Totale de Donations",
+    "days_left": "Jours restants"
+  },
+
+  "menu": {
+    "edit_details": "Modifier Les Détails",
+    "history": "Histoire",
+    "notifications": "Notifications",
+    "language": "Langue",
+    "log_out": "se déconnecter"
+  },
+
+  "editprofile": {
+    "full_name": "Nom",
+    "address": "Addresse",
+    "change_password": "Changer mot de passe",
+    "save_changes": "Sauvegarder Les Modifications"
+  },
+
+  "feeds": {
+    "feeds": "Nouvelles",
+    "request_is_fulfilled": "Demande est Exécutée",
+    "pints": "Pintes"
+  },
+
+  "history": {
+    "donation": "Donation",
+    "request": "Demande",
+    "all": "Tout",
+    "plasma": "Plasma",
+    "blood": "Sang",
+    "red_cells": "Globules Rouges",
+    "platelets": "Plaquettes",
+    "hospital": " Hôspital"
+  },
+
+  "requesttype": {
+    "request_type": "Type de Demande",
+    "plasma": "Plasma",
+    "red_cells": "Globules Rouges",
+    "platelets": "Plaquettes",
+    "blood": "Sang"
+  },
+
+  "requestform": {
+    "request_form": "Formulaire de demande",
+    "for": "Pour",
+    "for_me": "Pour Moi",
+    "others": "Autres",
+    "full_name": "Nom",
+    "phone": "Téléphone",
+    "address": "Addresse",
+    "emergency": "Urgence",
+    "purpose": "But",
+    "pints_need": "Besoin de pintes",
+    "send": "Envoyer"
+  },
+
+  "notification": {
+    "request_type": "Type de Demande",
+    "blood_type": "Groupe Sanguin",
+    "reset_all": "Effacer Tout",
+    "hospital": " Hôspital",
+    "plasma": "Plasma",
+    "red_cells": "Globules Rouges",
+    "platelets": "Plaquettes",
+    "blood": "Sang",
+    "pints": " Pintes"
+  },
+
+  "donatetype": {
+    "pick_your_target": "Choisir ton traget",
+    "urgent": "Urgente",
+    "volunteer": "Volontaire"
+  },
+
+  "volunteerlist": {
+    "welcome_hero": "Bienvenue Héro",
+    "red_cells": "Globules Rouges",
+    "platelets": "Plaquettes",
+    "blood": "Sang",
+    "hospital": "Hopital",
+    "request": "Demande"
+  },
+
+  "donationform": {
+    "donation_form": "Formulaire de donation",
+    "red_cells": "Globules Rouges",
+    "platelets": "Plaquettes",
+    "blood": "Sang",
+    "pints": "Pintes",
+    "hospital": "Hopital",
+    "request": "Demande",
+    "done": "Fini"
+  },
+
+  "donateappointment": {
+    "i_want_to_donate": "Je veux donner",
+    "appointment_date": "Date d'arrangement",
+    "appointment_time": "Temps d'arrangement",
+    "confirm_appointment": "Confirmer l'arrangement"
+  },
+
+  "donationConfirm": {
+    "donation_confirmed": "Confirmer la donation",
+    "thank_you_for_your_donation_please_check_your_email_for_more_information": "Merci pour votre donation , S'il vous plaît voire ton couriel pour plus d'information"
+  },
+
+  "donatereject": {
+    "your_last_donation": "Ta Dernière Donation",
+    "was_days_ago": "était de jours",
+    "let_your_bones_do_their_job": "Laissez vos os travailler"
   }
 }
