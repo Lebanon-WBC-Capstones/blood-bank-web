@@ -11,7 +11,7 @@ import { Context } from '../Context';
 
 export default function Dashboard() {
   const [state, dispatch] = useContext(Context);
-  console.log(state);
+
   const [MenuIsVisible, setMenuIsVisible] = useState(false);
   function toggleMenu() {
     setMenuIsVisible((prevMenuIsVisible) => !prevMenuIsVisible);

@@ -95,6 +95,7 @@ function RequestFormPage({ t }) {
   };
 
   const handleRequest = () => {
+    const d = new Date();
     firestore.collection('Request').add({
       operation: 'Request',
       userId: state.setUser.uid,
@@ -108,7 +109,7 @@ function RequestFormPage({ t }) {
       geoCoord: coord,
       neededBy: needed,
       message: purpose,
-      date: new Date(),
+      date: String(new Date()),
       emergency: emergency,
       fulfilled: 'false',
     });

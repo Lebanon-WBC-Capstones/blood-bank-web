@@ -28,7 +28,7 @@ function DonationAppointment({ t }) {
       pints: pintsx,
       donation_type: typex + ' Request',
       location: locationx,
-      date: new Date(),
+      date: String(new Date()),
       time: '10',
     });
   };
