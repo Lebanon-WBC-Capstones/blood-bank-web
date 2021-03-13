@@ -41,7 +41,7 @@ function AboutGraph({ t }) {
             backgroundColor: 'rgba(136, 129, 129, 0.22)',
             color: 'rgba(94, 89, 89, 0.87)',
           }}
-          class=" bg-red-300 text-xs "
+          className=" bg-red-300 text-xs "
         >
           {t('aboutus.request')}
         </button>
@@ -56,7 +56,7 @@ function AboutGraph({ t }) {
             backgroundColor: 'rgba(136, 129, 129, 0.22)',
             color: 'rgba(94, 89, 89, 0.87)',
           }}
-          class=" bg-red-300 text-xs"
+          className=" bg-red-300 text-xs"
         >
           {t('aboutus.get_notified')}
         </button>

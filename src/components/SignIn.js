@@ -1,8 +1,39 @@
-import React from 'react';
-import signInLogo from '../assets/signlogo.svg';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 import { withNamespaces } from 'react-i18next';
+import signInLogo from '../assets/signlogo.svg';
+import { useHistory } from 'react-router-dom';
+import { auth } from '../api/firebase';
+
 const SignIn = ({ t }) => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  //const [error, setError] = useState(''); will be used later just to make the app deploy
+  const history = useHistory();
+
+  const handleSignIn = (e, email, password) => {
+    e.preventDefault();
+    const promise = auth.signInWithEmailAndPassword(email, password);
+    promise
+      .then(() => history.push('/dashboard'))
+      .catch((e) => console.log('failed'));
+  };
+  const onChangeHandler = (e) => {
+    const { name, value } = e.currentTarget;
+
+    if (name === 'userEmail') {
+      setEmail(value);
+    } else if (name === 'userPassword') {
+      setPassword(value);
+    }
+  };
+  //This will be in the context file
+  useEffect(() => {
+    const userListener = auth.onAuthStateChanged((user) =>
+      user ? console.log('authen') : console.log('not authen')
+    );
+    return userListener;
+  }, []);
+
   return (
     <div className="bg-transparent container max-width: 640px">
       <div className="mb-8 ">
@@ -18,7 +49,7 @@ const SignIn = ({ t }) => {
       </div>
 
       <div className=" mt-5">
-        <form>
+        <form onSubmit={(e) => handleSignIn(e, email, password)}>
           <div>
             <label className="text-gray-500 font-Roboto pr-56">
               {' '}
@@ -26,10 +57,12 @@ const SignIn = ({ t }) => {
             </label>
             <br />
             <input
-              type="text"
-              id="email"
-              name="email"
-              className="  w-11/12 rounded-lg h-9 border-2 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
+              type="email"
+              id="userEmail"
+              name="userEmail"
+              value={email}
+              onChange={(e) => onChangeHandler(e)}
+              className=" w-11/12 rounded-lg h-9 border-2 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
             />
           </div>
 
@@ -40,8 +73,10 @@ const SignIn = ({ t }) => {
             <br />
             <input
               type="password"
-              id="password"
-              name="password"
+              id="userPassword"
+              name="userPassword"
+              value={password}
+              onChange={(e) => onChangeHandler(e)}
               className="  w-11/12 rounded-lg h-9 border-2 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
             />
           </div>
@@ -59,13 +94,11 @@ const SignIn = ({ t }) => {
           </div>
 
           <div className="mt-24">
-            <Link to={`/dashboard`}>
-              <input
-                type="submit"
-                value="Sign In"
-                className="bg-pink border-2 border-pink font-Roboto font-medium w-11/12 rounded-lg h-9 text-gray-500 font-Roboto focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
-              />
-            </Link>
+            <input
+              type="submit"
+              value="Sign In"
+              className="bg-pink  w-11/12 font-medium border-2 border-pink rounded-lg h-9 text-gray-500 font-Roboto focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
+            />
           </div>
         </form>
       </div>

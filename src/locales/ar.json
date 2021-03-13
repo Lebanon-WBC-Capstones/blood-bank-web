@@ -1,5 +1,207 @@
 {
-  "btn": {
-    "Reset All": "إعادة ضبط"
+  "landingpage": {
+    "find": "جد",
+    "local_blood": "متبرع قريب منك",
+    "donor": "متبرع",
+    "donation": "تبرع",
+    "centers": "مراكز",
+    "goo_sign_up": "إنشاء حساب",
+    "goo_sign_in": "تسجيل دخول",
+    "Emergency_Blood_Request": "طلب دم طارئ",
+    "Donate_and_help_others": "تبرع وساعد الآخرين",
+    "Flexible_scheduling": "جدول",
+    "Fast_Response": "تلبية سريعة",
+    "blood": "دم",
+    "center": "مركز",
+    "our": "نا",
+    "heroes": "أبطال",
+    "so_far": "بعيد جداً",
+    "we_have": "لدينا",
+    "reached": "وصل",
+    "life_saved": "إنفذ روح",
+    "requests": "طلب",
+    "requests_done": "اكتمل الطلب",
+    "donators": "المتبرعين",
+    "hospitals": "المستشفيات",
+    "nini": "نيني",
+    "mazloum": "مظلوم",
+    "haykel": "الهيكل",
+    "monla": "المنلا",
+    "terms": "الشروط",
+    "privacy_policy": "وسياسة الخصوصية",
+    "terms_and_agreement": "الشروط والاتفاق",
+    "about_us": "من نحن",
+    "copyright": "حقوق النشر",
+    "blood_bank_all_rights_reserved": "جميع الحقوق محفوظة لبنك الدم"
+  },
+
+  "aboutus": {
+    "about_our_service": "نظرة على خدماتنا",
+    "our_service_is_as_simple_as_saying_hello": "خدماتنا أسهل من السلام",
+    "register": "تسجيل",
+    "request": "طلب",
+    "get_notified": "إشعارات",
+    "save_a_life": "أنقذ روحاً",
+    "our_team": "فريقنا",
+    "contact_us": "إتصل بنا",
+    "we_appreciate": "نهتم",
+    "your_feedback": "لأرئكم",
+    "send": "إرسال",
+    "enter_your_name": "أدخل اسمك",
+    "e_mail": "البريد الإلكتروني",
+    "enter_your_message": "أدخل رسالتك",
+    "hospitals": "المستشفيات",
+    "nini": "النيني",
+    "mazloum": "المظلوم",
+    "haykel": "الهيكل",
+    "monla": "المنلا",
+    "terms": "الشروط",
+    "privacy_policy": "سياسة الخصوصية",
+    "terms_and_agreement": "الشروط والموافقة"
+  },
+
+  "signup": {
+    "sign_up_with": "سجل من خلال",
+    "gmail": "بريد الجي ميل",
+    "facebook": "الفيسبوك",
+    "or": "أو",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "confirm_password": "تأكيد كلمة المرور",
+    "i_agree_to_terms_conditions_and_privacy_policy": "أوافق على الشروط وسياسة الخصوصيى",
+    "sign_up": "إنشاء حساب"
+  },
+
+  "signin": {
+    "sign_in": "تسجيل دخول",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "remember_me": "تذكر حسابي"
+  },
+
+  "signupconfirm": {
+    "thank_you": "شكراً",
+    "please_check_your_email_to_verify_the_account": "فضلاً تفحص بريدك الإلكتروني للتأكد من الحساب",
+    "get_started": "إبدأ"
+  },
+
+  "dashboard": {
+    "hero_donor": "المتبرع البطل",
+    "request": "طلب",
+    "donate": "تبرع",
+    "your_donations": "تبرعاتك",
+    "last_donation": "أخر تبرع",
+    "total_donation": "مجموع التبرعات",
+    "days_left": "الأيام المتبقية"
+  },
+
+  "menu": {
+    "edit_details": "تعديل المعلومات",
+    "history": "السجل",
+    "notifications": "الإشعارات",
+    "language": "اللغة",
+    "log_out": "تسجل خروج"
+  },
+
+  "editprofile": {
+    "full_name": "الاسم الكامل",
+    "address": "العنون",
+    "change_password": "تغير كلمة المرور",
+    "save_changes": "حفظ التغيرات"
+  },
+
+  "feeds": {
+    "feeds": "الأخبار",
+    "request_is_fulfilled": "تم إنجاز الطلب",
+    "pints": "وحدات"
+  },
+
+  "history": {
+    "donation": "التبرع",
+    "request": "الطلب",
+    "all": "كل شيء",
+    "plasma": "بلازما",
+    "blood": "دم",
+    "red_cells": "كريات حمراء",
+    "platelets": "صفائح دم",
+    "hospital": " مستشفى"
+  },
+
+  "requesttype": {
+    "request_type": "نوع الطلب",
+    "plasma": "بلازما",
+    "red_cells": "كريات حمراء",
+    "platelets": "صفائح دم",
+    "blood": "دم"
+  },
+
+  "requestform": {
+    "request_form": "الطلب",
+    "for": "ل",
+    "for_me": "لي",
+    "others": "لغيري",
+    "full_name": "الاسم الكامل",
+    "phone": "الهانف",
+    "address": "العنوان",
+    "emergency": "حالة طارئة",
+    "purpose": "الغاية",
+    "pints_need": "الكمية المطلوبة",
+    "send": "إرسال"
+  },
+
+  "notification": {
+    "request_type": "نوع الطلب",
+    "blood_type": "نوع الدم",
+    "reset_all": "إعادة الضبط",
+    "hospital": " مستشفى",
+    "plasma": "بلازما",
+    "red_cells": "كريات حمراء",
+    "platelets": "صفائح",
+    "blood": "دم",
+    "pints": " وحدات"
+  },
+
+  "donatetype": {
+    "pick_your_target": "اختر وجهتك",
+    "urgent": "ضروري",
+    "volunteer": "متبرع"
+  },
+
+  "volunteerlist": {
+    "welcome_hero": "أهلا وسهلا بالبطل",
+    "red_cells": "كريات حمراء",
+    "platelets": "صفائح",
+    "blood": "دم",
+    "hospital": "مستشفى",
+    "request": "طلب"
+  },
+
+  "donationform": {
+    "donation_form": "طلب التبرع",
+    "red_cells": "كريات حمرتء",
+    "platelets": "صفائح",
+    "blood": "دم",
+    "pints": "واحدات",
+    "hospital": "مستشفلا",
+    "request": "طلب",
+    "done": "تم"
+  },
+
+  "donateappointment": {
+    "i_want_to_donate": "أريد التبرع",
+    "appointment_date": "تاريخ الموعد",
+    "appointment_time": "توقيت الموعد",
+    "confirm_appointment": "تأكيد الموعد"
+  },
+
+  "donationConfirm": {
+    "donation_confirmed": "تم تأكيد التبرع",
+    "thank_you_for_your_donation_please_check_your_email_for_more_information": "شكراً لتبرعك، فضلاً تحقق من بريدك الإلكتروني"
+  },
+
+  "donatereject": {
+    "your_last_donation": "أخر تبرع لك",
+    "was_days_ago": "كان قبل أيام",
+    "let_your_bones_do_their_job": "دع جسمك يقوم بعمله"
   }
 }
