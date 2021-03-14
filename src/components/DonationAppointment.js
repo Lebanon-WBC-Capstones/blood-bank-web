@@ -5,13 +5,13 @@ import DateIcon from '../assets/date.svg';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { withNamespaces } from 'react-i18next';
-//import { Link } from 'react-router-dom';
 import { firestore } from '../api/firebase.js';
 import { Context } from '../Context';
 import { useParams } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 function DonationAppointment({ t }) {
+  const history = useHistory();
   const [state] = useContext(Context);
   const [time, setTime] = useState('');
   const [startDate, setStartDate] = useState(new Date());
@@ -20,9 +20,10 @@ function DonationAppointment({ t }) {
   const { type: typex } = useParams();
 
   const onChangeHandler = (e) => {
-    setTime(e.current.value);
+    setTime(e.currentTarget.value);
   };
-  const handleDonate = () => {
+  const handleDonate = async (event) => {
+    event.preventDefault();
     firestore.collection('Donation').add({
       operation: 'Donation',
       userId: state.setUser.uid,
@@ -30,15 +31,14 @@ function DonationAppointment({ t }) {
       donation_type: typex + ' Request',
       location: locationx,
       date: String(new Date()),
-      time: '10',
+      appointment: startDate,
+      time: time,
     });
+    history.push(`/donateconfirm`);
   };
   return (
     <div>
-      <div>
-        <button onClick={handleDonate}>create donation</button>
-      </div>
-      <form>
+      <form onSubmit={handleDonate}>
         <div className="container max-w-screen-sm mt-10 sm:ml-12 sm:mt-20">
           <label className="font-Roboto text-gray-500 mr-32 sm:mr-80">
             {t('donateappointment.appointment_date')}
@@ -69,6 +69,7 @@ function DonationAppointment({ t }) {
             <div className="flex flex-row justify-evenly mt-0.5">
               <input
                 type="text"
+                value={time}
                 onChange={onChangeHandler}
                 className="w-3/4 rounded-lg h-9 bg-white border-2 pt-3 focus:outline-none focus:ring-2 focus:ring-gray-300"
               />
@@ -81,12 +82,13 @@ function DonationAppointment({ t }) {
           </div>
 
           <div className="ml-16 mb-8 mt-36">
-            <Link to={`/donateconfirm`}>
-              <button className="flex flex-row justify-evenly items-center w-3/4 rounded-lg h-9 text-md text-gray-500 font-Roboto bg-pink mt-10 mb-6 sm:pl-20 focus:outline-none focus:ring-2 focus:ring-gray-300 pl-5 sm:text-xl">
-                {t('donateappointment.confirm_appointment')}
-                <img src={Heart} alt="heart" className="pr-8 sm:pr-20" />
-              </button>
-            </Link>
+            <button
+              type="submit"
+              className="flex flex-row justify-evenly items-center w-3/4 rounded-lg h-9 text-md text-gray-500 font-Roboto bg-pink mt-10 mb-6 sm:pl-20 focus:outline-none focus:ring-2 focus:ring-gray-300 pl-5 sm:text-xl"
+            >
+              {t('donateappointment.confirm_appointment')}
+              <img src={Heart} alt="heart" className="pr-8 sm:pr-20" />
+            </button>
           </div>
         </div>
       </form>
