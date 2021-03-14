@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import signinlogo from '../assets/signlogo.svg';
 import getstarted from '../assets/getstarted.svg';
 import { Link } from 'react-router-dom';
 import { withNamespaces } from 'react-i18next';
+import { Context } from '../Context';
+
 const EmailConfirmation = ({ t }) => {
+  const [state, dispatch] = useContext(Context);
   return (
     <div className="flex flex-col">
       <div className="flex flex-col ">
@@ -24,7 +27,7 @@ const EmailConfirmation = ({ t }) => {
           </p>
         </div>
       </div>
-      <Link to={`/dashboard`}>
+      <Link to={`/dashboard/${state.setUser.email}/Tripoli/""`}>
         <div className="mt-20 ml-44 flex flex-row">
           <div>{t('signupconfirm.get_started')}</div>
           <div className="mt-1 ml-2">

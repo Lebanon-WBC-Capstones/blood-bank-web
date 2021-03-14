@@ -23,7 +23,7 @@ const SignIn = ({ t }) => {
           setUser: user,
           language: 'english',
         });
-        history.push('/dashboard');
+        history.push(`/dashboard/${user.email}/Tripoli/""`);
       })
       .catch((e) => console.log('failed'));
   };

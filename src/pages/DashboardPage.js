@@ -3,16 +3,19 @@ import { Link } from 'react-router-dom';
 import DashCards from '../components/dash-cards';
 import DashProfile from '../components/dash-profile';
 import feeds from '../assets/dashFeeds.svg';
-import { useState, useContext } from 'react';
+import { useState } from 'react';
 import Menu from '../components/menu';
 import BottomWave from '../assets/backBottomWave.svg';
 import pp from '../assets/profilepic.png';
-import { Context } from '../Context';
+
+import { useParams } from 'react-router-dom';
 
 export default function Dashboard() {
-  const [state, dispatch] = useContext(Context);
-
+  const { fullName: fullNamex } = useParams();
+  const { address: addressx } = useParams();
+  const { bloodType: bloodTypex } = useParams();
   const [MenuIsVisible, setMenuIsVisible] = useState(false);
+
   function toggleMenu() {
     setMenuIsVisible((prevMenuIsVisible) => !prevMenuIsVisible);
   }
@@ -35,6 +38,7 @@ export default function Dashboard() {
       </svg>
     );
   }
+
   return (
     <div
       className=" w-screen h-screen m-0 pt-2"
@@ -56,7 +60,7 @@ export default function Dashboard() {
           {Icon('#716A6A')}
         </div>
         <div className="flex justiy-center  text-lg font-roboto text-greyfont">
-          <p>{state.setUser.email}</p>
+          <p>{fullNamex}</p>
         </div>
 
         <Link to={`/feeds`}>
@@ -65,7 +69,7 @@ export default function Dashboard() {
           </div>
         </Link>
       </div>
-      <DashProfile pp={pp} />
+      <DashProfile pp={pp} address={addressx} blood_type={bloodTypex} />
 
       <DashCards />
 

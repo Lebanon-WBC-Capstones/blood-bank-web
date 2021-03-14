@@ -17,13 +17,6 @@ function SignUp({ setCount, count, t }) {
   const [confirmpass, setConfirmpass] = useState('');
   const [msg, setMsg] = useState('');
 
-  /*const handleProfile = () => {
-    firestore.collection('Profile').add({
-      userId: state.setUser.uid,
-      name:
-    });
-  };*/
-
   const onChangeHandler = (event) => {
     const { name, value } = event.currentTarget;
     if (name === 'userEmail') {

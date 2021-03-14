@@ -36,7 +36,7 @@ function App() {
           <Route path="/signup" component={SignUp} />
           {/*no auth */}
           <Route path="/signin" component={SignIn} />
-          {/*no auth */}
+          {/*no auth 
           <Route path="/dashboard" component={Dashboard} />
           {/*auth */}
           <Route path="/feeds" component={Feeds} />
@@ -68,6 +68,11 @@ function App() {
           <Route path="/volunteer" component={VolunteerPage} />
 
           <Route path="/confirm" component={ConfirmEmail} />
+
+          <Route
+            path="/dashboard/:fullName/:address/:bloodType"
+            component={Dashboard}
+          />
           {/*
           <Route path="/volunteer" component={VolunteerPage} />
           {/*auth 

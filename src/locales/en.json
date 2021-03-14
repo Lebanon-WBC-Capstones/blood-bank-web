@@ -107,7 +107,8 @@
     "full_name": "Full Name",
     "address": "Address",
     "change_password": "Change Password",
-    "save_changes": "Save Changes"
+    "save_changes": "Save Changes",
+    "blood_type":"Blood Type"
   },
 
   "feeds": {
