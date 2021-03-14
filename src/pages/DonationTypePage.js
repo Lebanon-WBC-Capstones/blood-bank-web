@@ -8,7 +8,7 @@ function DonationTypePage({ t }) {
   return (
     <div>
       <BackPage title={t('donatetype.pick_your_target')}>
-        <div className="mt16 mb-5 flex flex-wrap   justify-center content-center h-full">
+        <div className="mt-12 mb-5 flex flex-wrap   justify-center content-center h-full">
           <div class="mr-8">
             <Link to={`/urgent`}>
               <button
@@ -21,7 +21,7 @@ function DonationTypePage({ t }) {
                   <img
                     src={Urgent}
                     alt="Urgent"
-                    className="absolute mt-4 ml-7"
+                    className="absolute mt-5 ml-8"
                   />
                 </div>
 
@@ -43,7 +43,7 @@ function DonationTypePage({ t }) {
                   <img
                     src={Volunteer}
                     alt="Volunteer"
-                    className="absolute mt-4 ml-3"
+                    className="absolute w-16 h-16 mt-2 ml-2"
                   />
                 </div>
 

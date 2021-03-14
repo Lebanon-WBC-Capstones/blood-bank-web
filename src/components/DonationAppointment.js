@@ -5,7 +5,7 @@ import DateIcon from '../assets/date.svg';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { withNamespaces } from 'react-i18next';
-//import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function DonationAppointment({ t }) {
   const [startDate, setStartDate] = useState(new Date());
@@ -18,11 +18,12 @@ function DonationAppointment({ t }) {
           </label>
           <br />
           <div className="flex flex-row justify-evenly mt-0.5">
-            <div className="text-gray-400 h-9 pl-2 pr-20 sm:pr-72 rounded-lg border-2 focus:outline-none focus:ring-2 focus:ring-gray-300">
+            <div className="text-gray-400 w-3/4 h-9 pl-2 pr-20 sm:pr-72 rounded-lg border-2 focus:outline-none focus:ring-2 focus:ring-gray-300">
               <DatePicker
                 selected={startDate}
                 onChange={(date) => setStartDate(date)}
                 dateFormat="d/MMM/yyyy"
+                className="bg-white"
               />
             </div>
             <div className="absolute pr-2 pl-12 pb-32 sm:pr-6">
@@ -41,7 +42,7 @@ function DonationAppointment({ t }) {
             <div className="flex flex-row justify-evenly mt-0.5">
               <input
                 type="text"
-                className="w-3/4  bg-white rounded-lg h-9 border-2 pt-3 focus:outline-none focus:ring-2 focus:ring-gray-300"
+                className="w-3/4 rounded-lg h-9 bg-white border-2 pt-3 focus:outline-none focus:ring-2 focus:ring-gray-300"
               />
               <img
                 src={Clock}
@@ -51,11 +52,13 @@ function DonationAppointment({ t }) {
             </div>
           </div>
 
-          <div className="flex flex-row justify-evenly mb-8 mt-36">
-            <button className="flex flex-row justify-evenly items-center w-3/4 rounded-lg h-9 text-md text-gray-500 font-Roboto bg-pink mt-10 mb-6 sm:pl-20 focus:outline-none focus:ring-2 focus:ring-gray-300 pl-5 sm:text-xl">
-              {t('donateappointment.confirm_appointment')}
-              <img src={Heart} alt="heart" className="pr-8 sm:pr-20" />
-            </button>
+          <div className="ml-16 mb-8 mt-36">
+            <Link to={`/donateconfirm`}>
+              <button className="flex flex-row justify-evenly items-center w-3/4 rounded-lg h-9 text-md text-gray-500 font-Roboto bg-pink mt-10 mb-6 sm:pl-20 focus:outline-none focus:ring-2 focus:ring-gray-300 pl-5 sm:text-xl">
+                {t('donateappointment.confirm_appointment')}
+                <img src={Heart} alt="heart" className="pr-8 sm:pr-20" />
+              </button>
+            </Link>
           </div>
         </div>
       </form>

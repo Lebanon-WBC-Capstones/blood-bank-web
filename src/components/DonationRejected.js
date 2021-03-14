@@ -28,12 +28,8 @@ function DonationRejected({ t }) {
           id="heart"
         />{' '}
       </div>
-      <div className="text-gray-600 font-normal text-2xl mt-64 my-2 align-center p-10 sm:mb-10 sm:text-4xl">
-        {t('donatereject.your_last_donation')}
-        <br />
-        {t('donatereject.was_days_ago')}
-        <br />
-        {t('donatereject.let_your_bones_do_their_job')}
+      <div className="absolute animate-pulse text-pri-red  font-medium font-Roboto text-3xl mt-60 my-2 ml-12 p-10 sm:mb-10 sm:text-4xl">
+        {t('donatereject.request_sent')}
       </div>
     </div>
   );

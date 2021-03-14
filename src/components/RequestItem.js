@@ -1,6 +1,5 @@
 import React from 'react';
 import locationIcon from '../assets/location.svg';
-import callIcon from '../assets/callIcon.svg';
 import warningIcon from '../assets/warningIcon.svg';
 import bloodDropIcon from '../assets/bloodDropIcon.svg';
 import { withNamespaces } from 'react-i18next';
@@ -44,11 +43,6 @@ const RequestItem = (props) => {
             </div>
 
             <div className="flex flex-row ml-2">
-              <img src={callIcon} alt="callIcon" className="w-3 h-3 " />
-              <span className="text-xs ml-1 mb-1">{props.item_data.phone}</span>
-            </div>
-
-            <div className="flex flex-row ml-2">
               <img src={warningIcon} alt="warningIcon" className="w-3 h-3" />
               <span className="text-xs ml-1 mb-1">
                 {gettype()} |{' '}
@@ -60,7 +54,7 @@ const RequestItem = (props) => {
             </div>
           </div>
         </div>
-        <div className=" mr-5 mt-7 flex flex-col">
+        <div className=" mr-5 mt-7 flex flex-col  animate-pulse">
           <div>
             <img src={bloodDropIcon} alt="bloodDropIcon" className="ml-4" />
           </div>

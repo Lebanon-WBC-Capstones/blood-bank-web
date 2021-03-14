@@ -36,8 +36,8 @@ function RequestCards({ t }) {
               }}
               className="bg-white mb-20 rounded-3xl pl-1 pr-1 shadow-sm w-32 h-36 focus:outline-none focus:ring-2 focus:ring-pink focus:ring-opacity-50 "
             >
-              <div className="mt-2 pl-5 pr-1 ">
-                <img src={Blood} alt="tube" className="absolute" />
+              <div className="mt-3 pl-5 pr-1 ">
+                <img src={Blood} alt="tube" className="absolute w-20" />
               </div>
 
               <p className="text-sm font-medium bottom-0 mt-24 font-roboto text-greyfont ">

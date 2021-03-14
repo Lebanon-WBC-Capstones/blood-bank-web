@@ -16,61 +16,44 @@ function Graph({ t }) {
         <img style={{ marginRight: '0px' }} src={path2} alt="house" />
         <button
           style={{
-            borderRadius: '16px',
-            position: 'absolute',
             top: '20%',
-            left: '4%',
-            width: 'auto',
-            padding: '0.5rem',
+            left: '5%',
             backgroundColor: 'rgba(136, 129, 129, 0.22)',
-            color: 'rgba(94, 89, 89, 0.87)',
           }}
-          class="  bg-red-300  text-xs "
+          className=" absolute rounded-2xl px-2 py-1 w-auto text-gray-500 font-Roboto text-xs "
         >
           {t('landingpage.Emergency_Blood_Request')}
         </button>
         <button
           style={{
-            borderRadius: '16px',
-            position: 'absolute',
-            top: '38%',
+            top: '39%',
             left: '1%',
-            width: 'auto',
-            padding: '0.5rem',
+
             backgroundColor: 'rgba(136, 129, 129, 0.22)',
-            color: 'rgba(94, 89, 89, 0.87)',
           }}
-          class=" bg-red-300  text-xs "
+          className=" absolute rounded-2xl px-2 py-1 w-auto text-gray-500 font-Roboto text-xs "
         >
           {t('landingpage.Donate_and_help_others')}
         </button>
         <button
           style={{
-            borderRadius: '16px',
-            position: 'absolute',
             top: '57%',
             right: '0%',
-            width: 'auto',
-            padding: '0.5rem',
+
             backgroundColor: 'rgba(136, 129, 129, 0.22)',
-            color: 'rgba(94, 89, 89, 0.87)',
           }}
-          class=" bg-red-300 text-xs "
+          className="absolute rounded-2xl px-2 py-1 w-auto text-gray-500 font-Roboto text-xs "
         >
           {t('landingpage.Flexible_scheduling')}
         </button>
         <button
           style={{
-            borderRadius: '16px',
-            position: 'absolute',
-            top: '70%',
-            right: '3%',
-            width: 'auto',
-            padding: '0.5rem',
+            top: '71%',
+            right: '5%',
+
             backgroundColor: 'rgba(136, 129, 129, 0.22)',
-            color: 'rgba(94, 89, 89, 0.87)',
           }}
-          class=" bg-red-300 text-xs"
+          className=" absolute rounded-2xl px-2 py-1 w-auto text-gray-500 font-Roboto text-xs"
         >
           {t('landingpage.Fast_Response')}
         </button>

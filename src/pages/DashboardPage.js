@@ -33,10 +33,7 @@ export default function Dashboard() {
     );
   }
   return (
-    <div
-      className=" w-screen h-screen m-0 pt-2"
-      style={{ backgroundColor: 'rgba(255, 249, 249, 1)' }}
-    >
+    <div className="bg-white w-screen h-screen m-0 pt-2">
       {MenuIsVisible && (
         <Menu
           className="fixed"
@@ -46,7 +43,7 @@ export default function Dashboard() {
         />
       )}
       <div
-        className="flex flex-row justify-between mx-5 pt-2"
+        className="flex flex-row justify-between mx-2 pt-1"
         style={{ height: '5vh' }}
       >
         <div className="flex justiy-center pt-1" onClick={() => toggleMenu()}>
