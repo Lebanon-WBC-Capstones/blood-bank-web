@@ -102,13 +102,13 @@ function DashProfile(props) {
         <div
           style={{
             backgroundColor: 'rgba(255, 231, 231, 1)',
-            width: '33vw',
+            width: '30vw',
             height: '6vw',
           }}
           className="flex flex-row justify-evenly rounded-2xl	items-center p-2"
         >
           <img src={star} alt="location" className="mr-1" />{' '}
-          <p className=" font-roboto text-s text-greyfont">
+          <p className=" font-roboto text-xs font-medium text-greyfont">
             {' '}
             {props.t('dashboard.hero_donor')}
           </p>
@@ -120,9 +120,10 @@ function DashProfile(props) {
         }}
         className="flex flex-row justify-center text-white font-roboto"
       >
-        <img src={location} alt="location" /> <p>{props.address}</p>
+        <img src={location} alt="location" className="mr-1 mt-1 h-5" />{' '}
+        <p>{props.address}</p>
       </div>
-      <div style={{ margin: '2vw' }} className="flex justify-center">
+      <div style={{ margin: '2vw' }} className="flex mb-3 justify-center">
         {bloodtype(props.blood_type, Rhminus)}
       </div>
     </div>

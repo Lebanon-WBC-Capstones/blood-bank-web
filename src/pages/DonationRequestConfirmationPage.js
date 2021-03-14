@@ -1,6 +1,7 @@
 import React from 'react';
 import DonationRequest from '../components/Donationrequestconfirmation';
 import BackPage from '../components/BackPage';
+import Map from '../components/map-view-map';
 import { withNamespaces } from 'react-i18next';
 const DonationRequestPage = ({ t }) => {
   return (
@@ -10,7 +11,9 @@ const DonationRequestPage = ({ t }) => {
           <DonationRequest />
         </div>
 
-        <div className=" h-48 m-4 rounded-md">map here</div>
+        <div className=" h-48 ml-2 rounded-md">
+          <Map />
+        </div>
       </BackPage>
     </div>
   );

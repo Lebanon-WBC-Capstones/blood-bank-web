@@ -83,6 +83,19 @@ const RequestList = ({ type }) => {
           amount: '4',
         },
       },
+      {
+        user: {
+          username: 'AbdulRahman',
+          avatar:
+            'https://user-images.githubusercontent.com/12988551/108382684-1f03f000-721a-11eb-901b-3419f392e548.png',
+        },
+        data: {
+          blood_type: 'A-',
+          request_type: 'Platelets',
+          location: 'Monla',
+          amount: '2',
+        },
+      },
     ],
     []
   );

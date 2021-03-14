@@ -17,11 +17,8 @@ import DonatePage from './pages/DonationRequestConfirmationPage.js';
 import DonateAppointment from './pages/DonateAppointment.js';
 import VolunteerPage from './pages/VolunteerPage.js';
 import ConfirmEmail from './pages/ConfirmEmail.js';
-
-/*
-import DonateConfirm from './pages/DonationConfirmPage.js';
-import DonateRejected from './pages/DonationRejectedPage.js';
-*/
+import DonateConfirm from './pages/DonationConfirmPage';
+import RequestSent from './pages/RequestSentPage.js';
 
 function App() {
   return (
@@ -72,6 +69,8 @@ function App() {
             path="/dashboard/:fullName/:address/:bloodType"
             component={Dashboard}
           />
+          <Route path="/donateconfirm" component={DonateConfirm} />
+          <Route path="/requestsent" component={RequestSent} />
           {/*
           <Route path="/volunteer" component={VolunteerPage} />
           {/*auth 

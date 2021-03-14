@@ -70,13 +70,19 @@ function AboutFooter({ t }) {
           <div className="ml-12">
             <div>
               {' '}
-              <img className="" src={Twitter} alt="twitter" />
+              <a href="https://ads.twitter.com/login">
+                <img className="" src={Twitter} alt="twitter" />
+              </a>
             </div>
             <div>
-              <img className="mt-2" src={Github} alt="github" />
+              <a href="https://github.com/">
+                <img className="mt-2" src={Github} alt="github" />
+              </a>
             </div>
             <div>
-              <img className="mt-2" src={Facebook} alt="facebook" />
+              <a href="https://www.facebook.com/">
+                <img className="mt-2" src={Facebook} alt="facebook" />
+              </a>
             </div>
           </div>
         </div>

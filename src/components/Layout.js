@@ -4,7 +4,7 @@ function Layout(props) {
     <div>
       <div className="min-h-screen bg-pri-red py-10 sm:p-8">
         <div
-          className=" bg-white p-10 flex items-center justify-center sm:w-full"
+          className=" bg-white p-10 sm:w-full"
           style={{
             borderStyle: 'solid',
             borderRadius: '0px 50px 0px 50px',

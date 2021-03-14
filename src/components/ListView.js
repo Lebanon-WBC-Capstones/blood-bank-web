@@ -46,7 +46,7 @@ function ListView(props) {
         </div>
         <div class="text-gray-300 text-xs mr-2 mt-5 flex flex-row ">
           <img src={Clock} alt="clock" class="w-4 h-4" />
-          <span class="ml-1">{formatDate(props.date)}</span>
+          <span className="ml-1">{formatDate(props.date)}</span>
         </div>
       </div>
     </div>
