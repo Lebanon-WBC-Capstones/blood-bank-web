@@ -9,7 +9,7 @@ import { withNamespaces } from 'react-i18next';
 import { firestore } from '../api/firebase.js';
 import { Context } from '../Context';
 function DashCards({ t }) {
-  const [state, dispatch] = useContext(Context);
+  const [state] = useContext(Context);
   let d = new Date();
   const [donation, setDonation] = useState([]);
   const DonationList = [];

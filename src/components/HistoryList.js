@@ -7,7 +7,7 @@ import { Context } from '../Context';
 
 const HistoryList = ({ status }) => {
   const [historyFilter, setHistoryFilter] = useState([]);
-  const [state, dispatch] = useContext(Context);
+  const [state] = useContext(Context);
 
   const [request, setRequest] = useState([]);
   const [donation, setDonation] = useState([]);

@@ -16,7 +16,6 @@ import UrgentPage from './pages/UrgentPage.js';
 import DonatePage from './pages/DonationRequestConfirmationPage.js';
 import DonateAppointment from './pages/DonateAppointment.js';
 import VolunteerPage from './pages/VolunteerPage.js';
-import ContextProvider from './Context';
 import ConfirmEmail from './pages/ConfirmEmail.js';
 
 /*

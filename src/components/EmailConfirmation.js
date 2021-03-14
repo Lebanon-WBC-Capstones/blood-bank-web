@@ -6,7 +6,7 @@ import { withNamespaces } from 'react-i18next';
 import { Context } from '../Context';
 
 const EmailConfirmation = ({ t }) => {
-  const [state, dispatch] = useContext(Context);
+  const [state] = useContext(Context);
   return (
     <div className="flex flex-col">
       <div className="flex flex-col ">

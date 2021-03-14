@@ -11,7 +11,7 @@ import { withNamespaces } from 'react-i18next';
 import { Context } from '../Context';
 import { useContext } from 'react';
 function Menu(props) {
-  const [state, dispatch] = useContext(Context);
+  const [state] = useContext(Context);
   function handleLogOut() {}
   return (
     <div

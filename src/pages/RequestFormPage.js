@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import DatePicker from 'react-datepicker';
+// import DatePicker from 'react-datepicker';
 import dropRequest from '../assets/dropRequest.svg';
 import Back from '../assets/back.svg';
 import Wave from '../assets/Wafe.svg';
@@ -15,7 +15,7 @@ import { firestore } from '../api/firebase.js';
 import { Context } from '../Context';
 
 function RequestFormPage({ t }) {
-  const [state, dispatch] = useContext(Context);
+  const [state] = useContext(Context);
   const [fullName, setFullName] = useState('');
   const [phone, setPhone] = useState(0);
   const [purpose, setPurpose] = useState('');
@@ -95,7 +95,7 @@ function RequestFormPage({ t }) {
   };
 
   const handleRequest = () => {
-    const d = new Date();
+    // const d = new Date();
     firestore.collection('Request').add({
       operation: 'Request',
       userId: state.setUser.uid,

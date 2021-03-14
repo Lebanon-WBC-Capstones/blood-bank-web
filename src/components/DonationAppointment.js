@@ -11,7 +11,7 @@ import { Context } from '../Context';
 import { useParams } from 'react-router-dom';
 
 function DonationAppointment({ t }) {
-  const [state, dispatch] = useContext(Context);
+  const [state] = useContext(Context);
   const [time, setTime] = useState('');
   const [startDate, setStartDate] = useState(new Date());
   const { location: locationx } = useParams();

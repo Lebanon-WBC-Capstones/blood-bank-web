@@ -6,7 +6,7 @@ import { auth } from '../api/firebase';
 import { Context } from '../Context';
 
 const SignIn = ({ t }) => {
-  const [state, dispatch] = useContext(Context);
+  const dispatch = useContext(Context)[1];
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const history = useHistory();

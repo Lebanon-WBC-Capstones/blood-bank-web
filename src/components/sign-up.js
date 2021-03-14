@@ -7,10 +7,9 @@ import { auth } from '../api/firebase.js';
 import { useHistory } from 'react-router-dom';
 import { provider } from '../api/firebase.js';
 import { Context } from '../Context';
-import { firestore } from '../api/firebase.js';
 
 function SignUp({ setCount, count, t }) {
-  const [state, dispatch] = useContext(Context);
+  const dispatch = useContext(Context)[1];
   const history = useHistory();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -60,8 +59,8 @@ function SignUp({ setCount, count, t }) {
       .signInWithPopup(provider)
       .then((result) => {
         /** @type {firebase.auth.OAuthCredential} */
-        let credential = result.credential;
-        let token = credential.accessToken;
+        // let credential = result.credential;
+        // let token = credential.accessToken;
         let user = result.user;
         dispatch({
           type: 'CREATE_USER',

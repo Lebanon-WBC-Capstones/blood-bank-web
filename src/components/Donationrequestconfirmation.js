@@ -1,6 +1,5 @@
-import React, { useState, useContext } from 'react';
+import React from 'react';
 import { useParams } from 'react-router-dom';
-import bloodIcon from '../assets/blood.svg';
 import personIcon from '../assets/person1.svg';
 import location from '../assets/locationIcon.svg';
 import call from '../assets/call.svg';
