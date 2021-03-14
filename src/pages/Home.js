@@ -88,7 +88,7 @@ function Home({ t }) {
         className="absolute overflow-hidden "
         style={{ top: '197vw', left: '0vw', right: '0vw' }}
       >
-        <HeroesCircles className="ight-0 left-0" />
+        <HeroesCircles />
       </div>
       <div
         className="absolute text-sm text-grey opacity-80 font-Roboto font-medium ml-24"

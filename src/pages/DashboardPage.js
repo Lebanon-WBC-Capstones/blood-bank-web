@@ -43,7 +43,7 @@ export default function Dashboard() {
         />
       )}
       <div
-        className="flex flex-row justify-between mx-5 pt-2"
+        className="flex flex-row justify-between mx-2 pt-1"
         style={{ height: '5vh' }}
       >
         <div className="flex justiy-center pt-1" onClick={() => toggleMenu()}>

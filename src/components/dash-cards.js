@@ -58,7 +58,7 @@ function DashCards({ t }) {
         </Link>
       </div>
 
-      <div className=" mb-3 mr-52">
+      <div className=" mb-3 mr-48 mt-7">
         <p className="text-md font-medium font-roboto text-greyfont">
           {t('dashboard.your_donations')}
         </p>

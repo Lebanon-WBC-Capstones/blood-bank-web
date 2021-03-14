@@ -9,19 +9,22 @@ import { Link } from 'react-router-dom';
 import { withNamespaces } from 'react-i18next';
 const DonationRequest = ({ t }) => {
   return (
-    <div className="border-2 border-gray-200 w-80 h-52 ml-7 mt-3 rounded-md ">
+    <div
+      className="border-2 border-gray-200 h-52 ml-6 mt-5 rounded-lg "
+      style={{ width: '88%' }}
+    >
       <div className="flex flex-col m-2">
         <div className="flex flex-row justify-between">
           <div>
-            <h3 className="text-gray-500">
+            <h3 className="text-gray-500 ml-2 mt-1 font-medium font-Roboto">
               Red Blood {t('donationform.request')}
             </h3>
           </div>
-          <div>
+          <div className="mr-2">
             <img src={bloodIcon} alt="blood icon" />
           </div>
         </div>
-        <div className="flex flex-col -mt-4">
+        <div className="flex flex-col -mt-4 px-2 py-1">
           <div className="flex flex-row mb-1 ">
             <div>
               {' '}
@@ -62,8 +65,8 @@ const DonationRequest = ({ t }) => {
         </div>
         <div>
           <Link to={`/appointment`}>
-            <button className="text-gray-500 bg-red-100 rounded-md px-3.5 py-0.5">
-              {t('donationform.done')}
+            <button className="border-pink border-2 mb-2 text-gray-500  bg-pink rounded-md px-3.5 py-0.5">
+              {t('donationform.donate')}
             </button>
           </Link>
         </div>

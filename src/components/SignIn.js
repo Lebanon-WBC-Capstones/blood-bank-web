@@ -62,7 +62,7 @@ const SignIn = ({ t }) => {
               name="userEmail"
               value={email}
               onChange={(e) => onChangeHandler(e)}
-              className=" w-11/12 rounded-lg h-9 border-2 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
+              className=" w-11/12 text-gray-500 pl-3 rounded-lg h-9 border-2 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
             />
           </div>
 
@@ -77,7 +77,7 @@ const SignIn = ({ t }) => {
               name="userPassword"
               value={password}
               onChange={(e) => onChangeHandler(e)}
-              className="  w-11/12 rounded-lg h-9 border-2 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
+              className=" text-gray-500 pl-3 w-11/12 rounded-lg h-9 border-2 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
             />
           </div>
 

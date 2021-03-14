@@ -1,12 +1,10 @@
 import React from 'react';
-import dropRequest from '../assets/dropRequest.svg';
 import Back from '../assets/back.svg';
 import Wave from '../assets/BottomRequest.svg';
-//import Send from '../assets/send.svg';
+import Send from '../assets/send.svg';
 import Header from '../assets/headerRequest.svg';
 import 'react-datepicker/dist/react-datepicker.css';
-import { useParams, useHistory } from 'react-router-dom';
-//import { Link } from 'react-router-dom';
+import { useParams, useHistory, Link } from 'react-router-dom';
 import { withNamespaces } from 'react-i18next';
 
 function RequestFormPage({ t }) {
@@ -28,7 +26,7 @@ function RequestFormPage({ t }) {
           <div className="ml-4">
             <img src={Back} alt="images" onClick={() => history.goBack()} />
           </div>
-          <div className="flex flex-row mt-5 ml-28 ">
+          <div className="flex flex-row justify-evenly mt-9  ">
             <div>
               <select
                 className="text-xs w-28 p-2 bg-pri-red	border-2 border-white	rounded-lg h-8 text-white focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50
@@ -41,15 +39,13 @@ function RequestFormPage({ t }) {
                 <option value="others">Others</option>
               </select>
             </div>
-            <div className="relative	flex-initial ml-4 -mt-4">
-              <span className=" absolute text-3xl top-2 left-3 text-white">
-                A
-              </span>
-              <button className="absolute -right-2 rounded-full w-7 h-7 text-lg align-top leading-4	 text-white bg-gray-600		border-2	border-white	">
-                +
-              </button>
-              <img src={dropRequest} alt="images" />
-            </div>
+
+            <select
+              className="text-xs w-28 p-2 bg-pri-red	border-2 border-white	rounded-lg h-8 text-white focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50
+               h-9"
+            >
+              <option value="">Blood Type</option>
+            </select>
           </div>
 
           <div className="flex flex-col mt-5">
@@ -106,7 +102,15 @@ function RequestFormPage({ t }) {
           </div>
         </div>
       </div>
+
       <div>
+        <div className="absolute " style={{ top: '162vw', left: '65vw' }}>
+          <Link to={`/requestsent`}>
+            <button className="flex flex-row justify-evenly text-gray-500 font-medium font-Roboto bg-white opacity-90 px-2 border-2 border-white rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50">
+              Send <img src={Send} alt="" className="ml-3 mt-1" />
+            </button>
+          </Link>
+        </div>
         <div className="absolute" style={{ top: '134vw' }}>
           <img src={Wave} alt="" />
         </div>

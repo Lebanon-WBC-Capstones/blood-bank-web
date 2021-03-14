@@ -90,19 +90,17 @@ function SignUp({ setCount, count, t }) {
         </p>
       </div>
       <div>
-        <div className="flex justify-around mx-auto w-full">
+        <div className=" mx-auto ">
           <button
-            className="border-pink border-2 h-9 bg-pink w-1/2 mb-2 p-2 font-roboto flex justify-evenly focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
-            style={{
-              borderRadius: '0.75rem',
-            }}
+            className="border-pink border-2  bg-pink rounded-full mb-2 p-2 font-roboto  focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
+            style={{}}
             onClick={signInWithGoogle}
           >
             {' '}
             <img src={gmail} alt="gmail" />{' '}
-            <p className="font-medium text-gray-500 font-roboto">
+            {/* <p className="font-medium text-gray-500 font-roboto">
               {t('signup.gmail')}
-            </p>
+          </p>*/}
           </button>
         </div>
 
@@ -122,7 +120,7 @@ function SignUp({ setCount, count, t }) {
 
       <div className="m-5">
         <form onSubmit={handleSignUp}>
-          <label className="font-roboto m-0.25 text-gray-500 mr-48">
+          <label className="font-roboto m-0.25 text-gray-500 mr-48 sm:mr-96 sm:pr-4">
             {t('signup.email')}
           </label>
           <br />
@@ -134,7 +132,7 @@ function SignUp({ setCount, count, t }) {
             className="pl-2 text-gray-500 border-2 m-1 w-full h-9 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
           />
           <br />
-          <label className="font-roboto m-1 text-gray-500 mr-44">
+          <label className="font-roboto m-1 text-gray-500 mr-44 sm:mr-96">
             {t('signup.password')}
           </label>
           <br />
@@ -146,7 +144,7 @@ function SignUp({ setCount, count, t }) {
             className="pl-2 text-gray-500 border-2 m-1 w-full h-9 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
           />
           <br />
-          <label className="font-roboto m-0.25 text-gray-500 mr-28 mt-1">
+          <label className="font-roboto m-0.25 text-gray-500 mr-28 mt-1 sm:mr-80">
             {t('signup.confirm_password')}
           </label>
           <br />

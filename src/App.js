@@ -19,10 +19,7 @@ import VolunteerPage from './pages/VolunteerPage.js';
 import ContextProvider from './Context';
 import ConfirmEmail from './pages/ConfirmEmail.js';
 import DonateConfirm from './pages/DonationConfirmPage';
-
-/*
-import DonateRejected from './pages/DonationRejectedPage.js';
-*/
+import RequestSent from './pages/RequestSentPage.js';
 
 function App() {
   return (
@@ -64,14 +61,7 @@ function App() {
 
             <Route path="/confirm" component={ConfirmEmail} />
             <Route path="/donateconfirm" component={DonateConfirm} />
-            {/*
-          <Route path="/volunteer" component={VolunteerPage} />
-          {/*auth 
-           
-          {/*auth 
-          <Route path="/donaterejected" component={DonateRejected} />
-          {/*auth 
-          */}
+            <Route path="/requestsent" component={RequestSent} />
           </Switch>
         </div>
       </Router>

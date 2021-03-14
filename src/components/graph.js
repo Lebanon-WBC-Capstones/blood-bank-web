@@ -31,7 +31,7 @@ function Graph({ t }) {
 
             backgroundColor: 'rgba(136, 129, 129, 0.22)',
           }}
-          class=" absolute rounded-2xl px-2 py-1 w-auto text-gray-500 font-Roboto text-xs "
+          className=" absolute rounded-2xl px-2 py-1 w-auto text-gray-500 font-Roboto text-xs "
         >
           {t('landingpage.Donate_and_help_others')}
         </button>
@@ -42,7 +42,7 @@ function Graph({ t }) {
 
             backgroundColor: 'rgba(136, 129, 129, 0.22)',
           }}
-          class="absolute rounded-2xl px-2 py-1 w-auto text-gray-500 font-Roboto text-xs "
+          className="absolute rounded-2xl px-2 py-1 w-auto text-gray-500 font-Roboto text-xs "
         >
           {t('landingpage.Flexible_scheduling')}
         </button>
@@ -53,7 +53,7 @@ function Graph({ t }) {
 
             backgroundColor: 'rgba(136, 129, 129, 0.22)',
           }}
-          class=" absolute rounded-2xl px-2 py-1 w-auto text-gray-500 font-Roboto text-xs"
+          className=" absolute rounded-2xl px-2 py-1 w-auto text-gray-500 font-Roboto text-xs"
         >
           {t('landingpage.Fast_Response')}
         </button>

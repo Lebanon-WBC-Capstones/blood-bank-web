@@ -120,10 +120,10 @@ function DashProfile(props) {
         }}
         className="flex flex-row justify-center text-white font-roboto"
       >
-        <img src={location} alt="location" className="mr-2 h-5" />{' '}
+        <img src={location} alt="location" className="mr-1 mt-1 h-5" />{' '}
         <p>Tripoli</p>
       </div>
-      <div style={{ margin: '2vw' }} className="flex justify-center">
+      <div style={{ margin: '2vw' }} className="flex mb-3 justify-center">
         {bloodtype(AB, Rhminus)}
       </div>
     </div>

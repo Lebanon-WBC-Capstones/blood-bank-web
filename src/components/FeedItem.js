@@ -45,7 +45,7 @@ const FeedItem = (props) => {
               </span>
             </p>
           </div>
-          <div className="text-gray-300 text-xs mr-2 mt-4 flex flex-row ">
+          <div className="text-gray-400 text-xs mr-2 mt-4 flex flex-row ">
             <img src={clock} alt="clock" className="w-4 h-4" />
             <span className="ml-1">{formatDate(props.item_data.date)}</span>
           </div>
