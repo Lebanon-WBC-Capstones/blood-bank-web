@@ -99,6 +99,7 @@ const RequestList = ({ type }) => {
     ],
     []
   );
+
   const [requestFilter, setRequestFilter] = useState([]);
 
   const filteredHandler = useCallback(() => {
@@ -148,7 +149,7 @@ const RequestList = ({ type }) => {
         setRequestFilter(request.filter((r) => r.data.blood_type === 'O-'));
         break;
       case 'Reset':
-        setRequestFilter([]);
+        setRequestFilter(request);
         break;
       default:
         setRequestFilter(request);
