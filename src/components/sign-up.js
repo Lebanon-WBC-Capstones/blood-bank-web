@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import logo from '../assets/signlogo.svg';
 import gmail from '../assets/gmail.svg';
 import { withNamespaces } from 'react-i18next';
 import { auth } from '../api/firebase.js';
 import { useHistory } from 'react-router-dom';
 import { provider } from '../api/firebase.js';
+import { Context } from '../Context';
+
 function SignUp({ setCount, count, t }) {
+  const dispatch = useContext(Context)[1];
   const history = useHistory();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -31,7 +34,14 @@ function SignUp({ setCount, count, t }) {
       auth
         .createUserWithEmailAndPassword(email, password)
         .then((userCredential) => {
-          //let user = userCredential.user;
+          let user = userCredential.user;
+          dispatch({
+            type: 'CREATE_USER',
+            isLogged: 'true',
+            setUser: user,
+            language: 'english',
+          });
+
           history.push(`/confirm`);
           setMsg('');
         })
@@ -48,12 +58,21 @@ function SignUp({ setCount, count, t }) {
       .signInWithPopup(provider)
       .then((result) => {
         /** @type {firebase.auth.OAuthCredential} */
+        // let credential = result.credential;
+        // let token = credential.accessToken;
+        let user = result.user;
+        dispatch({
+          type: 'CREATE_USER',
+          isLogged: 'true',
+          setUser: user,
+          language: 'english',
+        });
         history.push(`/confirm`);
-        //let credential = result.credential;
+
         // This gives you a Google Access Token. You can use it to access the Google API.
-        //let token = credential.accessToken;
+
         // The signed-in user info.
-        // let user = result.user;
+
         // ...
       })
       .catch((error) => {
@@ -119,12 +138,13 @@ function SignUp({ setCount, count, t }) {
       </div>
 
       <div className="m-5">
-        <form onSubmit={handleSignUp}>
+        <form onSubmit={handleSignUp} autocomplete="off">
           <label className="font-roboto m-0.25 text-gray-500 mr-48 sm:mr-96 sm:pr-4">
             {t('signup.email')}
           </label>
           <br />
           <input
+            required
             name="userEmail"
             value={email}
             type="email"
@@ -137,6 +157,7 @@ function SignUp({ setCount, count, t }) {
           </label>
           <br />
           <input
+            required
             name="userPassword"
             value={password}
             type="password"
@@ -149,6 +170,7 @@ function SignUp({ setCount, count, t }) {
           </label>
           <br />
           <input
+            required
             type="password"
             name="userConfirm"
             value={confirmpass}

@@ -1,20 +1,30 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { withNamespaces } from 'react-i18next';
 import signInLogo from '../assets/signlogo.svg';
 import { useHistory } from 'react-router-dom';
 import { auth } from '../api/firebase';
+import { Context } from '../Context';
 
 const SignIn = ({ t }) => {
+  const dispatch = useContext(Context)[1];
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  //const [error, setError] = useState(''); will be used later just to make the app deploy
   const history = useHistory();
 
   const handleSignIn = (e, email, password) => {
     e.preventDefault();
     const promise = auth.signInWithEmailAndPassword(email, password);
     promise
-      .then(() => history.push('/dashboard'))
+      .then((userCredential) => {
+        let user = userCredential.user;
+        dispatch({
+          type: 'CREATE_USER',
+          isLogged: 'true',
+          setUser: user,
+          language: 'english',
+        });
+        history.push(`/dashboard/${user.email}/Tripoli/""`);
+      })
       .catch((e) => console.log('failed'));
   };
   const onChangeHandler = (e) => {
@@ -49,7 +59,10 @@ const SignIn = ({ t }) => {
       </div>
 
       <div className=" mt-5">
-        <form onSubmit={(e) => handleSignIn(e, email, password)}>
+        <form
+          onSubmit={(e) => handleSignIn(e, email, password)}
+          autocomplete="off"
+        >
           <div>
             <label className="text-gray-500 font-Roboto pr-56">
               {' '}
@@ -57,6 +70,7 @@ const SignIn = ({ t }) => {
             </label>
             <br />
             <input
+              required
               type="email"
               id="userEmail"
               name="userEmail"
@@ -72,6 +86,7 @@ const SignIn = ({ t }) => {
             </label>
             <br />
             <input
+              required
               type="password"
               id="userPassword"
               name="userPassword"

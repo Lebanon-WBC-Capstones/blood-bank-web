@@ -1,53 +1,40 @@
-import React from 'react';
-import BloodCells from '../assets/bloodcells.svg';
-import Platelets from '../assets/plasma.svg';
-import BloodTube from '../assets/bloodtube_1.svg';
-import BloodContainer from '../assets/bloodContainer.svg';
+import React, { useState, useEffect, useCallback } from 'react';
+
 import { Link } from 'react-router-dom';
+import { firestore } from '../api/firebase.js';
 
 import ListView from './ListView.js';
 
 function ListItem() {
-  const RequestList = [
-    {
-      donation_type: 'Plasma Request',
-      icon: BloodTube,
-      location: 'Nini Hospital',
-      date: '2021-02-10T15:47:40.314Z',
-    },
-    {
-      donation_type: 'Red Cells Request',
-      icon: BloodCells,
-      location: 'Haykal Hospital',
-      date: '2021-02-28T15:47:40.314Z',
-    },
+  const [state, setState] = useState([]);
 
-    {
-      donation_type: 'Platelets Request',
-      icon: Platelets,
-      location: 'Mazloum Hospital',
-      date: '2021-02-20T15:47:40.314Z',
-    },
-    {
-      donation_type: 'Blood Request',
-      icon: BloodContainer,
-      location: 'Monla Hospital',
-      date: '2021-02-26T15:47:40.314Z',
-    },
-  ];
+  const getCollection = useCallback(async () => {
+    const RequestList = [];
+    return firestore.collection('Request').onSnapshot((snapshot) => {
+      snapshot.forEach((doc) => RequestList.push({ ...doc.data() }));
+      setState(RequestList);
+    });
+  }, []);
+
+  useEffect(() => {
+    getCollection();
+  }, [getCollection]);
+
   return (
     <div>
-      <Link to={`/donate`}>
-        {RequestList.map((e, i) => (
+      {state.map((e, i) => (
+        <Link
+          to={`/donate/${e.name}/${e.phone}/${e.location}/${e.pints}/${e.donation_type}`}
+        >
           <ListView
-            photo={e.icon}
+            //photo={e.icon}
             item_data={e.donation_type}
             location={e.location}
             date={e.date}
             key={i}
           />
-        ))}
-      </Link>
+        </Link>
+      ))}
     </div>
   );
 }

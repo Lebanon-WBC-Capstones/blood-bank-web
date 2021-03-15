@@ -8,8 +8,14 @@ import Menu from '../components/menu';
 import BottomWave from '../assets/backBottomWave.svg';
 import pp from '../assets/profilepic.png';
 
+import { useParams } from 'react-router-dom';
+
 export default function Dashboard() {
+  const { fullName: fullNamex } = useParams();
+  const { address: addressx } = useParams();
+  const { bloodType: bloodTypex } = useParams();
   const [MenuIsVisible, setMenuIsVisible] = useState(false);
+
   function toggleMenu() {
     setMenuIsVisible((prevMenuIsVisible) => !prevMenuIsVisible);
   }
@@ -32,6 +38,7 @@ export default function Dashboard() {
       </svg>
     );
   }
+
   return (
     <div className="bg-white w-screen h-screen m-0 pt-2">
       {MenuIsVisible && (
@@ -50,7 +57,7 @@ export default function Dashboard() {
           {Icon('#716A6A')}
         </div>
         <div className="flex justiy-center  text-lg font-roboto text-greyfont">
-          <p>Layla</p>
+          <p>{fullNamex}</p>
         </div>
 
         <Link to={`/feeds`}>
@@ -59,7 +66,7 @@ export default function Dashboard() {
           </div>
         </Link>
       </div>
-      <DashProfile pp={pp} />
+      <DashProfile pp={pp} address={addressx} blood_type={bloodTypex} />
 
       <DashCards />
 

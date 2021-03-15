@@ -12,15 +12,15 @@ const HistoryItems = (props) => {
     }
   };
   const gettype = () => {
-    switch (props.item.type) {
-      case 'Plazma donation':
-        return props.t('history.plasma');
-      case 'Red Cells':
-        return props.t('history.red_cells');
-      case 'blood':
-        return props.t('history.blood');
-      case 'Platelets':
-        return props.t('history.platelets');
+    switch (props.item.donation_type) {
+      case 'Plasma Request':
+        return props.t('history.plasma') + ' ' + props.t('history.request');
+      case 'Red Cells Request':
+        return props.t('history.red_cells') + ' ' + props.t('history.request');
+      case 'Blood Request':
+        return props.t('history.blood') + ' ' + props.t('history.request');
+      case 'Platelets Request':
+        return props.t('history.platelets') + ' ' + props.t('history.request');
       default:
         return null;
     }
@@ -60,7 +60,7 @@ const HistoryItems = (props) => {
               </div>
             </div>
             <div className="w-11 h-8 rounded-lg bg-gray-300 text-xs text-center pt-1 mt-3 mr-3 ">
-              {props.item.amount}
+              {props.item.pints}
             </div>
           </div>
         </div>

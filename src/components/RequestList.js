@@ -1,31 +1,35 @@
 import React, { useCallback, useEffect, useState, useMemo } from 'react';
 import RequestItem from './RequestItem.js';
+import Jolie from '../assets/jolie_H.png';
+import Jana from '../assets/jana_Z.png';
+import Layla from '../assets/layla_H.png';
+import Mohamad from '../assets/mohamad_T.png';
+import Nabigha from '../assets/nabigha_M.png';
+import Abdulrahman from '../assets/abdulrahman.png';
 const RequestList = ({ type }) => {
   const request = useMemo(
     () => [
       {
         user: {
           username: 'Jolie Hobloss',
-          avatar:
-            'https://user-images.githubusercontent.com/12988551/108382684-1f03f000-721a-11eb-901b-3419f392e548.png',
+          avatar: Jolie,
         },
         data: {
-          blood_type: 'AB+',
+          blood_type: 'B+',
           request_type: 'Blood Cells',
-          location: 'Haykal',
+          location: 'Haykal Hospital',
           amount: '2',
         },
       },
       {
         user: {
           username: 'Jana Zrayka',
-          avatar:
-            'https://user-images.githubusercontent.com/12988551/108382684-1f03f000-721a-11eb-901b-3419f392e548.png',
+          avatar: Jana,
         },
         data: {
           blood_type: 'O+',
           request_type: 'Red Cells',
-          location: 'Nini',
+          location: 'Nini Hospital',
           amount: '3',
         },
       },
@@ -33,48 +37,44 @@ const RequestList = ({ type }) => {
       {
         user: {
           username: 'Layla Hammoud',
-          avatar:
-            'https://user-images.githubusercontent.com/12988551/108382684-1f03f000-721a-11eb-901b-3419f392e548.png',
+          avatar: Layla,
         },
         data: {
           blood_type: 'A+',
           request_type: 'Plasma',
-          location: 'Mazloum',
+          location: 'Nini Hospital',
           amount: '2',
         },
       },
       {
         user: {
           username: 'Mohamad Tassieh',
-          avatar:
-            'https://user-images.githubusercontent.com/12988551/108382684-1f03f000-721a-11eb-901b-3419f392e548.png',
+          avatar: Mohamad,
         },
         data: {
           blood_type: 'O-',
           request_type: 'Blood Cells',
-          location: 'Haykal',
+          location: 'Monla Hospital',
           amount: '2',
         },
       },
       {
         user: {
-          username: 'Jolie Hobloss',
-          avatar:
-            'https://user-images.githubusercontent.com/12988551/108382684-1f03f000-721a-11eb-901b-3419f392e548.png',
+          username: 'Nabigh Mogharbel',
+          avatar: Nabigha,
         },
         data: {
           blood_type: 'AB+',
           request_type: 'Platelets',
-          location: 'Haykal',
+          location: 'Hanan Hospital',
           amount: '2',
         },
       },
 
       {
         user: {
-          username: 'Nabigha Mogharbel',
-          avatar:
-            'https://user-images.githubusercontent.com/12988551/108382684-1f03f000-721a-11eb-901b-3419f392e548.png',
+          username: 'Abdulrahman Ghalayini',
+          avatar: Abdulrahman,
         },
         data: {
           blood_type: 'B+',

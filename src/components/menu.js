@@ -8,7 +8,10 @@ import Edit from '../assets/menuEdit.svg';
 import menubg from '../assets/menuBg.svg';
 import { Link } from 'react-router-dom';
 import { withNamespaces } from 'react-i18next';
+import { Context } from '../Context';
+import { useContext } from 'react';
 function Menu(props) {
+  const [state] = useContext(Context);
   function handleLogOut() {}
   return (
     <div
@@ -32,9 +35,9 @@ function Menu(props) {
             className="rounded-full border-2 border-white w-80"
           />
         </div>
-        <div className="flex flex-col ml-2 pt-2 ">
+        <div className="flex flex-col ml-2 pt-2">
           <div className="text-lg self-start mb-1">
-            <p style={{ color: '#FFEEEE' }}>Layla</p>
+            <p style={{ color: '#FFEEEE' }}>{state.setUser.email}</p>
           </div>
           <div className="flex flex-row">
             <div>
