@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect, useContext, useCallback } from 'react';
 import donate from '../assets/dashboard-donate-logo.svg';
 import request from '../assets/dashboard-request-logo.svg';
 import drop from '../assets/dashboard-lastdonate-logo.svg';
@@ -12,8 +12,9 @@ function DashCards({ t }) {
   const [state] = useContext(Context);
   let d = new Date();
   const [donation, setDonation] = useState([]);
-  const DonationList = [];
-  const getDonation = async () => {
+
+  const getDonation = useCallback(async () => {
+    const DonationList = [];
     return firestore
       .collection('Donation')
       .where('userId', '==', state.setUser.uid)
@@ -21,11 +22,11 @@ function DashCards({ t }) {
         snapshot.forEach((doc) => DonationList.push({ ...doc.data() }));
         setDonation(DonationList);
       });
-  };
+  }, [state.setUser.uid]);
 
   useEffect(() => {
     getDonation();
-  }, []);
+  }, [getDonation]);
 
   return (
     <div className="p-3">

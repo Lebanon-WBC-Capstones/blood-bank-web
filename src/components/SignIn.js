@@ -59,7 +59,10 @@ const SignIn = ({ t }) => {
       </div>
 
       <div className=" mt-5">
-        <form onSubmit={(e) => handleSignIn(e, email, password)}>
+        <form
+          onSubmit={(e) => handleSignIn(e, email, password)}
+          autocomplete="off"
+        >
           <div>
             <label className="text-gray-500 font-Roboto pr-56">
               {' '}
@@ -67,6 +70,7 @@ const SignIn = ({ t }) => {
             </label>
             <br />
             <input
+              required
               type="email"
               id="userEmail"
               name="userEmail"
@@ -82,6 +86,7 @@ const SignIn = ({ t }) => {
             </label>
             <br />
             <input
+              required
               type="password"
               id="userPassword"
               name="userPassword"

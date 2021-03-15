@@ -38,7 +38,7 @@ function DonationAppointment({ t }) {
   };
   return (
     <div>
-      <form onSubmit={handleDonate}>
+      <form onSubmit={handleDonate} autocomplete="off">
         <div className="container max-w-screen-sm mt-10 sm:ml-12 sm:mt-20">
           <label className="font-Roboto text-gray-500 mr-32 sm:mr-80">
             {t('donateappointment.appointment_date')}
@@ -68,6 +68,7 @@ function DonationAppointment({ t }) {
             <br />
             <div className="flex flex-row justify-evenly mt-0.5">
               <input
+                required
                 type="text"
                 value={time}
                 onChange={onChangeHandler}

@@ -104,7 +104,7 @@ function RequestFormPage({ t }) {
 
   return (
     <div>
-      <form onSubmit={handleRequest}>
+      <form onSubmit={handleRequest} autocomplete="off">
         <div className="flex flex-col bg-pri-red min-h-screen">
           <div className="bg-pri-red">
             <img src={Header} alt="Header" />
@@ -122,6 +122,7 @@ function RequestFormPage({ t }) {
             <div className="flex flex-row justify-evenly mt-9  ">
               <div>
                 <select
+                  required
                   onChange={handleStatus}
                   className="text-xs w-28 p-2 bg-pri-red	border-2 border-white	rounded-lg h-8 text-white focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50
                 h-9"
@@ -129,12 +130,14 @@ function RequestFormPage({ t }) {
                   <option value="">
                     {t('requestform.for')}/{t('requestform.others')}
                   </option>
+
                   <option value="me">Me</option>
                   <option value="others">Others</option>
                 </select>
               </div>
 
               <select
+                required
                 onChange={handleBloodType}
                 className="text-xs w-28 p-2 bg-pri-red	border-2 border-white	rounded-lg h-8 text-white focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50
                h-9"
@@ -161,6 +164,7 @@ function RequestFormPage({ t }) {
 
             <div className="flex flex-col mt-5">
               <input
+                required
                 type="text"
                 name="fullName"
                 value={fullName}
@@ -170,6 +174,7 @@ function RequestFormPage({ t }) {
               />
 
               <input
+                required
                 type="number"
                 name="phone"
                 value={phone}
@@ -179,10 +184,12 @@ function RequestFormPage({ t }) {
               />
 
               <select
+                required
                 onChange={handleLocation}
-                className=" w-3/4 rounded-lg h-9 border-2 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50 block mx-auto mt-3"
+                className=" text-gray-500 w-3/4 rounded-lg h-9 border-2 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50 block mx-auto mt-3"
                 placeholder={t('requestform.address')}
               >
+                <option value="">Hospitals</option>
                 <option value="Monla">Monla</option>
                 <option value="Islamic">Islamic</option>
                 <option value="Hanan">Hanan</option>
@@ -195,15 +202,18 @@ function RequestFormPage({ t }) {
               </select>
 
               <select
+                required
                 onChange={handleEmergency}
-                className=" w-3/4 rounded-lg h-9 border-2 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50 block mx-auto mt-3"
+                className=" text-gray-500 w-3/4 rounded-lg h-9 border-2 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50 block mx-auto mt-3"
                 placeholder={t('requestform.address')}
               >
+                <option value="">Emergency</option>
                 <option value="yes">Yes</option>
                 <option value="no">No</option>
               </select>
 
               <input
+                required
                 type="text"
                 name="purpose"
                 value={purpose}

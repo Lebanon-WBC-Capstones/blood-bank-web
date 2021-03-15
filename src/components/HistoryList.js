@@ -11,10 +11,9 @@ const HistoryList = ({ status }) => {
 
   const [request, setRequest] = useState([]);
   const [donation, setDonation] = useState([]);
-  const RequestList = [];
-  const DonationList = [];
 
-  const getRequest = async () => {
+  const getRequest = useCallback(async () => {
+    const RequestList = [];
     return firestore
       .collection('Request')
       .where('userId', '==', state.setUser.uid)
@@ -24,9 +23,10 @@ const HistoryList = ({ status }) => {
         );
         setRequest(RequestList);
       });
-  };
+  }, [state.setUser.uid]);
 
-  const getDonation = async () => {
+  const getDonation = useCallback(async () => {
+    const DonationList = [];
     return firestore
       .collection('Donation')
       .where('userId', '==', state.setUser.uid)
@@ -36,12 +36,12 @@ const HistoryList = ({ status }) => {
         );
         setDonation(DonationList);
       });
-  };
+  }, [state.setUser.uid]);
 
   useEffect(() => {
     getDonation();
     getRequest();
-  }, []);
+  }, [getDonation, getRequest]);
 
   const filteredHandler = useCallback(() => {
     let history = [...request, ...donation];
