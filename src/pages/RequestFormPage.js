@@ -104,7 +104,7 @@ function RequestFormPage({ t }) {
 
   return (
     <div>
-      <form onSubmit={handleRequest} autocomplete="off">
+      <form onSubmit={handleRequest} autoComplete="off">
         <div className="flex flex-col bg-pri-red min-h-screen">
           <div className="bg-pri-red">
             <img src={Header} alt="Header" />
@@ -235,11 +235,7 @@ function RequestFormPage({ t }) {
                 </div>
               </div>
 
-              <div>
-                <div>
-                  <img src={Wave} alt="" />
-                </div>
-              </div>
+              <div></div>
             </div>
           </div>
         </div>

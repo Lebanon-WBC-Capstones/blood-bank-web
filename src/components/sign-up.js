@@ -138,7 +138,7 @@ function SignUp({ setCount, count, t }) {
       </div>
 
       <div className="m-5">
-        <form onSubmit={handleSignUp} autocomplete="off">
+        <form onSubmit={handleSignUp} autoComplete="off">
           <label className="font-roboto m-0.25 text-gray-500 mr-48 sm:mr-96 sm:pr-4">
             {t('signup.email')}
           </label>
