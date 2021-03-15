@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import RignBell from '../assets/notificationIcon.svg';
 import Language from '../assets/menuLanguage.svg';
 import History from '../assets/menuHistory.svg';
@@ -8,8 +8,28 @@ import Edit from '../assets/menuEdit.svg';
 import menubg from '../assets/menuBg.svg';
 import { Link } from 'react-router-dom';
 import { withNamespaces } from 'react-i18next';
+
 function Menu(props) {
   function handleLogOut() {}
+  const { t, i18n } = withNamespaces();
+  const [lang, setLang] = useState('EN');
+  // function handelLang(i18n) {
+  //   let x = document.getElementById('selectLanguage').value;
+  //   console.log(x);
+  //   if (x === 'en') {
+  //     i18n.changeLanguage('en');
+  //     document.body.dir = i18n.dir();
+  //     setLang('EN');
+  //   } else if (x === 'ar') {
+  //     i18n.changeLanguage('ar');
+  //     document.body.dir = i18n.dir();
+  //     setLang('AR');
+  //   } else {
+  //     i18n.changeLanguage('fr');
+  //     document.body.dir = i18n.dir();
+  //     setLang('FR');
+  //   }
+  // }
   return (
     <div
       className=" fixed h-screen w-3/4 top-0 pt-4 pl-4 font-roboto"
@@ -88,9 +108,37 @@ function Menu(props) {
           <div className="mr-14" style={{ marginRight: '3.75rem' }}>
             <p>{props.t('menu.language')}</p>
           </div>
-          <div className="self-center">
-            <img src={arrow} alt=" " />
+          <div className="self-center text-sm">
+            <select
+              name="selectLanguage"
+              id="selectLanguage"
+              onChange={() => {
+                let x = document.getElementById('selectLanguage').value;
+                console.log(x);
+                if (x === 'en') {
+                  i18n.changeLanguage('en');
+                  document.body.dir = i18n.dir();
+                  setLang('EN');
+                } else if (x === 'ar') {
+                  i18n.changeLanguage('ar');
+                  document.body.dir = i18n.dir();
+                  setLang('AR');
+                } else {
+                  i18n.changeLanguage('fr');
+                  document.body.dir = i18n.dir();
+                  setLang('FR');
+                }
+              }}
+              // onChange={handelLang(i18n)}
+            >
+              <option value="en">En</option>
+              <option value="ar">AR</option>
+              <option value="fr">FR</option>
+            </select>
           </div>
+          {/* <div className="self-center">
+            <img src={arrow} alt=" " />
+          </div> */}
         </div>
       </div>
       <Link to={`/signin`}>
@@ -108,4 +156,5 @@ function Menu(props) {
     </div>
   );
 }
+
 export default withNamespaces()(Menu);
