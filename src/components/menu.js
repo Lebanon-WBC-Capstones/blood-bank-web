@@ -112,24 +112,23 @@ function Menu(props) {
             <select
               name="selectLanguage"
               id="selectLanguage"
-              onChange={() => {
-                let x = document.getElementById('selectLanguage').value;
-                console.log(x);
-                if (x === 'en') {
-                  i18n.changeLanguage('en');
-                  document.body.dir = i18n.dir();
-                  setLang('EN');
-                } else if (x === 'ar') {
-                  i18n.changeLanguage('ar');
-                  document.body.dir = i18n.dir();
-                  setLang('AR');
-                } else {
-                  i18n.changeLanguage('fr');
-                  document.body.dir = i18n.dir();
-                  setLang('FR');
-                }
-              }}
-              // onChange={handelLang(i18n)}
+              // onChange={() => {
+              //   let x = document.getElementById('selectLanguage').value;
+              //   console.log(x);
+              //   if (x === 'en') {
+              //     i18n.changeLanguage('en');
+              //     document.body.dir = i18n.dir();
+              //     setLang('EN');
+              //   } else if (x === 'ar') {
+              //     i18n.changeLanguage('ar');
+              //     document.body.dir = i18n.dir();
+              //     setLang('AR');
+              //   } else {
+              //     i18n.changeLanguage('fr');
+              //     document.body.dir = i18n.dir();
+              //     setLang('FR');
+              //   }
+              // }}
             >
               <option value="en">En</option>
               <option value="ar">AR</option>
