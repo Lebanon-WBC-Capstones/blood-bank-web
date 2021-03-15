@@ -20,13 +20,13 @@ const DonationRequest = ({ t }) => {
 
   const gettype = () => {
     switch (typex) {
-      case 'Plasma Request':
+      case 'Plasma':
         return BloodTube;
-      case 'Red Cells Request':
+      case 'Red Cells':
         return BloodCells;
-      case 'Blood Request':
+      case 'Blood':
         return BloodContainer;
-      case 'Platelets Request':
+      case 'Platelets':
         return Platelets;
       default:
         return null;
@@ -42,7 +42,7 @@ const DonationRequest = ({ t }) => {
         <div className="flex flex-row justify-between">
           <div>
             <h3 className="text-gray-500 ml-2 mt-1 font-medium font-Roboto">
-              {typex}
+              {typex} {t('donationform.request')}
             </h3>
           </div>
           <div className="mr-2">
@@ -89,7 +89,7 @@ const DonationRequest = ({ t }) => {
         <div>
           <Link to={`/appointment/${locationx}/${pintsx}/${typex}`}>
             <button className="border-pink border-2 mb-2 text-gray-500  bg-pink rounded-md px-3.5 py-0.5">
-              {t('donationform.done')}
+              {t('donationform.donate')}
             </button>
           </Link>
         </div>

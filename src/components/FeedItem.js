@@ -33,14 +33,14 @@ const FeedItem = (props) => {
               alt="profile"
               className="rounded-full w-11 h-11 mt-1"
             />
-            <p className="mt-3 ml-2">
-              <span className="text-gray-500 text-sm">
+            <p className="mt-3 ml-4">
+              <span className="text-gray-500 text-xs">
                 {props.item_user.username}{' '}
               </span>
-              <span className="text-gray-500 text-sm">
+              <span className="text-gray-500 text-xs">
                 {props.item_data.operation} is{' '}
               </span>
-              <span className="text-pri-red text-sm">
+              <span className="text-pri-red text-xs">
                 {props.t('feeds.request_is_fulfilled')}
               </span>
             </p>

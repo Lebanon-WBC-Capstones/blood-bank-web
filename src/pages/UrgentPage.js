@@ -4,7 +4,7 @@ import ListItem from '../components/Listitem.js';
 function UrgentPage() {
   return (
     <div>
-      <BackPage title="Feeds" children={<ListItem />}></BackPage>
+      <BackPage title="Urgent" children={<ListItem />}></BackPage>
     </div>
   );
 }
