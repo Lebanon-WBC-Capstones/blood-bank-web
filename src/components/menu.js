@@ -12,7 +12,7 @@ import { Context } from '../Context';
 function Menu(props) {
   const [state] = useContext(Context);
   function handleLogOut() {}
-  const [lang, setLang] = useState('EN');
+  const [setLang] = useState('EN');
   return (
     <div
       className=" fixed h-screen w-3/4 top-0 pt-4 pl-4 font-roboto"
