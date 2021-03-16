@@ -11,25 +11,7 @@ import { withNamespaces } from 'react-i18next';
 
 function Menu(props) {
   function handleLogOut() {}
-  // const { t, i18n } = withNamespaces();
   const [lang, setLang] = useState('EN');
-  // function handelLang(i18n) {
-  //   let x = document.getElementById('selectLanguage').value;
-  //   console.log(x);
-  //   if (x === 'en') {
-  //     i18n.changeLanguage('en');
-  //     document.body.dir = i18n.dir();
-  //     setLang('EN');
-  //   } else if (x === 'ar') {
-  //     i18n.changeLanguage('ar');
-  //     document.body.dir = i18n.dir();
-  //     setLang('AR');
-  //   } else {
-  //     i18n.changeLanguage('fr');
-  //     document.body.dir = i18n.dir();
-  //     setLang('FR');
-  //   }
-  // }
   return (
     <div
       className=" fixed h-screen w-3/4 top-0 pt-4 pl-4 font-roboto"
@@ -135,9 +117,6 @@ function Menu(props) {
               <option value="fr">FR</option>
             </select>
           </div>
-          {/* <div className="self-center">
-            <img src={arrow} alt=" " />
-          </div> */}
         </div>
       </div>
       <Link to={`/signin`}>
