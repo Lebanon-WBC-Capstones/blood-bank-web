@@ -92,7 +92,7 @@ function Home({ t }) {
       </div>
       <div
         className="absolute text-sm text-grey opacity-80 font-Roboto font-medium ml-24"
-        style={{ top: '315vw' }}
+        style={{ top: '327vw' }}
       >
         You don't have <br /> <span className="mr-12">to be a doctor</span>{' '}
         <br /> to save lives

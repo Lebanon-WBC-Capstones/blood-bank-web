@@ -13,10 +13,10 @@ function RequestFormPage({ t }) {
   const history = useHistory();
   const [state] = useContext(Context);
   const [fullName, setFullName] = useState('');
-  const [phone, setPhone] = useState(0);
+  const [phone, setPhone] = useState();
   const [purpose, setPurpose] = useState('');
   const [emergency, setEmergency] = useState('');
-  const [pints, setPints] = useState(0);
+  const [pints, setPints] = useState();
   const [needed, setNeeded] = useState('');
   const [coord, setCoord] = useState('');
   const [hospitalName, setHospitalName] = useState('');
@@ -89,7 +89,7 @@ function RequestFormPage({ t }) {
       name: fullName,
       phone: phone,
       pints: pints,
-      donation_type: typex + ' Request',
+      donation_type: typex,
       bloodType: bloodType,
       location: hospitalName,
       geoCoord: coord,

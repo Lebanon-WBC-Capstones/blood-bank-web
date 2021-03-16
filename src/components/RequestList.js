@@ -17,7 +17,7 @@ const RequestList = ({ type }) => {
         data: {
           blood_type: 'B+',
           request_type: 'Blood Cells',
-          location: 'Haykal Hospital',
+          location: 'Haykal',
           amount: '2',
         },
       },
@@ -29,7 +29,7 @@ const RequestList = ({ type }) => {
         data: {
           blood_type: 'O+',
           request_type: 'Red Cells',
-          location: 'Nini Hospital',
+          location: 'Nini',
           amount: '3',
         },
       },
@@ -42,7 +42,19 @@ const RequestList = ({ type }) => {
         data: {
           blood_type: 'A+',
           request_type: 'Plasma',
-          location: 'Nini Hospital',
+          location: 'Dar Zahraa',
+          amount: '2',
+        },
+      },
+      {
+        user: {
+          username: 'AbdulRahman',
+          avatar: Abdulrahman,
+        },
+        data: {
+          blood_type: 'A-',
+          request_type: 'Platelets',
+          location: 'Monla',
           amount: '2',
         },
       },
@@ -54,7 +66,7 @@ const RequestList = ({ type }) => {
         data: {
           blood_type: 'O-',
           request_type: 'Blood Cells',
-          location: 'Monla Hospital',
+          location: 'Rahme',
           amount: '2',
         },
       },
@@ -66,7 +78,7 @@ const RequestList = ({ type }) => {
         data: {
           blood_type: 'AB+',
           request_type: 'Platelets',
-          location: 'Hanan Hospital',
+          location: 'Hanan',
           amount: '2',
         },
       },
@@ -79,21 +91,8 @@ const RequestList = ({ type }) => {
         data: {
           blood_type: 'B+',
           request_type: 'Blood Cells',
-          location: 'Monla',
+          location: 'New Mazloum',
           amount: '4',
-        },
-      },
-      {
-        user: {
-          username: 'AbdulRahman',
-          avatar:
-            'https://user-images.githubusercontent.com/12988551/108382684-1f03f000-721a-11eb-901b-3419f392e548.png',
-        },
-        data: {
-          blood_type: 'A-',
-          request_type: 'Platelets',
-          location: 'Monla',
-          amount: '2',
         },
       },
     ],

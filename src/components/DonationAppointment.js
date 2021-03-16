@@ -28,7 +28,7 @@ function DonationAppointment({ t }) {
       operation: 'Donation',
       userId: state.setUser.uid,
       pints: pintsx,
-      donation_type: typex + ' Request',
+      donation_type: typex,
       location: locationx,
       date: String(new Date()),
       appointment: startDate,

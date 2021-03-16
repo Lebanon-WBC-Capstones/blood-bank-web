@@ -12,27 +12,27 @@ const FeedList = () => {
     {
       fulfilled: true,
       user: {
-        username: 'Layla Hammoud',
+        username: 'Layla',
         avatar: Layla,
       },
       data: {
         operation: 'Request',
-        date: '2021-02-18T15:47:40.314Z',
+        date: '2021-02-20T15:47:40.314Z',
         reason: 'Car accident',
         amount: '2 ',
-        donors: ['Ahmed', 'Fahed', 'jana', 'nabi8a'],
+        donors: ['Sam', 'Fahed', 'jana', 'nabi8a'],
       },
     },
 
     {
       fulfilled: true,
       user: {
-        username: 'Jana Zrayka',
+        username: 'Jana',
         avatar: Jana,
       },
       data: {
         operation: 'Request',
-        date: '2021-02-18T15:47:40.314Z',
+        date: '2021-11-10T15:47:40.314Z',
         reason: 'Sick',
         amount: '6 ',
         donors: ['Salam', 'Nada', 'jana', 'nabi8a'],
@@ -41,27 +41,27 @@ const FeedList = () => {
     {
       fulfilled: true,
       user: {
-        username: 'Jolie Hobloss',
+        username: 'Jolie',
         avatar: Jolie,
       },
       data: {
         operation: 'Request',
-        date: '2021-02-18T15:47:40.314Z',
+        date: '2021-12-12T15:47:40.314Z',
         reason: 'Patient',
         amount: '3',
-        donors: ['Nabigha', 'Jana', 'jana', 'Mohamad'],
+        donors: ['Najwa', 'Jana', 'jana', 'Mohamad'],
       },
     },
 
     {
       fulfilled: true,
       user: {
-        username: 'Nabigh Mogharbel',
+        username: 'Nabigh',
         avatar: Nabigha,
       },
       data: {
         operation: 'Request',
-        date: '2021-02-18T15:47:40.314Z',
+        date: '2021-06-14T15:47:40.314Z',
         reason: 'Jump Accident',
         amount: '9 ',
         donors: ['Rima', 'Layla', 'Fawzi', 'nabi8a'],
@@ -70,12 +70,12 @@ const FeedList = () => {
     {
       fulfilled: true,
       user: {
-        username: 'Mohamad Tassieh',
+        username: 'Mohamad',
         avatar: Mohamad,
       },
       data: {
         operation: 'Request',
-        date: '2021-02-18T15:47:40.314Z',
+        date: '2021-04-11T15:47:40.314Z',
         reason: 'Car accident',
         amount: '1',
         donors: ['Layla', 'Jana', 'jana', 'nabi8a'],
@@ -85,7 +85,7 @@ const FeedList = () => {
     {
       fulfilled: true,
       user: {
-        username: 'Abdulrahman Ghalayini',
+        username: 'Abdlrhman',
         avatar: Abdulrahman,
       },
       data: {
@@ -93,7 +93,36 @@ const FeedList = () => {
         date: '2021-02-18T15:47:40.314Z',
         reason: 'Corona',
         amount: '5',
-        donors: ['Ahmed', 'Layla', 'jana', 'nabi8a'],
+        donors: ['Nada', 'Layla', 'jana', 'nabi8a'],
+      },
+    },
+
+    {
+      fulfilled: true,
+      user: {
+        username: 'Layla',
+        avatar: Layla,
+      },
+      data: {
+        operation: 'Request',
+        date: '2021-09-13T15:47:40.314Z',
+        reason: 'Car accident',
+        amount: '2 ',
+        donors: ['Sam', 'Fahed', 'jana', 'nabi8a'],
+      },
+    },
+    {
+      fulfilled: true,
+      user: {
+        username: 'Mohamad',
+        avatar: Mohamad,
+      },
+      data: {
+        operation: 'Request',
+        date: '2021-02-11T15:47:40.314Z',
+        reason: 'Car accident',
+        amount: '1',
+        donors: ['Layla', 'Jana', 'jana', 'nabi8a'],
       },
     },
   ];
