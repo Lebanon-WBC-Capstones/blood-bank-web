@@ -1,20 +1,30 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { withNamespaces } from 'react-i18next';
 import signInLogo from '../assets/signlogo.svg';
 import { useHistory } from 'react-router-dom';
 import { auth } from '../api/firebase';
+import { Context } from '../Context';
 
 const SignIn = ({ t }) => {
+  const dispatch = useContext(Context)[1];
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  //const [error, setError] = useState(''); will be used later just to make the app deploy
   const history = useHistory();
 
   const handleSignIn = (e, email, password) => {
     e.preventDefault();
     const promise = auth.signInWithEmailAndPassword(email, password);
     promise
-      .then(() => history.push('/dashboard'))
+      .then((userCredential) => {
+        let user = userCredential.user;
+        dispatch({
+          type: 'CREATE_USER',
+          isLogged: 'true',
+          setUser: user,
+          language: 'english',
+        });
+        history.push(`/dashboard/${user.email}/Tripoli/""`);
+      })
       .catch((e) => console.log('failed'));
   };
   const onChangeHandler = (e) => {
@@ -36,8 +46,12 @@ const SignIn = ({ t }) => {
 
   return (
     <div className="bg-transparent container max-width: 640px">
-      <div className="mt-12 ">
-        <img src={signInLogo} alt="images" className="block mx-auto" />
+      <div className="mb-8 ">
+        <img
+          src={signInLogo}
+          alt="images"
+          className="h-24 w-24 block mx-auto"
+        />
       </div>
 
       <div className="font-Roboto text-3xl mt-5 text-gray-500">
@@ -45,7 +59,10 @@ const SignIn = ({ t }) => {
       </div>
 
       <div className=" mt-5">
-        <form onSubmit={(e) => handleSignIn(e, email, password)}>
+        <form
+          onSubmit={(e) => handleSignIn(e, email, password)}
+          autoComplete="off"
+        >
           <div>
             <label className="text-gray-500 font-Roboto pr-56">
               {' '}
@@ -53,12 +70,13 @@ const SignIn = ({ t }) => {
             </label>
             <br />
             <input
+              required
               type="email"
               id="userEmail"
               name="userEmail"
               value={email}
               onChange={(e) => onChangeHandler(e)}
-              className="  w-3/4 rounded-lg h-9 border-2 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
+              className=" w-11/12 text-gray-500 pl-3 rounded-lg h-9 border-2 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
             />
           </div>
 
@@ -68,12 +86,13 @@ const SignIn = ({ t }) => {
             </label>
             <br />
             <input
+              required
               type="password"
               id="userPassword"
               name="userPassword"
               value={password}
               onChange={(e) => onChangeHandler(e)}
-              className="  w-3/4 rounded-lg h-9 border-2 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
+              className=" text-gray-500 pl-3 w-11/12 rounded-lg h-9 border-2 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
             />
           </div>
 
@@ -89,11 +108,11 @@ const SignIn = ({ t }) => {
             </label>
           </div>
 
-          <div className="mt-32">
+          <div className="mt-24">
             <input
               type="submit"
               value="Sign In"
-              className="bg-pink  w-3/4 rounded-lg h-9 text-gray-500 font-Roboto focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
+              className="bg-pink  w-11/12 font-medium border-2 border-pink rounded-lg h-9 text-gray-500 font-Roboto focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
             />
           </div>
         </form>

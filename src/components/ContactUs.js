@@ -9,8 +9,18 @@ function ContactUs({ t }) {
   return (
     <div>
       <div>
-        <div> {t('aboutus.contact_us')}</div>
-        <div class="text-gray-500 mt-4 pl-12">{t('aboutus.we_appreciate')}</div>
+        <div className="text-gray-500 text-2xl font-bold	mt-4">
+          {t('aboutus.contact_us')}
+        </div>
+        <div className="text-gray-500 mt-4 pl-12">We Appreciate</div>
+        <div className="text-gray-500  pl-32">Your Feedback</div>
+      </div>
+      <div></div>
+      <div className="z-10 grid justify-items-start absolute -bottom-80 left-24 mb-6 w-8/12  mb-2">
+        <input
+          className="bg-pink rounded-md pl-4 leading-8	 text-xs text-gray-500 font-Robot w-full	"
+          placeholder="Enter Your Name"
+        />
 
         <input
           className="bg-pink rounded-md pl-4 leading-8 mt-6	 text-xs text-gray-500 font-Robot w-full	"
@@ -21,10 +31,10 @@ function ContactUs({ t }) {
           placeholder="Enter Your Message..."
         ></textarea>
         <br />
-        <div class="w-full flex justify-end">
-          <button class="text-gray-500 justify-center flex leadind-4 bg-pink rounded-md w-28 items-center	">
+        <div className="w-full flex justify-end">
+          <button className="text-gray-500 justify-center flex leadind-4 bg-pink rounded-md w-28 items-center	">
             {t('aboutus.send')}
-            <img class="ml-2" src={send} alt="images" />
+            <img className="ml-2" src={send} alt="images" />
           </button>
         </div>
       </div>

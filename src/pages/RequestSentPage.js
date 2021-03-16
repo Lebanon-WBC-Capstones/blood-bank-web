@@ -5,7 +5,7 @@ import DonationRejected from '../components/DonationRejected.js';
 function DonationRejectedPage() {
   return (
     <div>
-      <BackPage title="Donation Rejected">
+      <BackPage title="Request Sent">
         <DonationRejected />
       </BackPage>
     </div>

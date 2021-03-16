@@ -24,7 +24,7 @@ function HeroCircles() {
     <div className="sm:flex items-center justify-center mt-16">
       <div
         ref={cont}
-        style={{ position: 'relative', width: '430px', height: '430px' }}
+        style={{ position: 'relative', width: '400px', height: '400px' }}
       >
         <div
           className="border-solid border-2 border-gray-400"
@@ -64,11 +64,11 @@ function HeroCircles() {
           style={{
             position: 'absolute',
             display: 'block',
-            width: '25%',
-            height: '25%',
-            margin: '-12.5%',
-            top: 215 + 215 * Math.sin(angle + 0.75),
-            left: 215 + 215 * Math.cos(angle + 0.75),
+            width: '30%',
+            height: '30%',
+            marginRight: '10%',
+            //top: 200 + 200 * Math.sin(angle + 0.75),
+            //left: 200 + 200 * Math.cos(angle + 0.75),
           }}
         />
 
@@ -80,9 +80,9 @@ function HeroCircles() {
             display: 'block',
             width: '25%',
             height: '25%',
-            margin: '-12,5%',
-            top: 215 + 150 * Math.sin(angle + 3.5),
-            left: 215 + 150 * Math.cos(angle + 3.5),
+            margin: '-12.5%',
+            top: 200 + 139 * Math.sin(angle + 3),
+            left: 200 + 139 * Math.cos(angle + 3),
           }}
         />
         <img
@@ -94,22 +94,24 @@ function HeroCircles() {
             width: '25%',
             height: '25%',
             margin: '-10%',
-            top: 215 + 55 * Math.sin(angle + 1),
-            left: 215 + 55 * Math.cos(angle + 1),
+            top: 200 + 51 * Math.sin(angle + 1),
+            left: 200 + 51 * Math.cos(angle + 1),
           }}
         />
 
         <img
           src={HeroFive}
           alt="hero"
+          data-aos="fade-up-right"
           style={{
             position: 'absolute',
             display: 'block',
             width: '30%',
             height: '30%',
-            margin: '-15%',
-            top: 215 + 215 * Math.sin(angle + 2.5),
-            left: 215 + 215 * Math.cos(angle + 2.5),
+            marginTop: '73%',
+            marginRight: '5%',
+            // top: 215 + 215 * Math.sin(angle + 2.5),
+            //left: 215 + 215 * Math.cos(angle + 2.5),
           }}
         />
 
@@ -121,23 +123,25 @@ function HeroCircles() {
             display: 'block',
             width: '27%',
             height: '27%',
-            margin: '-14%',
-            top: 215 + 150 * Math.sin(angle - 0.5),
-            left: 215 + 150 * Math.cos(angle - 0.5),
+            margin: '-13%',
+            top: 200 + 139 * Math.sin(angle - 0.5),
+            left: 200 + 139 * Math.cos(angle - 0.5),
           }}
         />
 
         <img
           src={HeroSix}
           alt="hero"
+          data-aos="fade-up-left"
           style={{
             position: 'absolute',
             display: 'block',
             width: '30%',
             height: '30%',
-            margin: '-15%',
-            top: 215 + 215 * Math.sin(angle + 5),
-            left: 215 + 215 * Math.cos(angle + 5),
+            marginTop: '80%',
+            marginLeft: '65%',
+            //top: 215 + 215 * Math.sin(angle + 5),
+            //left: 215 + 215 * Math.cos(angle + 5),
           }}
         />
       </div>

@@ -6,15 +6,15 @@
     "donation": "Donation",
     "centers": "Centers",
     "goo_sign_up": "goo sign up",
-    "goo_sign_in": "goo sign in",
+    "goo_sign_in": "Sign In",
     "Emergency_Blood_Request": "Emergency Blood Request",
     "Donate_and_help_others": "Donate and help others",
     "Flexible_scheduling": "Flexible scheduling",
     "Fast_Response": "Fast Response",
     "blood": "Blood",
     "center": "Center",
-    "our": "Our",
-    "heroes": "Heroes",
+    "our": "OUR",
+    "heroes": "HEROES",
     "so_far": "So Far",
     "we_have": "We Have",
     "reached": "Reached",
@@ -107,12 +107,13 @@
     "full_name": "Full Name",
     "address": "Address",
     "change_password": "Change Password",
-    "save_changes": "Save Changes"
+    "save_changes": "Save Changes",
+    "blood_type": "Blood Type"
   },
 
   "feeds": {
     "feeds": "Feeds",
-    "request_is_fulfilled": "Request is Fulfilled",
+    "request_is_fulfilled": " Fulfilled",
     "pints": "Pints"
   },
 
@@ -124,7 +125,8 @@
     "blood": "blood",
     "red_cells": "Red Cells",
     "platelets": "Platelets",
-    "hospital": " hospital"
+    "hospital": " hospital",
+    "pints": " Pints"
   },
 
   "requesttype": {
@@ -184,7 +186,7 @@
     "pints": "Pints",
     "hospital": "Hospital",
     "request": "Request",
-    "done": "Done"
+    "donate": "Donate"
   },
 
   "donateappointment": {
@@ -195,13 +197,11 @@
   },
 
   "donationConfirm": {
-    "donation_confirmed": "Donation Confirmed",
+    "donation_confirmed": "Donation Confirmed !!",
     "thank_you_for_your_donation_please_check_your_email_for_more_information": "Thank You For Your Donation Please Check Your Email For More Information"
   },
 
   "donatereject": {
-    "your_last_donation": "Your Last Donation",
-    "was_days_ago": "Was days ago",
-    "let_your_bones_do_their_job": "Let Your Bones do their job"
+    "request_sent": "Request Sent !!"
   }
 }

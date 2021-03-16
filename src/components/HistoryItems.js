@@ -1,8 +1,11 @@
 import React from 'react';
-import bloodIcon from '../assets/bloodIcon.svg';
 import location from '../assets/location-xs.svg';
 import moment from 'moment';
 import { withNamespaces } from 'react-i18next';
+import BloodCells from '../assets/bloodcells.svg';
+import Platelets from '../assets/plasma.svg';
+import BloodTube from '../assets/bloodtube_1.svg';
+import BloodContainer from '../assets/bloodContainer.svg';
 const HistoryItems = (props) => {
   const checkDate = (myDate) => {
     if (moment().diff(myDate, 'days') > 7) {
@@ -12,15 +15,30 @@ const HistoryItems = (props) => {
     }
   };
   const gettype = () => {
-    switch (props.item.type) {
-      case 'Plazma donation':
-        return props.t('history.plasma');
+    switch (props.item.donation_type) {
+      case 'Plasma':
+        return props.t('history.plasma') + ' ' + props.t('history.request');
       case 'Red Cells':
-        return props.t('history.red_cells');
-      case 'blood':
-        return props.t('history.blood');
+        return props.t('history.red_cells') + ' ' + props.t('history.request');
+      case 'Blood':
+        return props.t('history.blood') + ' ' + props.t('history.request');
       case 'Platelets':
-        return props.t('history.platelets');
+        return props.t('history.platelets') + ' ' + props.t('history.request');
+      default:
+        return null;
+    }
+  };
+
+  const getImage = () => {
+    switch (props.item.donation_type) {
+      case 'Plasma':
+        return BloodTube;
+      case 'Red Cells':
+        return BloodCells;
+      case 'Blood':
+        return BloodContainer;
+      case 'Platelets':
+        return Platelets;
       default:
         return null;
     }
@@ -45,7 +63,7 @@ const HistoryItems = (props) => {
               />
               <img
                 className="ml-1 mt-2 mb-5"
-                src={bloodIcon}
+                src={getImage()}
                 alt="blood icon"
               />
               <div className="flex flex-col ">
@@ -59,8 +77,10 @@ const HistoryItems = (props) => {
                 </div>
               </div>
             </div>
-            <div className="w-11 h-8 rounded-lg bg-gray-300 text-xs text-center pt-1 mt-3 mr-3 ">
-              {props.item.amount}
+            <div className="w-11 h-8 rounded-lg bg-gray-300 text-xs text-center  mt-3 mr-3 ">
+              {props.item.pints}
+              <br />
+              {props.t('history.pints')}
             </div>
           </div>
         </div>

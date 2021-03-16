@@ -1,111 +1,104 @@
 import React, { useCallback, useEffect, useState, useMemo } from 'react';
 import RequestItem from './RequestItem.js';
+import Jolie from '../assets/jolie_H.png';
+import Jana from '../assets/jana_Z.png';
+import Layla from '../assets/layla_H.png';
+import Mohamad from '../assets/mohamad_T.png';
+import Nabigha from '../assets/nabigha_M.png';
+import Abdulrahman from '../assets/abdulrahman.png';
 const RequestList = ({ type }) => {
   const request = useMemo(
     () => [
       {
         user: {
           username: 'Jolie Hobloss',
-          avatar:
-            'https://user-images.githubusercontent.com/12988551/108382684-1f03f000-721a-11eb-901b-3419f392e548.png',
+          avatar: Jolie,
         },
         data: {
-          blood_type: 'AB+',
+          blood_type: 'B+',
           request_type: 'Blood Cells',
           location: 'Haykal',
           amount: '2',
-          phone: '70/4673728',
         },
       },
       {
         user: {
           username: 'Jana Zrayka',
-          avatar:
-            'https://user-images.githubusercontent.com/12988551/108382684-1f03f000-721a-11eb-901b-3419f392e548.png',
+          avatar: Jana,
         },
         data: {
           blood_type: 'O+',
           request_type: 'Red Cells',
           location: 'Nini',
           amount: '3',
-          phone: '70/4673728',
         },
       },
 
       {
         user: {
           username: 'Layla Hammoud',
-          avatar:
-            'https://user-images.githubusercontent.com/12988551/108382684-1f03f000-721a-11eb-901b-3419f392e548.png',
+          avatar: Layla,
         },
         data: {
           blood_type: 'A+',
           request_type: 'Plasma',
-          location: 'Mazloum',
+          location: 'Dar Zahraa',
           amount: '2',
-          phone: '70/4673728',
-        },
-      },
-      {
-        user: {
-          username: 'Mohamad Tassieh',
-          avatar:
-            'https://user-images.githubusercontent.com/12988551/108382684-1f03f000-721a-11eb-901b-3419f392e548.png',
-        },
-        data: {
-          blood_type: 'O-',
-          request_type: 'Blood Cells',
-          location: 'Haykal',
-          amount: '2',
-          phone: '70/4673728',
-        },
-      },
-      {
-        user: {
-          username: 'Jolie Hobloss',
-          avatar:
-            'https://user-images.githubusercontent.com/12988551/108382684-1f03f000-721a-11eb-901b-3419f392e548.png',
-        },
-        data: {
-          blood_type: 'AB+',
-          request_type: 'Platelets',
-          location: 'Haykal',
-          amount: '2',
-          phone: '70/4673728',
-        },
-      },
-
-      {
-        user: {
-          username: 'Nabigha Mogharbel',
-          avatar:
-            'https://user-images.githubusercontent.com/12988551/108382684-1f03f000-721a-11eb-901b-3419f392e548.png',
-        },
-        data: {
-          blood_type: 'B+',
-          request_type: 'Blood Cells',
-          location: 'Monla',
-          amount: '4',
-          phone: '70/4673728',
         },
       },
       {
         user: {
           username: 'AbdulRahman',
-          avatar:
-            'https://user-images.githubusercontent.com/12988551/108382684-1f03f000-721a-11eb-901b-3419f392e548.png',
+          avatar: Abdulrahman,
         },
         data: {
           blood_type: 'A-',
           request_type: 'Platelets',
           location: 'Monla',
           amount: '2',
-          phone: '70/4673728',
+        },
+      },
+      {
+        user: {
+          username: 'Mohamad Tassieh',
+          avatar: Mohamad,
+        },
+        data: {
+          blood_type: 'O-',
+          request_type: 'Blood Cells',
+          location: 'Rahme',
+          amount: '2',
+        },
+      },
+      {
+        user: {
+          username: 'Nabigh Mogharbel',
+          avatar: Nabigha,
+        },
+        data: {
+          blood_type: 'AB+',
+          request_type: 'Platelets',
+          location: 'Hanan',
+          amount: '2',
+        },
+      },
+
+      {
+        user: {
+          username: 'Abdulrahman Ghalayini',
+          avatar: Abdulrahman,
+        },
+        data: {
+          blood_type: 'B+',
+          request_type: 'Blood Cells',
+          location: 'New Mazloum',
+          amount: '4',
         },
       },
     ],
     []
   );
+
   const [requestFilter, setRequestFilter] = useState([]);
 
   const filteredHandler = useCallback(() => {
@@ -155,7 +148,7 @@ const RequestList = ({ type }) => {
         setRequestFilter(request.filter((r) => r.data.blood_type === 'O-'));
         break;
       case 'Reset':
-        setRequestFilter([]);
+        setRequestFilter(request);
         break;
       default:
         setRequestFilter(request);
