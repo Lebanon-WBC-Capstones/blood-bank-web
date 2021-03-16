@@ -11,7 +11,7 @@ import { withNamespaces } from 'react-i18next';
 
 function Menu(props) {
   function handleLogOut() {}
-  const { t, i18n } = withNamespaces();
+  // const { t, i18n } = withNamespaces();
   const [lang, setLang] = useState('EN');
   // function handelLang(i18n) {
   //   let x = document.getElementById('selectLanguage').value;
@@ -112,23 +112,23 @@ function Menu(props) {
             <select
               name="selectLanguage"
               id="selectLanguage"
-              // onChange={() => {
-              //   let x = document.getElementById('selectLanguage').value;
-              //   console.log(x);
-              //   if (x === 'en') {
-              //     i18n.changeLanguage('en');
-              //     document.body.dir = i18n.dir();
-              //     setLang('EN');
-              //   } else if (x === 'ar') {
-              //     i18n.changeLanguage('ar');
-              //     document.body.dir = i18n.dir();
-              //     setLang('AR');
-              //   } else {
-              //     i18n.changeLanguage('fr');
-              //     document.body.dir = i18n.dir();
-              //     setLang('FR');
-              //   }
-              // }}
+              onChange={() => {
+                let x = document.getElementById('selectLanguage').value;
+                console.log(x);
+                if (x === 'en') {
+                  props.i18n.changeLanguage('en');
+                  document.body.dir = props.i18n.dir();
+                  setLang('EN');
+                } else if (x === 'ar') {
+                  props.i18n.changeLanguage('ar');
+                  document.body.dir = props.i18n.dir();
+                  setLang('AR');
+                } else {
+                  props.i18n.changeLanguage('fr');
+                  document.body.dir = props.i18n.dir();
+                  setLang('FR');
+                }
+              }}
             >
               <option value="en">En</option>
               <option value="ar">AR</option>
