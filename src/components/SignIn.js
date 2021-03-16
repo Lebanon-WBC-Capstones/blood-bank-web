@@ -61,7 +61,7 @@ const SignIn = ({ t }) => {
       <div className=" mt-5">
         <form
           onSubmit={(e) => handleSignIn(e, email, password)}
-          autocomplete="off"
+          autoComplete="off"
         >
           <div>
             <label className="text-gray-500 font-Roboto pr-56">
