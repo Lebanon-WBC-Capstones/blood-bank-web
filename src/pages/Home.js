@@ -19,11 +19,16 @@ function Home({ t }) {
       <div
         data-aos="fade-right"
         className="absolute  "
-        style={{ top: '175vw' }}
+        style={{ top: '176vw' }}
       >
         <Link to={`/signup`}>
-          <button className="text-lg ml-16">
-            <img src={getStarted} alt=" " className=" rounded w-12 h-7" />
+          <button className="flex flex-row justify-evenly text-lg ml-12">
+            <div className="font-Roboto font-medium text-white opacity-80">
+              Start
+            </div>
+            <div>
+              <img src={getStarted} alt=" " className=" mt-2 rounded w-8 h-4" />
+            </div>
           </button>
         </Link>
       </div>
@@ -81,7 +86,7 @@ function Home({ t }) {
       >
         <div className="text-white ">MEET {t('landingpage.our')}</div>
 
-        <span className="text-gray-600  ">{t('landingpage.heroes')}</span>
+        <span className="text-greyfont  ">{t('landingpage.heroes')}</span>
       </div>
       <div
         data-aos="zoom-in"
