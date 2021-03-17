@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import RignBell from '../assets/notificationIcon.svg';
 import Language from '../assets/menuLanguage.svg';
 import History from '../assets/menuHistory.svg';
