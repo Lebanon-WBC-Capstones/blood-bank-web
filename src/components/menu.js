@@ -12,7 +12,6 @@ import { Context } from '../Context';
 function Menu(props) {
   const [state] = useContext(Context);
   function handleLogOut() {}
-  const [setLang] = useState('EN');
   return (
     <div
       className=" fixed h-screen w-3/4 top-0 pt-4 pl-4 font-roboto"
@@ -101,15 +100,15 @@ function Menu(props) {
                 if (x === 'en') {
                   props.i18n.changeLanguage('en');
                   document.body.dir = props.i18n.dir();
-                  setLang('EN');
+                  props.setLang('EN');
                 } else if (x === 'ar') {
                   props.i18n.changeLanguage('ar');
                   document.body.dir = props.i18n.dir();
-                  setLang('AR');
+                  props.setLang('AR');
                 } else {
                   props.i18n.changeLanguage('fr');
                   document.body.dir = props.i18n.dir();
-                  setLang('FR');
+                  props.setLang('FR');
                 }
               }}
             >
