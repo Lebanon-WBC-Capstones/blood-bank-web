@@ -16,11 +16,7 @@ function Home({ t }) {
   });
   return (
     <LandingLayout>
-      <div
-        data-aos="fade-right"
-        className="absolute  "
-        style={{ top: '176vw' }}
-      >
+      <div data-aos="fade-right" className="relative" style={{ top: '-359vw' }}>
         <Link to={`/signup`}>
           <button className="flex flex-row justify-evenly text-lg ml-12">
             <div className="font-Roboto font-medium text-white opacity-80">
@@ -32,7 +28,7 @@ function Home({ t }) {
           </button>
         </Link>
       </div>
-      <div className="absolute ml-72 opacity-80" style={{ top: '3vw' }}>
+      <div className="relative ml-72 opacity-80" style={{ top: '-538vw' }}>
         <Link to={`/signin`}>
           <div className=" flex flex-row">
             <div className="text-xs text-grey font-bold font-Roboto ml-5">
