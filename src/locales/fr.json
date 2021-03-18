@@ -200,8 +200,6 @@
   },
 
   "donatereject": {
-    "your_last_donation": "Ta Dernière Donation",
-    "was_days_ago": "était de jours",
-    "let_your_bones_do_their_job": "Laissez vos os travailler"
+    "request_sent": "Demande envoyer !!"
   }
 }

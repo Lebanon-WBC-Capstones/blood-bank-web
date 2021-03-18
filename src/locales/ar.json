@@ -200,8 +200,6 @@
   },
 
   "donatereject": {
-    "your_last_donation": "أخر تبرع لك",
-    "was_days_ago": "كان قبل أيام",
-    "let_your_bones_do_their_job": "دع جسمك يقوم بعمله"
+    "request_sent": "تم إرسال الطلب"
   }
 }

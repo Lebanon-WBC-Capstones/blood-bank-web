@@ -28,21 +28,28 @@ function Home({ t }) {
           </button>
         </Link>
       </div>
-      <div className="relative ml-72 opacity-80" style={{ top: '-538vw' }}>
-        <Link to={`/signin`}>
-          <div className=" flex flex-row">
-            <div className="text-xs text-grey font-bold font-Roboto ml-5">
+      <div
+        className="relative flex flex-row justify-evenly ml-64 pl-2 opacity-80"
+        style={{ top: '-538vw' }}
+      >
+        <div>
+          <Link to={`/signin`}>
+            <div className="text-tiny text-grey font-bold font-Roboto ">
               {t('landingpage.goo_sign_in')}
             </div>
-            <div>
-              <button>
-                {' '}
-                <img src={Door} alt="" className="h-3 w-5 ml-1 mb-1" />
-              </button>
-            </div>
-          </div>
-        </Link>
+          </Link>
+        </div>
+        <div>
+          <button>
+            {' '}
+            <img src={Door} alt="" className="h-3 w-5 mb-2" />
+          </button>
+        </div>
+        <div className="text-tiny text-grey font-bold font-Roboto pr-1">
+          <Link to={`/signup`}>{t('landingpage.goo_sign_up')}</Link>
+        </div>
       </div>
+
       <div
         data-aos="fade-down"
         data-aos-easing="linear"
