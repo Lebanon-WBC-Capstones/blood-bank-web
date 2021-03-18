@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import RignBell from '../assets/notificationIcon.svg';
 import Language from '../assets/menuLanguage.svg';
 import History from '../assets/menuHistory.svg';
@@ -9,7 +9,6 @@ import menubg from '../assets/menuBg.svg';
 import { Link } from 'react-router-dom';
 import { withNamespaces } from 'react-i18next';
 import { Context } from '../Context';
-import { useContext } from 'react';
 function Menu(props) {
   const [state] = useContext(Context);
   function handleLogOut() {}
@@ -91,8 +90,32 @@ function Menu(props) {
           <div className="mr-14" style={{ marginRight: '3.75rem' }}>
             <p>{props.t('menu.language')}</p>
           </div>
-          <div className="self-center">
-            <img src={arrow} alt=" " />
+          <div className="self-center text-sm">
+            <select
+              name="selectLanguage"
+              id="selectLanguage"
+              onChange={() => {
+                let x = document.getElementById('selectLanguage').value;
+                console.log(x);
+                if (x === 'en') {
+                  props.i18n.changeLanguage('en');
+                  document.body.dir = props.i18n.dir();
+                  props.setLang('EN');
+                } else if (x === 'ar') {
+                  props.i18n.changeLanguage('ar');
+                  document.body.dir = props.i18n.dir();
+                  props.setLang('AR');
+                } else {
+                  props.i18n.changeLanguage('fr');
+                  document.body.dir = props.i18n.dir();
+                  props.setLang('FR');
+                }
+              }}
+            >
+              <option value="en">En</option>
+              <option value="ar">AR</option>
+              <option value="fr">FR</option>
+            </select>
           </div>
         </div>
       </div>
@@ -111,4 +134,5 @@ function Menu(props) {
     </div>
   );
 }
+
 export default withNamespaces()(Menu);
