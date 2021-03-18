@@ -16,32 +16,40 @@ function Home({ t }) {
   });
   return (
     <LandingLayout>
-      <div
-        data-aos="fade-right"
-        className="absolute  "
-        style={{ top: '175vw' }}
-      >
+      <div data-aos="fade-right" className="relative" style={{ top: '-359vw' }}>
         <Link to={`/signup`}>
-          <button className="text-lg ml-16">
-            <img src={getStarted} alt=" " className=" rounded w-12 h-7" />
+          <button className="flex flex-row justify-evenly text-lg ml-12">
+            <div className="font-Roboto font-medium text-white opacity-80">
+              Start
+            </div>
+            <div>
+              <img src={getStarted} alt=" " className=" mt-2 rounded w-8 h-4" />
+            </div>
           </button>
         </Link>
       </div>
-      <div className="absolute ml-72 opacity-80" style={{ top: '3vw' }}>
-        <Link to={`/signin`}>
-          <div className=" flex flex-row">
-            <div className="text-xs text-grey font-bold font-Roboto ml-5">
+      <div
+        className="relative flex flex-row justify-evenly ml-64 pl-2 opacity-80"
+        style={{ top: '-538vw' }}
+      >
+        <div>
+          <Link to={`/signin`}>
+            <div className="text-tiny text-grey font-bold font-Roboto ">
               {t('landingpage.goo_sign_in')}
             </div>
-            <div>
-              <button>
-                {' '}
-                <img src={Door} alt="" className="h-3 w-5 ml-1 mb-1" />
-              </button>
-            </div>
-          </div>
-        </Link>
+          </Link>
+        </div>
+        <div>
+          <button>
+            {' '}
+            <img src={Door} alt="" className="h-3 w-5 mb-2" />
+          </button>
+        </div>
+        <div className="text-tiny text-grey font-bold font-Roboto pr-1">
+          <Link to={`/signup`}>{t('landingpage.goo_sign_up')}</Link>
+        </div>
       </div>
+
       <div
         data-aos="fade-down"
         data-aos-easing="linear"
@@ -81,7 +89,7 @@ function Home({ t }) {
       >
         <div className="text-white ">MEET {t('landingpage.our')}</div>
 
-        <span className="text-gray-600  ">{t('landingpage.heroes')}</span>
+        <span className="text-greyfont  ">{t('landingpage.heroes')}</span>
       </div>
       <div
         data-aos="zoom-in"
